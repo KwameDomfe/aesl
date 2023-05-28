@@ -1,0 +1,1238 @@
+
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block pagetitle %} 
+    {{ project.sub_category.category }} || {{ project.sub_category }} || {{ project.name }} 
+{% endblock pagetitle %}
+
+{% block others %}   
+    
+{% endblock others %}
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- Page Header -->
+            <header id="project_details_header"
+                class="grid gtc12
+                bg-black-10"
+            >
+                <figure class="gc1s12 mb2-00">
+                    <img src="{{project.thumbnail.url}}"          
+                        alt=""
+                        class="w-100 vh-50 cover">
+                </figure>
+                <hgroup class="gc1s12
+                        ph1-00 mb1-50">
+                    <h2 
+                        class="f3-00 ttu"  
+                    >
+                        {{ project.name }}
+                    </h2>
+                    <span class="f2-00">{{ project.location }}</span>     
+                </hgroup> 
+                <!-- Projects summary -->
+                {% include 'website/projects/_partials/project_details_summary.html' %}
+                <!-- Projects summary -->
+            </header>
+        <!-- Page Header -->
+
+        <div id="l_3:1" 
+            class="grid gtc4"
+        >
+            <!-- AESL History Start -->
+                <div id="lc_gc1s3__pageMain--history"
+                    class="gc1s3
+                        min-vh-100"
+                >   
+                    <!-- Page Main -->
+                    <main class="bg-white blue0">
+                        <!-- Project Details-->
+                        <div id="projectDetails"
+                            class="min-vh-100 w-100">
+                            <!-- Projects Overview -->
+                            <div id="projectDetails--Overview"
+                                class="grid gtc12 ggap1-00
+                                    ph1-00
+                                    mb2-00"
+                            >
+                                <header 
+                                    class="gr1s1 gc2s10 
+                                        w-100
+                                        blue0 bb"
+                                >
+                                    <hgroup id="Project_Overview_1"
+                                        class="f1-50"
+                                    >
+                                        <p class="mb0-00 pv4-00 lh-copy tracked tj">
+                                            {% lorem 50 w random %}.
+                                        </p>   
+                                    </hgroup> 
+                                </header>
+                                <div class="gc1s12 flex ggap2-00 lh-copy">
+                                    <article id="Project_Overview_1" 
+                                        class="gr2s1 gc1s4" 
+                                    > 
+                                        
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- Projects Overview -->
+
+                            <!-- Projects gallery -->
+                            <div id="projectDetails--Gallery"
+                                class="grid gtc12 ggap1-00
+                                    ph1-00 mb2-00"
+                            >   
+                                <hgroup id=""
+                                    class="gc1s12"
+                                >
+                                    <h2 class="mv1-00
+                                        f3-00"
+                                    >
+                                        PROJECT GALLERY
+                                    </h2>     
+                                </hgroup> 
+                                
+                                <article id="project_gallery_1" 
+                                    class="gr2s1 gc1s6
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                
+                                </article>
+
+                                <article id="project_gallery_1" 
+                                    class="gr2s1 gc7s6
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                
+                                </article>
+
+                                <article id="project_gallery_1" 
+                                    class="gr3s1 gc1s6
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                
+                                </article>
+
+                                <article id="project_gallery_1" 
+                                    class="gr3s1 gc7s6
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                
+                                </article>
+                                <footer id="project_Concept_gallery_5" 
+                                    class="gr4s1 gc1s12
+                                        items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                    {% include 'website\projects\_partials\project_details--sectionFooterII.html' %}
+                                </footer>
+                            </div>
+                            <!-- Projects gallery -->
+                            
+                            <!-- Projects Concept -->
+                            <div id="projectDetails--Concept"
+                                class="grid gtc12 ggap1-00
+                                ph1-00 mb3-00">
+                                
+                                <!-- Project Concept Title -->
+                                <hgroup id="project_Concept Title"
+                                    class="gc1s12">
+                                    <h2 class="
+                                    mb2-00
+                                        f3-00
+                                        ">
+                                        PROJECT CONCEPT
+                                    </h2>     
+                                </hgroup>
+                                <!-- Project Concept Title -->
+
+                                <!-- Project Concept Description -->
+                                <article id="project_Concept_Description" 
+                                    class="gr2s1 gc1s12 flex ggap2-00 w-100 tj"
+                                >
+                                    <div class="">
+                                        <P>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div> 
+                                    
+                                    <div class="">
+                                        <P>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div>
+                                </article>    
+                                <!-- Project Concept Description -->
+
+                                <!-- Project Concept gallery -->
+                                <article id="project_Concept_gallery_1" 
+                                    class="gr3s2 gc2s4
+                                        flex items-center justify-center
+                                        relative
+                                        "
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-goldT
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    Concept Image One
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_Concept_gallery_2" 
+                                    class="gr3s3 gc7s6
+                                        flex items-center justify-center
+                                        relative">
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-goldT
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    Concept Image Two
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                        </p>
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_Concept_gallery_3" 
+                                    class="gr6s3 gc7s6
+                                        flex items-center justify-center
+                                        min-vh-50
+                                        relative
+                                        "
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %}<hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    Concept Image Three
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                        </p>     
+                                    </hgroup> {% endcomment %}
+                                </article>
+
+                                <article id="project_Concept_gallery_4" 
+                                    class="gr5s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %}<hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    Concept Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                        </p>     
+                                    </hgroup> {% endcomment %}
+                                </article>
+                                <article id="project_Concept_gallery_5" 
+                                    class="gr7s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %}<hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    Concept Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                        </p>     
+                                    </hgroup> {% endcomment %}
+                                </article>
+                                <footer id="project_Concept_gallery_5" 
+                                    class="gr9s1 gc1s12
+                                        items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                    {% include 'website\projects\_partials\project_details--sectionFooterI.html' %}
+                                </footer>
+                                <!-- Project Concept gallery -->
+                            </div>
+                            <!-- Projects Concept --> 
+
+                            <!-- Projects Design -->
+                            <div id="projectDetails--Design"
+                                class="grid gtc12 ggap1-00
+                                ph1-00 mb3-00"
+                            >
+                                <!-- Project Design Title -->
+                                <hgroup id="project_design_title"
+                                    class="gc1s12">
+                                    <h2 class="
+                                    mb2-00
+                                        f3-00
+                                        ">
+                                        PROJECT DESIGN
+                                    </h2>     
+                                </hgroup>
+                                <!-- Project Design Title -->
+
+                                <!-- Project design Description -->
+                                <article id="project_design_description" 
+                                    class="gr2s1 gc1s12 flex w-100 ggap2-00 tj"
+                                >
+                                    <div class="">
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div> 
+                                    
+                                    <div class="">
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div> 
+                                </article>    
+                                <!-- Project design Description -->
+
+                                <!-- Project design gallery -->
+                                <article id="project_design_gallery_1" 
+                                    class="gr3s2 gc2s4
+                                        flex items-center justify-center
+                                        relative
+                                        "
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    design Image One
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_design_gallery_2" 
+                                    class="gr3s3 gc7s6
+                                        flex items-center justify-center
+                                        relative">
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    design Image Two
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_design_gallery_3" 
+                                    class="gr6s3 gc7s6
+                                        flex items-center justify-center
+                                        min-vh-50
+                                        relative
+                                        "
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    design Image Three
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_design_gallery_4" 
+                                    class="gr5s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    design Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_design_gallery_5" 
+                                    class="gr7s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    design Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+                                
+                                <footer id="project_Concept_gallery_5" 
+                                    class="gr9s1 gc1s12
+                                        items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                    {% include 'website\projects\_partials\project_details--sectionFooterI.html' %}
+                                </footer>
+                                
+                                <!-- Project Concept gallery -->
+                            </div>
+                            <!-- Projects Concept --> 
+
+                            <!-- Projects Construction -->
+                            <div id="projectDetails--Construction"
+                                class="grid gtc12 ggap1-00
+                                ph1-00 mb3-00"
+                            >
+                                <!-- Project constuction Title -->
+                                <hgroup id="project_constuction Title"
+                                    class="gc1s12"
+                                >
+                                    <h2 class="
+                                        mb2-00
+                                        f3-00"
+                                    >
+                                        PROJECT CONSTRUCTION
+                                    </h2>     
+                                </hgroup>
+                                <!-- Project constuction Title -->
+
+                                <!-- Project constuction Description -->
+                                <article id="project_constuction_Description" 
+                                    class="gr2s1 gc1s12 ggap2-00 flex w-100 tj"
+                                >
+                                    <div class="">
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div> 
+                                    
+                                    <div class="">
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P>
+                                        <P>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                                        </P> 
+                                    </div> 
+                                </article>    
+                                <!-- Project constuction Description -->
+
+                                <!-- Project constuction gallery -->
+                                <article id="project_constuction_gallery_1" 
+                                    class="gr3s2 gc2s4
+                                        flex items-center justify-center
+                                        relative
+                                        "
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    constuction Image One
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_constuction_gallery_2" 
+                                    class="gr3s3 gc7s6
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    constuction Image Two
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_constuction_gallery_3" 
+                                    class="gr6s3 gc7s6
+                                        flex items-center justify-center
+                                        min-vh-50
+                                        relative " 
+                                >
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                            constuction Image Three
+                                        </h3>    
+                                        <p class="white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_constuction_gallery_4" 
+                                    class="gr5s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    constuction Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+
+                                <article id="project_constuction_gallery_5" 
+                                    class="gr7s2 gc2s4
+                                        flex items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                
+                                    <figure class="shadow-5">
+                                        <img src="{% static '_images\projects\education\1_1.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold bw2
+                                                cover"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup class="w-75 pa0-50 
+                                            bg-gold
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                white-90 f">
+                                    constuction Image Four
+                                        </h3>    
+                                        <p class=" white-90">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                                        </p>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+                                <footer id="project_Concept_gallery_5" 
+                                    class="gr9s1 gc1s12
+                                        items-center justify-center
+                                        h-100
+                                        relative"
+                                >
+                                    {% include 'website\projects\_partials\project_details--sectionFooterII.html' %}
+                                </footer>
+                                <!-- Project Construction gallery -->
+                            </div>
+                            <!-- Projects Construction --> 
+
+                            <!-- Project Data -->
+                            <div id="projectDetails--Data"
+                                class="grid gtc12 ggap1-00
+                                ph1-00 mb3-00"
+                            >
+                                <!-- Project Data Title -->
+                                <hgroup id="project_data Title"
+                                    class="gc1s12">
+                                    <h2 class="
+                                    mb2-00
+                                        f3-00
+                                        ">
+                                        PROJECT DATA
+                                    </h2>     
+                                </hgroup>
+                                <!-- Project Data Title -->
+                                <div class="gc1s12 flex">
+                                    <div class="ba w-50 pa0-50">
+                                        
+                                        <div id="projectData--awards" 
+                                            class="mb2-00"
+                                        >
+                                            <h2>Awards</h2>
+                                            <div >
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="mr2-00">2008</div>
+                                                    <div>GIA National Award</div>
+                                                </div> 
+                                            </div>
+                                        </div>
+
+                                        <div id="projectData--projectTeamMembers" 
+                                            class="mb2-00"
+                                        >
+                                            <h2>Project Team Members</h2>
+                                            <ul class="flex flex-wrap justify-between">
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                                <li><small>Teammember</small></li>
+                                            </ul>
+                                        </div>
+
+                                        <div id="projectData--awards" 
+                                            class="w-100"
+                                        >
+                                            <h2>Data</h2>
+                                            <div class="flex w-100 justify-between">
+                                                <div>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                            Date
+                                                            </h5>
+                                                            <p class="mb0-25">June, 2017</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Location
+                                                            </h5>
+                                                            <p class="mb0-25">Accra, Ghana</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Site Area
+                                                            </h5>
+                                                            <p class="mb0-25">12,450 sqm</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Gross Floor Area
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+
+                                                </div>
+                                                
+                                                <div>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Lead Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Structural Engineer
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Services Engineer
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Mechanical Enginner
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Quantity Surveyor
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                </div>
+                                                
+                                                <div>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                    <hgroup id="project_summary_1" 
+                                                        class="">
+                                                            <h5 class="mb0-50">
+                                                                Project Consultant
+                                                            </h5>
+                                                            <p class="mb0-25">Architect Tepayo</p>
+                                                    </hgroup>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class=" grid gtc12 h-100 ggap0-50
+                                                ba w-50 white-90">
+                                        <div class="gc1s12 gr1s3
+                                                w-100 h-100
+                                                bg-gold">
+                                            <h4>Map Showing Project Location</h4>
+                                            
+                                        </div>
+                                        <div class="gc1s6 gr4s1
+                                                w-100 h-100
+                                                bg-green
+                                            ">
+                                                <h4>Project Coordinator</h4>
+                                            
+                                        </div>
+                                        <div class="gc7s6 gr4s1
+                                                w-100 h-100
+                                                bg-blue0">
+                                            <h4>Project Leads</h4>
+                                        </div>
+                                        <div class="gc1s4 gr5s1
+                                                w-100 h-100
+                                                bg-blue2">
+                                            <h4>Job Sheets</h4>
+                                        </div>
+                                        
+                                        <div class="gc9s4 gr5s1
+                                                w-100 h-100
+                                                bg-black-90">
+                                        
+                                        </div>
+                                        <div class="gc5s4 gr5s1
+                                                w-100 h-100
+                                                bg-red">
+                                            <h4>News</h4>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Data --> 
+                        </div>
+                        <!-- Project Details-->
+
+                        <!-- Related Projects -->
+                        <section id="projectDetails--RelatedProjects"
+                            class="grid gtc12
+                                min-vh-50 
+                                pa1-00"
+                        >
+                            <hgroup id="project_data Title"
+                                class="gc1s12 gr1s1">
+                                <h2 class="mb2-00 ttu
+                                    f3-00"
+                                >
+                                    related projects
+                                </h2>     
+                            </hgroup>
+                            <article id="" 
+                                class="gr2s4 gc1s4
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure class="
+                                    w-100 h-100"
+                                >
+                                    <img src="{% static '_images\projects\hospitality\1_1.jpg' %}"            
+                                        alt=""
+                                        class="w-100 h-100
+                                            ba b--gold bw3
+                                            cover"
+                                    />
+                                        
+                                </figure> 
+                                {% comment %} <hgroup 
+                                    class ="flex justify-center items-center flex-column 
+                                        w-100 h-100 blue0
+                                        absolute"
+                                    >
+                                    <h5 class=" white-90 flex items-center justify-center">
+                                        Project Name
+                                    </h5>
+                                    <h5 class="flex items-center justify-center">
+                                        Project Town
+                                    </h5>
+                                    <small></small> 
+                                </hgroup>  {% endcomment %}
+                            </article>
+                            
+                            <article id="" 
+                                class="gr2s4 gc5s4
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure class="
+                                    w-100 h-100
+                                    "
+                                >
+                                    <img src="{% static '_images\projects\office-and-mixed-use\1_1.jpg' %}"            
+                                        alt=""
+                                        class="w-100 h-100
+                                            ba b--gold bw3
+                                            cover">
+                                        
+                                </figure> 
+                                {% comment %} <hgroup 
+                                    class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 
+                                        tc 
+                                        white-90">
+                                        Project Two
+                                    </h5>     
+                                </hgroup>  {% endcomment %}
+                            </article>
+
+                            <article id="" 
+                                class="gr2s4 gc9s4
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure 
+                                    class="
+                                        w-100 h-100"
+                                >
+                                    <img src="{% static '_images\projects\office-and-mixed-use\6_1.jpeg' %}"            
+                                        alt=""
+                                        class="w-100 h-100
+                                            ba b--gold bw3
+                                            cover"
+                                    />
+                                        
+                                </figure> 
+                                {% comment %} <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                    w-100 tc 
+                                    white-90">
+                                        Project Three
+                                    </h5>     
+                                </hgroup>  {% endcomment %}
+                            </article>
+                        </section>
+                        <!-- Page Footer -->
+                        <footer id="pageFooter"
+                            class="mb1-00"
+                        > 
+                            {% include 'website/_partials/page_footer.html' %}
+                        </footer>
+                        <!-- Page Footer -->
+                        <!-- Related Projects -->
+                    </main>
+                    <!-- Page Main -->   
+                </div>
+            <!-- AESL History End -->
+
+            <!-- AESL History Aside  Start -->
+                <div id="lc_gc4s1__pageAside--history" 
+                    class="gc4s1 
+                        blue0 relative"
+                >
+                    <div class="flex flex-column justify-between
+                        min-vh-100 
+                        pt4-00
+                        sticky top-0"
+                    >
+                        
+                        <ul class="mb1-00 bl bw4 pl1-00 f0-75">
+                            <h3 class="ttu f1-00">
+                                <a href="{% url 'website:projects-home' %}"
+                                    class="blue0"    
+                                >Back to Projects</a>
+                            </h3>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Overview"
+                                            class="blue0"
+                                        >Project Overview</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Gallery"
+                                            class="blue0"
+                                        >Project Gallery</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Concept"
+                                            class="blue0"
+                                        >Project Concept</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Design"
+                                            class="blue0"
+                                        >Project Design</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Construction"
+                                            class="blue0"
+                                        >Project Construction</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--Data"
+                                            class="blue0"
+                                        >Project Data</a>
+                            </li>
+                            <li class="mb1-00 i">
+                                <a href="#projectDetails--RelatedProjects"
+                                            class="blue0"
+                                        >Related Projects</a>
+                            </li>
+                        </ul>
+
+                        <div class="mb1-00" >
+                            {% comment %} <small>Previous</small> </br>
+                            <a href="{% url 'website:principles-sustainability' %}" 
+                                class="mb1-00 blue0 f0-75 b"
+                            >AESL Sustanability</a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            <!-- AESL History Aside  End -->
+        </div> 
+        
+    {% endblock pagecontent %}
+{% endblock content %}
+   

@@ -1,0 +1,122 @@
+<div id="project_summary"
+    class="gc1s12 grid gtc12 ggap1-00
+    items-center justify-center
+    ph1-00 mb1-00 max-h-100
+    tracked-tight f0-75 f1-00-s"
+    >
+    <article id="project_team" 
+        class="gr1s1 gc1s6 gc1s4-m gc1s3-l"
+    >
+        <ul
+            class="w-100 h0-00 pb-100
+            pa0-50
+            white-90
+            bg-blue0
+            br0-50"
+            >
+            <hgroup 
+                class="mb1-00"
+            >
+                <h3 class="mb0-50">
+                    Project Coordinator
+                </h3>
+                <p>
+                    {{project.coordinator}}
+                </p>     
+            </hgroup>
+            <h3 class="mb0-50">
+                Project Leads
+            </h3>
+            {% for x in projectLead %}
+                <li>
+                {{ x }} 
+                </li>     
+            {% endfor %}
+            <li>
+                Arc. Walter Sermodzi{% comment %} {{project.coordinator}} {% endcomment %}
+            </li>  
+            <li>
+                Ing. Adivdom Clement{% comment %} {{project.coordinator}} {% endcomment %}
+            </li>  
+            <li>
+                Surv. Kwadwo Appiah{% comment %} {{project.coordinator}} {% endcomment %}
+            </li>    
+        </ul>
+    </article>
+
+    <article id="project_details" 
+        class="gr2s1 gc7s6 gc9s4-m gc10s3-l gr1s1-l"
+    >
+        <ul class="w-100 h0-00 pb-100
+            pa0-50
+            white-90
+            bg-blue0
+            br0-50"
+            >
+                <h3 class="mb0-50">
+                    Job Sheets
+                </h3>
+                <li>English</li>
+                <div 
+                    class="w-100 
+                        white-90 mt1-00"
+                >
+                    <h3 class="mb0-50">
+                        Certifications
+                    </h3>
+                    <p>
+                        Certification I
+                    </p>
+                </div> 
+        </ul> 
+    </article>
+
+    <article id="project_details" 
+        class="gr1s1 gc7s6 gc5s4-m gc4s3-l"
+    >
+        <div 
+            class="w-100 h0-00 
+            pb-100 pa0-50
+            white-90
+            bg-blue1
+            br0-50"
+        >
+            <h3 class="mb0-25">
+                Client
+            </h3>
+            <p class="mb0-50">{{project.client}}</p>
+
+            <h3 class="mb0-25">
+                Total Floor Area
+            </h3>
+            <p>{{project.total_floor_area}} m<sup>2</sup></p>
+       
+            <h3 class="mb0-50">
+                Cost
+            </h3>
+            <p>{{project.cost}}</p>
+        </div> 
+    </article>
+
+    <article id="project_dates" 
+        class="gr1s1-l gc5s4-m gc7s3-l gr2s1 gc1s6"
+    >
+        <div 
+            class="w-100 h0-00 
+            pb-100 pa0-50
+            white-90
+            bg-blue2
+            br0-50
+                "
+        >
+            <h3 class="mb0-50">
+                Sart Date
+            </h3>
+            <p class="mb0-25">{{ project.start_date|date:'F, Y' }}</p>
+            <h3 class="mb0-50">
+                Competed Date
+            </h3>
+            <p class="mb0-25">{{ project.completed_date|date:'F, Y' }}</p>
+        </div> 
+    </article>
+</div>

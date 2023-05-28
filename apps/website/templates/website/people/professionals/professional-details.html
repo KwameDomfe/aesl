@@ -1,0 +1,332 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block title %} Professionals {% endblock title %}
+
+{% block others %}   
+    
+{% endblock others %}
+
+
+{% block content %}
+    <main id="l__mainContents"
+        class="flex flex-column flex-row-l 
+                    vh-100 w-100"
+    >
+        <!-- 00.00   mainHeader -->
+        <div id="mainHeader" 
+            class="flex items-center justify-between flex-column-l
+                white-90"  
+        >
+            {% include '_partials/_mainHeader.html' %}
+        </div>
+        <!-- 00.00   mainHeader -->
+
+        <!-- 00.00   main Body -->
+        <div id="mainBody"
+            class="w-100 of-y-scroll"
+        >
+            {% block mainbody %}
+                <div id=""
+                    class="min-vh-100 w-100">
+                    <!-- Page Header -->
+                    <header id="peope_pageHeader"
+                        class="grid gtc12
+                            "
+                    >
+                        <figure class="gc1s12 pa0-25">
+                            <img src="{% static './_media/images/people/people_1.jpg' %}"          
+                                alt=""
+                                class="vh-60 cover">
+                        </figure>
+                        <hgroup class="w-100 blue0">
+                            <h2 class="w-100 h-100
+                                pa1-00 pb1-00 mb0-00
+                                f3-00
+                                ">
+                                Prinipal Consultants
+                            </h2>     
+                        </hgroup> 
+                    </header>
+                    <!-- Page Header -->
+
+                    <!-- Page Main -->
+                    <main id = "people_pagemain"
+                        class="bg-white">
+                        <!-- Page Navigation -->
+                        {% include 'basic/people/_partials/people-page-nav.html' %}
+                        <!-- Page Navigation -->
+
+                        <!-- Principal Consultants -->
+                        <div id="people_principal_consultants"
+                            class="grid gtc12 ggap1-00
+                                ph0-50
+                                mb2-00"
+                        >   
+                            <!-- Principal Consultants Header -->
+                            <hgroup id="people_principal_consultants_header"
+                                class="gc1s12"
+                            >
+                                <h2 class="mb0-00
+                                    ttu
+                                    f2-00"
+                                >
+                                    principal consultants
+                                </h2>     
+                            </hgroup> 
+                            <!-- Principal Consultants Header -->
+
+                            <!-- Principal Consultants Description -->
+                            <article id="people_principal_consultants_description" 
+                                class="gr2s1 gc1s8"
+                            > 
+                                <P>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
+                                </P>
+                                <P>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor incidunt dolorum, veritatis blanditiis obcaecati nesciunt voluptatibus fugit numquam neque ducimus? Alias doloremque quisquam, accusantium laborum vero ea culpa vitae soluta repellendus distinctio sint earum nihil accusamus, ullam nesciunt facere, adipisci non corporis deserunt nemo corrupti ipsum ut dolor enim. Eos!
+                                </P>
+                            </article>
+                            <!-- Principal Consultants Description -->
+                            <!-- Principal Consultants Gallery -->
+                            <div id="people_principal_consultants_gallery"
+                                class="gr3s1 gc1s12
+                                    grid gtc12 ggap1-00
+                                    ph0-25 mb2-00
+                                    white-90"
+                            >
+                                <article id="people_principal_consultant_1" 
+                                    class="gr1s1 gc1s3
+                                        flex flex-column items-center justify-center
+                                    "
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_2" 
+                                    class="gr1s1 gc4s3
+                                        flex flex-column items-center justify-center"
+                                >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        Isaac Agyei Marfo
+                                    </h5> 
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup>   
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_3" 
+                                    class="gr1s1 gc7s3
+                                    flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_4" 
+                                    class="gr1s1 gc10s3
+                                        flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                <article id="people_principal_consultant_5" 
+                                    class="gr2s1 gc1s3
+                                    flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_6" 
+                                    class="gr2s1 gc4s3
+                                    flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_7" 
+                                    class="gr2s1 gc7s3
+                                    flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+                                
+                                <article id="people_principal_consultant_8" 
+                                    class="gr2s1 gc10s3
+                                    flex flex-column items-center justify-center"
+                                >
+                                    <figure class="shadow-5 mb0-50">
+                                        <img src="{% static '_media/images/people/MD.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50 "
+                                        /> 
+                                    </figure>
+                                    <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-25
+                                            blue0
+                                                ">
+                                        <h5 class="mb0-50">
+                                            Isaac Agyei Marfo
+                                        </h5> 
+                                        <h6>
+                                            architect
+                                        </h6>   
+
+                                    </hgroup> 
+                                </article>
+
+                                <article id="misc_gold" 
+                                    class="gr3s1 gc1s3
+                                        flex items-center justify-center
+                                        bg-gold h6-00
+                                    ">
+                                </article>
+
+                                <article id="misc_blue" 
+                                    class="gr4s1 gc6s1
+                                        flex items-center justify-center
+                                        bg-blue0 h6-00 
+                                        ">
+                                </article>
+                            </div>
+                            <!-- Principal Consultants Gallery -->   
+                        </div>
+                        <!-- Principal Consultants -->
+                    </main>
+                    <!-- Page Main --> 
+
+                    <!-- Page Footer -->
+                    <footer id="pageFooter"
+                        class=""
+                    >
+                        {% include '_partials/page-footer.html' %}
+                    </footer>
+                    <!-- Page Footer -->
+                </div>
+            {% endblock mainbody %}
+            </div>
+        <!-- 00.00   main Body -->
+    </main> 
+{% endblock content %}

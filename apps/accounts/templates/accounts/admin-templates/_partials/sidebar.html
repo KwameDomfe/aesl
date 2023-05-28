@@ -1,0 +1,149 @@
+{% load static %}
+<aside id="l__mainSidebar" 
+    class="w-100 vh-100-l
+        pa1-00
+        bg-blue0"
+    >
+    <div id="o__aeslAdminSidebar" 
+            class="flex flex-column-l justify-between h-100"
+        >   
+        <article id="m__aesl"
+            class="flex flex-column-l items-center justify-center"
+            tabindex="0" 
+            title="AESL Logo" 
+            aria-label="AESL Logo"
+        >
+            <a href="{% url 'website:index' %}"
+                class="white-90 mb1-00-l"
+            >
+                <figure id="m_aesl__logo" 
+                    class="flex items-center justify-start flex-column-l "
+                >   
+                    <img src="{% static '_images\_partials\logos\aesl_logo.png' %}" 
+                        alt="AESL Logo" 
+                        class="w3-00 mr0-00-l
+                            "
+                    >
+                    <figcaption class="flex flex-column justify-center items-center">
+                        <h4 class="f1-00 tc mb0-50 ml1-00 ml0-00-l w16-00 ">
+                            Architectural & Engineering Services Limited
+                        </h4>
+                        <h5 class="f0-75 tc">
+                            Consulting Architects, Engineers and Surveyors
+                        </h5>
+                    </figcaption>
+                </figure>   
+            </a>
+        </article>
+        <div class="h-100"> 
+            <hgroup class="gc1s1 gr1s1 ph1-00 bg-gradientLR">
+                <h3 class="pt1-00 white-90 f1-25 ttu">
+                    Admin Dashboard
+                </h3>     
+                <h4 class="gold pv0-00 mb0-00 tj tracked-tight lh-title">
+                    The diversity of our projects.
+
+                </h4>     
+            </hgroup>
+            <nav id="m__navItems"
+                class="dn flex-l flex-column-l items-center-l justify-center-l 
+                w-100"
+            >
+                <ul class=" dib-m flex-column-m 
+                        mb0-00 
+                        w-100 
+                        ttu
+                        bb bt white-90 pv1-50
+                        ">
+                    <li class="mb0-50 
+                        "
+                        tabindex="0" 
+                        title="search" 
+                        aria-label="search">
+                        <a  href="{% url 'website:search' %}" 
+                            class="white-90">
+                            search
+                        </a>
+                    </li>
+                    <li class="mb0-50"
+                        tabindex="0" 
+                        title="projects" 
+                        aria-label="projects">
+                        <a  href="{% url 'website:projects-home' %}" 
+                            class="white-90">
+                            projects
+                        </a>
+                        <ul class="ttl ml1-00">
+                            <li>Create Project</li>
+                            <li>Projects List</li>
+                            <li>Update Project</li>
+                            <li>Delete Project</li>
+                        </ul>
+                    </li>
+                    <li class="mb0-50" 
+                        tabindex="0" 
+                        title="practice" 
+                        aria-label="practice">
+                        <a  href="{% url 'website:practice-home' %}" 
+                            class="white-90">
+                            practice
+                        </a>
+                    </li>
+                    <li class="mb0-50" 
+                        tabindex="0" 
+                        title="principles" 
+                        aria-label="principles">
+                        <a  href="{% url 'website:principles-home' %}" 
+                            class="white-90">
+                            principles
+                        </a>
+                    </li>
+                    <li class="mb0-50" 
+                        tabindex="0" 
+                        title="people" 
+                        aria-label="people">
+                        <a  href="{% url 'website:people-home' %}" 
+                            class="white-90">
+                            people
+                        </a>
+                    </li>
+                    <li class="mb0-50" 
+                        tabindex="0" 
+                        title="news" 
+                        aria-label="news">
+                        <a  href="{% url 'website:news-home' %}" 
+                            class="white-90">
+                           xxx
+                        </a>
+                    </li>
+                    <li class="mb0-00"
+                        tabindex="0" 
+                        title="publications" 
+                        aria-label="publications">
+                        <a  href="{% url 'website:publications-home' %}" 
+                            class="white-90">
+                            xxx
+                        </a>
+                    </li>
+                </ul>
+            
+            </nav>
+        </div>
+        <footer id="o__aeslAdminSidebar--Footer" class="dn flex-l flex-column-l items-center">
+            
+            <div id = "m__poweredby"
+                class="flex items-center justify-center flex-column 
+                white 
+                f0-75"
+            >
+                <small class="mb0-50">powered by:</small>
+                <div class="flex">
+                    <small class="">kda design technologies</small>
+                    <small class="ml1-00">&copy; 2022</small>
+                </div>
+            </div> 
+        </footer>
+
+    </div>
+
+</aside>

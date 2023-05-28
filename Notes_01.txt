@@ -1,0 +1,11 @@
+Naming Conventions
+1. HTML 
+    a. tags         lowercase
+    b. ids          WordCapsCase
+    c. classes      kee-bab-case
+
+2. Python
+    a. constants    UPPERCASE
+    b. variables    camelCase
+
+3. Javascript 

@@ -1,0 +1,142 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   People Home 
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+{% block custom_scripts %}   
+
+{% endblock custom_scripts %}
+
+{% block content %}
+    {% block pagecontent %}
+        <div id="projects-home-page"
+            class=""
+    > 
+            <!-- Page Header -->
+            <header id="peope_pageHeader"
+                class="">
+                <hgroup class="gc1s12 w-100 blue0 ph1-00 mb1-00">
+                    <h2 class="w-100 h-100
+                       
+                        f5-00
+                        ">
+                        PEOPLE
+                    </h2>     
+                </hgroup> 
+             
+            </header>
+            <!-- Page Header -->
+            
+            <!-- Page Main -->
+            <main class="ph1-00">
+                <!-- Principal Consultants -->
+                <div id="people_principal_consultants"
+                    class="grid gtc12 ggap1-00 bg-gold"     
+                >   
+                    <!-- Services Start -->
+                    <section id=""
+                        class="bg-black-90 gr1s1 gc1s12 pa1-00"   
+                    >
+                        <article id="" 
+                            class="pa2-00">
+
+                        
+                            <div id="4x4_Grid_services"
+                                class="grid gtc12 ggap1-00"
+                            >
+                                <article id="services__urbanPlanning"
+                                    class="gr1s1 gc1s3
+                                        grid items-center justify-center
+                                        white-90"
+                                >
+                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                        
+                                        <figcaption id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa0-50
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                           
+                                            <h3 class="blue0 bg-white ba dib pa2-50 mb0-00 f1-00">
+                                                {{ nameVar}}
+                                            </h3> 
+                                            <h3 class="blue0 bg-white ba dib pa2-50 mb0-00 f1-00">
+                                                {{ numberVar }}
+                                            </h3> 
+                                            
+                                            
+                                        </figcaption>
+                                    </figure> 
+                                    
+                                </article>
+                                
+                                <article id="service__buildingDesign"
+                                    class="gr1s1 gc4s9
+                                    grid 
+                                   
+                                    white-90"      
+                                >
+                                    <ul>
+                                        {% for x in categories_c %}
+                                        <li class=" pa1-00">
+                                            <div>{{ x.name }}</div>
+                                            <div>{{ x.slug }}</div>
+                                            <div>{{ x.description }}</div>
+                                            <div>{{ x.created }}</div>
+                                            <div>{{ x.thumbnail }}</div>
+                                        </li>
+                                        {% endfor %} 
+                                    </ul>
+
+                                    <h2>{{ civic_and_culture }}</h2>      
+                                    <h2>{{ education }}</h2>      
+                                         
+                                     
+                                </article>
+
+                            </div>
+                        </article>
+
+                        <footer id="services__footer">
+                            <div class="flex justify-between pa0-50 bg-gold white-90">
+                                <div class="">
+                                    AESL || Services
+                                </div>
+                                <div>
+                                    
+                                </div>
+                            </div> 
+                        </footer>
+                    </section>
+                    <!-- Services End -->
+                </div>
+                <!-- Principal Consultants -->
+            
+            </main>
+            <!-- Page Main --> 
+            
+            <!-- Page Footer -->
+            <footer id = "home-page-footer">
+                <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mv1-00">
+                    <div>
+                        AESL
+                    </div>
+                    <div>
+                        Consulting Architects, Engineers and Surveyors
+                    </div>
+                </div> 
+            </footer>
+            <!-- Page Footer -->
+        </div>
+    {% endblock pagecontent %}
+   
+{% endblock content %}

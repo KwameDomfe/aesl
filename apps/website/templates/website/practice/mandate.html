@@ -1,0 +1,303 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Practice - Mandate
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+        {% block pagecontent %}
+            <!-- Page Header -->
+            <header id="Page_Header"
+                class="grid gtc12
+                    bg-white "
+            >
+                <!-- Page Banner Start -->
+                    <figure id="Page_Banner"
+                        class="gc1s12"
+                    >
+                        <img src="{% static '_images/practice/mandate/mandate-01.jpg' %}"          
+                            alt=""
+                            class="w-100 vh-60 cover"
+                        >
+                    </figure>
+                <!-- Page Banner End -->
+
+                <!-- Page Dashboard -->
+                    <hgroup id=""
+                        class="w-100 blue0 gc1s12"
+                    >   
+                        <!-- Page Title -->
+                            <h2 class="
+                                ph1-00 pb0-50 mb0-00
+                                f5-00 ttu
+                                "
+                            >
+                                Mandate
+                            </h2>
+                        <!-- Page Title -->
+                        <!-- Page Navigation --> 
+                            {% include 'website/practice/_partials/practice-page-nav.html' %}  
+                        <!-- Page Navigation -->   
+                    </hgroup>
+                <!-- Page Dashboard  -->
+            </header>
+            <!-- Page Header -->
+
+             <!-- Page Main -->
+            <main id="" 
+                class="ph1-00"
+            >
+                <div id="l__3:1"
+                    class="grid gtc4"
+                >
+                    <div id="pageMain"
+                        class="gc1s3 grid
+                            mb1-00 min-vh-100"
+                    >   
+                        <article id="pageDetails"
+                            class="gc1s3
+                                mb1-00 min-vh-100"
+                        >   
+                            <!-- Practice Mandate -->
+                            <div id="p--mandate"
+                                class="grid gtc12 ggap1-00"
+                            >
+                                <article id="Project_Overview_1" 
+                                    class="gr2s1 gc1s12"
+                                >   
+                                    <div class="ggap1-00 
+                                        pv4-00 mh4-00
+                                        tj blue0 lh-copy f1-25"
+                                    >
+                                        <p>
+                                            The Mandate of AESL established by the British was used for all state works over decades post-colonial.
+                                        </p>
+                                        <p>
+                                            The institutions like State Construction Corporation (SCC), State Housing Corporation (SHC), Highways.
+                                        </p>
+                                        <p>
+                                            No privates businesses were allowed to handle state/ public works except the PWD.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Practice -->
+                            <div id="p--mandateGallery"
+                                class="gr3s1 gc1s12
+                                    grid gtc12 ggap1-00
+                                    white-90"
+                            >
+                                <article id="" 
+                                    class="gr1s1 gc1s3
+                                    flex items-center justify-center
+                                    relative"
+                                >
+                                    {% comment %} <hgroup 
+                                        class="flex flex-column items-center justify-center
+                                            pa0-50 bg-blue0 
+                                            absolute
+                                                ">
+                                        <h3>
+                                            practice_2
+                                        </h3>    
+                                        <span>
+                                            - Techiman, Ghana.
+                                        </span>    
+                                    </hgroup>  {% endcomment %}
+                                    <figure 
+                                    >
+                                        <img src="{% static '_images/practice/mandate/mandate-01.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                cover"
+                                        /> 
+                                    </figure>
+                                </article>
+                                
+                                <article id="passport_office" 
+                                    class="gr1s1 gc6s4
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    <figure class="shadow-5"
+                                    >
+                                        <img src="{% static '_images/practice/mandate/mandate-01.jpg' %}"            
+                                            alt=""
+                                            class="pa0-50"
+                                        /> 
+                                    </figure>
+                                    {% comment %} <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-50
+                                            bg-blue0
+                                            absolute
+                                                ">
+                                        <h3>
+                                        Refeurbished Passport Office
+                                        </h3>    
+                                        <span>
+                                        - Accra , Ghana.
+                                        </span>    
+                                    </hgroup>  {% endcomment %}
+                                </article>
+                            
+                                <article id="proposed_apartment_2" 
+                                    class="gr2s2 gc1s3
+                                    flex items-center justify-center
+                                    relative"
+                                >
+                                    
+                                    {% comment %} <hgroup 
+                                        class="flex flex-column items-center justify-start
+                                            pa0-50
+                                            bg-blue0
+                                            absolute
+                                                ">
+                                        <h3>
+                                        Proposed Apartment
+                                        </h3>    
+                                        <span>
+                                        - Accra , Ghana.
+                                        </span>    
+                                    </hgroup>  {% endcomment %}
+                                    <figure class="shadow-5"
+                                    >
+                                        <img src="{% static '_images/practice/mandate/mandate-01.jpg' %}"            
+                                            alt=""
+                                            class="w-100
+                                            
+                                                ba b--gold 
+                                                "
+                                        /> 
+                                    </figure>
+                                </article>
+                            
+                                <article id="Office_Techiman" 
+                                    class="gr4s1 gc8s5
+                                        flex items-center justify-center
+                                        relative"
+                                >
+                                    
+                                    {% comment %} <hgroup 
+                                        class="flex items-center justify-center
+                                            bg-blue0
+                                            absolute
+                                                ">
+                                        <h3 class="
+                                                flex items-center justify-around
+                                                pa0-50
+                                                white-90">
+                                            OFFICE BLOCK
+                                        </h3>    
+                                        <span class="white-90 flex items-center justify-center">
+                                            - Techiman, Ghana.
+                                        </span>    
+                                    </hgroup>  {% endcomment %}
+                                    <figure 
+                                    >
+                                        <img src="{% static '_images/practice/mandate/mandate-01.jpg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold 
+                                                "
+                                        /> 
+                                    </figure>
+                                </article>
+                            
+                                <article id="misc_gold" 
+                                    class="gr3s1 gc6s1
+                                        flex items-center justify-center
+                                        bg-gray"
+                                >
+                                </article>
+                            
+                                <article id="misc_blue" 
+                                    class="gr2s1 gc6s3
+                                        flex items-center justify-center
+                                        bg-black-90"
+                                >
+                                        
+                                </article>
+                                <!-- Practice -->
+                            </div>
+                            <!-- Practice -->
+                        </article>
+                        <footer class="gr3s1 gc1s12 pa1-00 bg-gray white-90 w-100 i">
+                            Practice || Mandate
+                        </footer>
+                    </div>
+                    <!-- Practice Mandate -->
+
+                    <div id="pageAside" 
+                        class="gc4s1 
+                            w-100 blue0 relative"
+                    >
+                        <div 
+                            class="flex flex-column justify-between
+                                min-vh-100 
+                                ph2-00 pb1-00
+                                pt5-00
+                                sticky top-0"
+                        >
+                            <div
+                            >
+                                <a href= {% url 'website:practice-home' %}
+                                    class="dib mb1-00 
+                                        f1-25 blue0 ttu fw6"
+                                >
+                                    Back to Practice
+                                </a>
+                                <ul class="mb1-00 bl bw4 pa1-00 b--gray gray f0-75">
+                                    <h3 >Mandate</h3>
+                                    <li class="mb1-00 i">
+                                        <a href="#p--mandate"
+                                            class="gray"
+                                        >
+                                            AESL Mandate
+                                        </a>
+                                    </li>
+                                    <li class="mb1-00 i">
+                                        <a href="#p--mandateGallery"
+                                            class="gray"
+                                        >
+                                            AESL Mandate Gallery
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
+
+                            <div class="h6-00 gray">
+                                <small>Previous</small></br>
+                                <a href="{% url 'website:history' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL History
+                                </a> <br><br>
+                                <small>Next</small></br>
+                                <a href="{% url 'website:functions' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL Functions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Page Main -->
+        {% endblock pagecontent %}
+    <!-- 00.00   main Body -->
+    </main> 
+{% endblock content %}

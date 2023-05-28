@@ -1,0 +1,124 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Projects List
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white mb4-00">
+            <figure class="gc1s12">
+                <img src="{% static '_images\projects\civic_and_culture\civic\2.PNG' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover">
+            </figure>
+            <hgroup class="gc1s12 w-100 blue0">
+                <h2 class="w-100 h-100
+                    ph1-00 pb1-00 mb0-00
+                    f5-00
+                    ">
+                    PROJECTS LIST
+                </h2>     
+            </hgroup> 
+            <!-- Page Navigation -->
+            {% include 'website/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="bg-white">
+            <!-- Projects List-->
+            <div id="projects"
+                class = "w-100
+                    ph1-00 mb1-00"
+            >
+                <div 
+                    class="flex 
+                        b
+                        bb"
+                >
+                    <span class="w10-00 pb0-50 mb0-50 ">Start Date</span>
+                    <span class="w10-00 pb0-50 mb0-50 ">Category</span>
+                    <span class="w14-00 pb0-50 mb0-50">SubCategory</span>
+                    <span class="w20-00 pb0-50 mb0-50">Name</span>
+                    <span class="w10-00 pb0-50 mb0-50">Client</span>
+                    <span class="w10-00 pb0-50 mb0-50">Location</span>
+                </div>
+                <ul class=""
+                >
+                    {% for project in projects_list %}
+                        <li class="flex items-center justify-between
+                            w-100 f1-00"
+                        >
+                            <a href="{% url 'website:project-details' project.slug %}"
+                                class="dib w-100"
+                            >
+                                <article id="" 
+                                    class="flex items-center justify-center"
+                                >
+                                    <hgroup 
+                                        class="flex justify-start 
+                                        w-100
+                                        blue0 bb"
+                                    >   
+                                        <p class="w10-00">{{ project.start_date }}</p>
+                                        <p class="w10-00">{{ project.sub_category.category }}</p>
+                                        <p class="w14-00">{{ project.sub_category }} </p>
+                                        <p class="w20-00">{{ project.name }}</p>
+                                        <p class="w10-00">{{ project.client }}</p>   
+                                        <p class="w10-00">{{ project.location }}</p>   
+                                    </hgroup>
+                                </article>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <article id="misc_gold" 
+                    class="gr3s2 gc1s3
+                        flex items-center justify-center
+                        bg-gold h4-00 w8-00
+                    ">
+                </article>
+    
+                <article id="misc_blue" 
+                    class="gr3s2 gc10s3
+                        flex items-center justify-center
+                        bg-black-90 h6-00 w2-00
+                        ">
+                </article>
+
+            </div>
+            <footer id = "projectsListPage__Footer"
+                class="mb1-00"
+            >
+                {% include 'website/_partials/page_footer.html' %} 
+            </footer>
+            <!-- Projects List -->
+        </main>
+        <!-- Page Main -->
+
+        <!-- Main Footer -->
+        <footer id="pageFooter"
+            class="">
+        
+        </footer>
+        <!-- Main Footer -->
+    {% endblock pagecontent %}
+{% endblock content %}
+
+   
+        

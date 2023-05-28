@@ -1,0 +1,72 @@
+{% load static %}
+<div id="aesl_address"
+    class=" w-100 
+        flex flex-column justify-start items-center
+        f1-00 tl" 
+    itemtype=""
+>
+    <figure id="aesl_address--LogoAndName" 
+        class="flex flex-column justify-center items-center
+            w-100 mb1-00"
+    >
+        <img src="{% static '_images/_partials/logos/aesl_logo.png' %}" 
+                alt=""
+                class="br4-00 w3-00 mb1-00 "
+        />
+        <div itemprop="name" class ="tc ttu b">
+            AESL <br> Head Office
+
+        </div>
+    </figure>
+
+    <address id="aesl_address--Locational_address"
+        class="f0-75 w-100 tc"
+        itemprop="address" 
+        itemscope="" 
+        itemtype="http://schema.org/PostalAddress"
+    >
+        <span class="dib" 
+            itemprop="streetAddress"
+        >
+            <div class="mb0-25">
+                The Hall of Technology
+            </div> 
+            <div class="mb0-25">
+                Opposite The Ministry of Roads and Highways
+            </div> 
+            <div class="mb0-25">
+                Ministries, Accra.
+            </div> 
+            <div class="mb0-25">
+                Ghana
+            </div> 
+        </span>
+    </address>
+    <div id="aesl_address--email"
+        class="flex flex-column justify-center 
+            w-80 items-center
+            f0-75"
+    >
+        <a  href="" 
+            title="Get In Touch on WhatsApp" 
+            target="_blank" 
+            class="tc"
+            rel="noopener noreferrer"
+        >
+            <p class="flex items-center justify-between 
+                w-100
+                pv0-25 ph1-00
+                ba br5-00 
+                b b--white-90"
+            > 
+                <img src="{% static 'svgs/mails/Mail_(iOS).svg' %}"
+                    alt="WhatsApp" 
+                    class="w1-25 mr0-50" 
+                />info@aesl.com 
+            </p>
+        </a>
+    </div>
+    <p class="lh-copy tj i">
+        The Architectural & Engineering Services Limited (AES Ltd) is a {% lorem 30 w random %}.
+    </p>
+</div>

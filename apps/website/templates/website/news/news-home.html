@@ -1,0 +1,97 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   News Home 
+{% endblock pagetitle %}
+
+
+{% block custom_css %} 
+<!-- Custom Stylesheets -->
+<!-- Custom Stylesheets --> 
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+<!-- Custom Scripts -->
+
+<!-- Custom Scripts -->
+{% endblock scripts %}
+
+{% block content %}
+    <!-- 00.00   main Body -->
+        {% block pagecontent %}
+            <div id="projects-home-page"
+                class=""
+            > 
+                <!-- Page Header -->
+                    <header id = "princeples_pageHeader"
+                        class="grid gtc12
+                        bg-white"
+                    >   
+                        
+                        <figure class="gc1s12"
+                        >
+                            <img src="{% static '_images\news\news_1.jpg' %}"          
+                                alt=""
+                                class="w-100 vh-50 vh-60-l cover"
+                            />
+                        </figure>
+                        <hgroup class="w-100 blue0 gc1s12"
+                        >
+                            <h2 class="
+                                w-100 h-100
+                                pa1-00 mb0-00
+                                f5-00"
+                            >
+                                NEWS
+                            </h2>     
+                        </hgroup> 
+                        <!-- Page Navigation -->
+                        
+                        <!-- Page Navigation -->
+                    </header>
+                <!-- Page Header -->
+            
+                <!-- Page Main Start -->
+                    <main class=""
+                    >
+                        <div class="grid gtc12 ggap1-00
+                            pa1-00"
+                        >
+                            <article class="gr1s3 gc1s12"
+                            >
+                                <hgroup class="flex justify-around items-start flex-column"
+                                >
+                                    <h2 class="
+                                        w-100 h-100
+                                        mt0-75"
+                                    >
+                                        Please, we are sorry our <span class="blue0 bb bw2">News Page</span>  is under development
+                                    </h2>
+                                    <h4 class="
+                                        w-100 h-100
+                                        mt0-75 
+                                        red"
+                                    >
+                                        It would be up and running very soon
+                                    </h4>
+                                </hgroup>
+                            </article>
+                        </div>
+                    </main>
+                <!-- Page Main End --> 
+                
+                <!-- page Footer -->
+                    <footer id = "newsPage__Footer"
+                        class="mb1-00"
+                    >
+                        {% include 'website/_partials/page_footer.html' %} 
+                    </footer>
+                <!-- page Footer -->
+            </div>
+        {% endblock pagecontent %}   
+    <!-- 00.00   main Body --> 
+{% endblock content %}
+
+   

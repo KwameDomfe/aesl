@@ -1,0 +1,198 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+<!-- TITLE BLOCK -->
+{% block pagetitle %} 
+    User Log In Page
+{% endblock pagetitle %}
+<!-- TITLE BLOCK END-->
+
+<!-- OTHERS BLOCK -->
+{% block others %}   
+    
+{% endblock others %}
+<!-- OTHERS BLOCK END-->
+
+<!-- CUSTOM CSS BLOCK -->
+{% block custom_css %}   
+    
+{% endblock custom_css %}
+<!-- CUSTOM CSS BLOCK END-->
+
+<!-- CUSTOM CSS JS -->
+{% block Custom_js %}   
+    
+{% endblock Custom_js %}
+<!-- CUSTOM CSS JS END-->
+
+{% block pagecontent %}
+    <div id="UserLognInPage"
+        class="vh-100 flex items-center justify-center
+            pa2-00">
+        <div id="UserLognIn--Content"
+            class="flex flex-column items-center justify-around
+            h-100 w-60-s">
+
+            <header id = "UserLognIn--Header"
+                class="w-100 
+                pa0-50  
+                bg-blue0
+                white-90">
+                <figure id = ""
+                    class="flex justify-start items-center 
+                       ">
+                    <img src="{% static 'images\avatar-01.png' %}" 
+                        alt=""
+                        class="w2-50 br-100 mr1-00">
+                    <figcaption class="f1-25 ttc">
+                        User Login
+                    </figcaption>
+                </figure>
+            </header>
+
+            <main id = "UserLognIn--Main"
+                class="">
+                {% if not request.user.is_authenticated %}
+                    <!-- login details -->
+                    <form id=""
+                        class="flex flex-column justify-between items-center 
+                            w-100 h-100" 
+                        method="POST"
+                        action="">
+                        {% csrf_token %}
+                       
+                        <fieldset id = "admin-primary-credentials"
+                            class="ph1-00  mb1-00 w-100">
+                            <legend class="ph0-50">
+                                Login Credentials
+                            </legend>
+                            
+                            <label for="username" 
+                                class="dib mb1-00 w-100">
+                                Username:
+                                <input id="username" 
+                                    type="text"
+                                    name="username"
+                                    class="w-100 pa0-50 mt0-25"
+                                    placeholder="Please Enter Your Username"
+                                    tabindex="1" />
+                            </label>
+
+                            <label for="password"
+                                class="dib mb1-00 w-100">Password:
+                                <input id="password"
+                                    name = "password"
+                                    class="w-100 pa0-50 mt0-25" 
+                                    type="password"
+                                    placeholder="Please Enter Your Password"
+                                />
+                                <a class="blue0 f0-75" href="">
+                                    Forgot Password?
+                                </a>
+                            </label>
+
+                            <div class="flex justify-between ">
+                                <label for="logInSubmit"
+                                    class="dib 
+                                        w-100">
+                                    <button type = "submit"
+                                        class = "bg-blue0
+                                        white-90
+                                        pa0-50
+                                        br0-25
+                                        b--none ttu"
+                                    >
+                                        Submit
+                                    </button>
+                                </label> 
+                            </div>
+                        </fieldset>
+                            {% if error %}
+                                <p class="red">{{error}}</p>
+                                <p class="blue0">If you've forgotten your username or password...</p>
+                                <p class="red">{{suggestion}}</p>
+                            {% endif %}
+                        <fieldset id ="admin-alternate-credentials" 
+                            class="ph1-00 br0-25 mb1-00 w-100">
+                            <legend class="ph0-50 ">Secondary Login</legend>
+                            <nav id="nav_social_media"
+                                class="w-100 mb1-00" 
+                                tabindex="0" 
+                                title="connect" 
+                                aria-label="connect">
+                                <ul id="social_media_list" 
+                                    class="flex flex-column flex-row-m justify-between items-center 
+                                        w-100"
+                                    >
+                                        <li class="ba br1-00 pa0-50 b--white-90 black-90"> 
+                                            <a  href="" 
+                                                class="black-90 flex items-center justify-between"
+                                                title="Follow me on Twitter" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer">
+                                                <img src="{% static 'svgs\twitter.svg' %}" 
+                                                    alt="" 
+                                                    class="w1-00 mr1-00 "
+                                                >
+                                                Twitter
+                                            </a>
+                                        </li>
+                                        <li class="ba br5-00 pa0-50 b--white-90"> 
+                                            <a  href="" 
+                                                class="black-90 flex items-center justify-between"
+                                                title="Follow me on Facebook" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer">
+                                                <img src="{% static 'svgs/facebook.svg' %}" 
+                                                    alt="" 
+                                                    class="w1-00 mr0-25">
+                                                    facebook
+                                            </a>
+                                        </li>
+                                        <li class="ba br5-00 pa0-50 b--white-90"> 
+                                            <a  href="" 
+                                                class="black-90 flex items-center justify-between pa0-25"
+                                                title="Connect with me on LinkedIn" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer">
+                                                <img src="{% static 'svgs/linkedin.svg' %}" 
+                                                    alt="" 
+                                                    class="w1-00 mr0-25">
+                                                linkedIn
+                                            </a>
+                                            
+                                        </li>
+                                    </ul> 
+                            </nav>
+                        </fieldset>
+                    </form>
+                    <p>Need an account? Please <a class="pa0-25 blue0 ba br0-25 f1-00 ttu" 
+                        href="{% url 'accounts:user-register' %}">Register</a></p>
+                    <!-- Log In with Social Media -->
+                {% else %}
+                    <p class=" tc">
+                        You are already logged in. Would you like to <a class="pa0-25 blue0 ba br0-25 f1-00 ttu" 
+                        href="{% url 'accounts:user-logout' %}">logout?</a> 
+                    </p>
+                {% endif %}
+            </main>
+
+            <footer id="UserLognIn--Footer"
+                class="flex justify-between items-center
+                w-100
+                pa1-00 
+                white-90  
+                bg-blue0 ">
+                <div>
+                    AESL
+                </div>
+                <div>
+                    <h5 class="f0-75 tc">
+                        Consulting Architects, Enginners and Surveyors
+                    </h5>
+                </div>
+            </footer>
+        </div>
+    </div>
+{% endblock pagecontent %}

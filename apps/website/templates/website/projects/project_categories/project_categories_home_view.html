@@ -1,0 +1,106 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block title %} 
+    Project Catetories Home 
+{% endblock title %}
+
+{% block others %}   
+    
+{% endblock others %}
+
+
+{% block pagecontent %}
+    <!-- 00.00   MAIN -->
+    <div id=""
+        class="min-vh-100 w-100">
+        
+        <!-- Page Header -->
+        <header id="project_Header"
+            class="grid gtc12
+            bg-white"
+        >
+            <figure class="gc1s12">
+                <img src="{% static './_media/images/Landscape_Images/fpo_hero.png' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover">
+            </figure>
+            <hgroup class="gc1s12
+                    pa1-00 ">
+                <h2 class="mb0-00
+                        f3-00
+                    "
+                >
+                Project Categories Home
+            </hgroup>
+           
+        </header>
+        <!-- Page Header -->
+
+        <main class="bg-white ph1-00">
+            <!-- Page Navigation -->
+            {% include 'website/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
+
+            <!-- Projects Category Overview -->
+            <div id="project_Overview"
+                class="grid gtc12 ggap1-00
+                    ph1-00
+                    mb3-00"
+            >
+                <article id="Project_categories_overview" 
+                    class="gr1s1 gc1s8
+                       
+                    "
+                > 
+                <ul>
+                    {% for project in projectcategories_list %}
+                    <li>{{ project }}</li>
+                    
+                    {% endfor %}
+                </ul>
+                <P>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                </P>
+                </article>
+
+                <div class="gr2s1 gc1s12 w-100">
+                    {% for projectcategory in projectcategories_list %}
+                        <div class="w-100 bg-blue0">
+                            
+                            <a href=""
+                            class="white-90" >
+                                <div class="flex ">
+                                    <h4 class="mb1-00 w12-00">{{ projectcategory.name }}</h4>
+                                    <p class="ml1-00">{{ projectcategory.description }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>  
+                {{ projectCategory.name }}
+            </div>
+            <!-- Projects Category Overview -->
+
+            <!-- Projects Category Gallery -->
+            <div id="project_category_Gallery"
+                class="grid gtc12 ggap1-00
+                    mb3-00"
+            >
+                
+            </div>
+            <!-- Projects Category Gallery -->
+            
+        </main>
+       
+            
+        <footer id="pageFooter"
+            class=""
+        >
+            {% comment %} {% include '_partials/page-footer.html' %} {% endcomment %}
+        </footer>
+    </div>
+   
+{% endblock pagecontent %}
+   

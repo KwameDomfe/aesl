@@ -1,0 +1,298 @@
+{% load static %}
+<div class="grid
+    items-start justify-between ggap0-50 
+    w-100"
+>
+    <section id="footer__projects"  
+        class = "gr1s1 gc1s12 gc1s6-s gc1s3-m
+            w-100"
+        data-use-new="true" 
+        role="tabpanel" 
+        aria-label="projects" 
+        section-index="1"
+    >
+        <header>
+            <h2 class=""
+            >
+                <a class="white-90" 
+                    href="#projects"
+                    role="button" 
+                    aria-expanded="false"
+                >
+                    PROJECTS
+                </a>
+            </h2>
+        </header>
+        <nav aria-label=""
+        >
+            <ul class="flex flex-column items-center justify-center"
+            >
+                {% for project_category in project_categories_list %}
+                    <li class="w-100 
+                        mb1-00"
+                    >
+                        <a href="{% url 'website:project-category-details' project_category.slug %}"
+                            class="white-90 dib "
+                        >
+                            {{ project_category.name}} 
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>  
+        </nav>
+    </section>
+
+    <section id="footer__practice" 
+        class="gr2s1 gr1s1-s gc1s12 gc7s6-s gc4s3-m
+            w-100" 
+        data-use-new="true" 
+        role="tabpanel" 
+        aria-label="PRACTICE" 
+        section-index="2"
+    >
+        <header>
+            <h2 class=""
+            >
+                <a  role="button" 
+                    aria-expanded="false" 
+                    href="#practice"
+                    class="white-90"
+                >
+                    PRACTICE
+                </a>
+            </h2>
+        </header>
+        
+        <nav aria-label="practice"
+        >
+            <ul class=""
+            >
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:history' %}"
+                    >
+                        History
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:mandate' %}"
+                    >
+                        Mandate
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:functions' %}"
+                    >
+                        Functions
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:mission-vision-values' %}"
+                    >
+                        Mission, Vision & Values
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:sector-ministry' %}"
+                    >
+                        Sector Ministry
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:corporate-governance' %}"
+                    >
+                        Corporate Governance
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:management' %}"
+                    >
+                        Management
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:services' %}"
+                    >
+                        Services
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:client-speak' %}"
+                    >
+                        Client Speak
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:alliances' %}"
+                    >
+                        Alliances
+                    </a>
+                </li>
+                <li class="mb1-00 "
+                >
+                    <a  class="white-90" 
+                        href="{% url 'website:corporate-responsibilities' %}"
+                    >
+                        Corporate Responsibility
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section id="footer__principles" 
+        class="gr3s1 gr2s1-s gr1s1-m gc1s12 gc1s6-s gc7s3-m
+            w-100" 
+        data-use-new="true" 
+        role="tabpanel" 
+        aria-label="principles" 
+        section-index="3"
+    >
+        <header
+        >
+            <h2 class=""
+            >
+                <a  role="button" 
+                    aria-expanded="false" 
+                    href="#principles"
+                    class="white-90"
+                >
+                    PRINCIPLES
+                </a>
+            </h2>
+        </header>
+
+        <nav aria-label=""
+        >
+            <ul class=""
+            >
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-civic' %}"
+                    >
+                        Civic
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-professionalism' %}"
+                    >
+                        Professionalism
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-excellence' %}"
+                    >
+                        Excellence
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-integrity-and-honesty' %}"
+                    >
+                        Integrity and Honesty
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-timeliness-and-cost-effectiveness' %}"
+                    >
+                        Timeliness and Cost Effectiveness
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-sustainability' %}"
+                    >
+                        Sustainability
+                    </a>
+                </li>
+                <li class="mb1-00 ">
+                    <a  class="white-90" 
+                        href="{% url 'website:principles-empowerment' %}"
+                    >
+                        Empowerment
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section id="footer__people" 
+        class="w-100 gr4s1 gr2s1-s gr1s1-m gc1s12 gc7s6-s gc10s3-m" 
+        data-use-new="true" 
+        role="tabpanel" 
+        aria-label="people" 
+        section-index="4"
+    >
+        <header>
+            <h2 class="">
+                <a  role="button" 
+                    aria-expanded="false" 
+                    href="#people"
+                    class="white-90"
+                >PEOPLE</a>
+            </h2>
+        </header>
+
+        <nav aria-label="">
+            <ul class="">
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:principal-consultants' %}">Principal Consultants</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:senior-consultants' %}">Senior Consultants</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:consultants' %}">Consultants</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:senior-professionals' %}">Senior Professionals</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:professionals' %}">Professionals</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                        href="{% url 'website:assistant-professionals' %}">Assistant Professionals</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                            href="{% url 'website:probationers' %}">Probationers</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                            href="{% url 'website:national-service-personnels' %}">National Service Personnels</a>
+                </li>
+                <li class="mb1-00 "> 
+                    <a  class="white-90" 
+                            href="{% url 'website:supporting-team' %}">Support Team</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</div>

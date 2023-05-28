@@ -1,0 +1,110 @@
+
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+<!-- TITLE BLOCK -->
+{% block pagetitle %} 
+    User Log Out Page
+{% endblock pagetitle %}
+<!-- TITLE BLOCK END-->
+
+<!-- OTHERS BLOCK -->
+{% block others %}   
+    
+{% endblock others %}
+<!-- OTHERS BLOCK END-->
+
+<!-- CUSTOM CSS BLOCK -->
+{% block custom_css %}   
+    
+{% endblock custom_css %}
+<!-- CUSTOM CSS BLOCK END-->
+
+<!-- CUSTOM CSS JS -->
+{% block Custom_js %}   
+    
+{% endblock Custom_js %}
+<!-- CUSTOM CSS JS END-->
+
+{% block pagecontent %}
+    <div id="UserLognInPage"
+        class="vh-75 flex items-center justify-center
+            ma2-00">
+        <div id="UserLognIn--Content"
+            class="flex flex-column items-center justify-between
+            h-100 w-60-s">
+            <header id = "UserLognIn--Header"
+                class="w-100 
+                pa0-50 mb1-00  
+                bg-blue0
+                white-90">
+                <figure id = ""
+                    class="flex justify-between items-center 
+                        w12-00">
+                    <img src="{% static 'images\avatar-01.png' %}" 
+                        alt=""
+                        class="w2-50 br-100">
+                    <figcaption class="f1-25 ttu">
+                        User Logout
+                    </figcaption>
+                </figure>
+            </header>
+            <main id = "UserLognIn--Main"
+                class="bg-white w-100">
+                {% if request.user.is_authenticated %}
+                    <!-- login details -->
+                    <form id=""
+                        class="flex flex-column justify-between items-center 
+                            w-100 h-100 ph1-00" 
+                        method="POST"
+                        action=""
+                    >
+                        {% csrf_token %}
+                    
+                        <fieldset id = "admin-primary-credentials"
+                            class="ph1-00  mb1-00 w-100">
+                            <legend class="ph0-50">
+                            Logout Confirmation
+                            </legend>
+                    
+                            <p>Are you sure you want to logout?</p>
+                            <label for="logInSubmit"
+                                class="dib 
+                                    w-100">
+                                <button type = "submit"
+                                    class = "bg-blue0
+                                        white-90
+                                        pa0-50
+                                        b--none"    
+                                >
+                                    Yes, logout
+                                </button>
+                            </label> 
+                        </fieldset>
+                    </form>
+                    <!-- Log In with Social Media -->
+                {% else %}
+                    <p class="tc">
+                        You are not logged in. </br> Would you like to <a class="blue0" href="{% url 'accounts:user-login' %}">login</a> ?
+                    </p>
+                {% endif %}
+            </main>
+            <footer id="UserLognIn--Footer"
+                class="flex justify-between items-center
+                w-100
+                pa1-00 
+                white-90  
+                bg-blue0 ">
+                <div>
+                    AESL
+                </div>
+                <div>
+                    <h5 class="f0-75 tc">
+                        Consulting Architects, Enginners and Surveyors
+                    </h5>
+                </div>
+            </footer>
+        </div>
+    </div>
+{% endblock pagecontent %}

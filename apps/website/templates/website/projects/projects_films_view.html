@@ -1,0 +1,77 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block title %} Projects Films {% endblock title %}
+
+
+{% block others %}   
+    
+{% endblock others %}
+
+
+{% block content %}
+
+    <div id=""
+        class="min-vh-100 w-100">
+        
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+                bg-white "
+        >
+            <figure class="gc1s12"
+            >
+                <img src="{% static './_media/images/projects/projects_landing_page.jpeg' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover"
+                />
+            </figure>
+            <hgroup class="gc1s12
+                w-100 
+                blue0"
+            >
+                <h2 class="w-100 h-100
+                    pa1-00 pb1-00 mb0-00
+                    f3-00"
+                >
+                    PROJECTS FILMS
+                </h2>     
+            </hgroup> 
+        </header>
+        <!-- Page Header -->
+
+        <main class="bg-white">
+            <!-- Page Navigation -->
+            {% include 'basic/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
+            <!-- Projects -->
+            <div id="projects"
+                class = "ph0-25"
+            > 
+                <article id="misc_gold" 
+                    class="gr3s2 gc1s3
+                        flex items-center justify-center
+                        bg-gold"
+                >
+                </article>
+
+                <article id="misc_blue" 
+                    class="gr3s2 gc10s3
+                        flex items-center justify-center
+                        bg-black-90"
+                >
+                </article>
+            </div>
+            <!-- Projects -->
+        </main>
+            
+        <footer id="pageFooter"
+            class=""
+        >
+            {% include '_partials/page-footer.html' %}
+        </footer>
+    </div>
+   
+{% endblock content %}
+   

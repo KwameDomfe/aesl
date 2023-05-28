@@ -1,0 +1,55 @@
+{% load static %}
+<article id="o__AESLHeader" 
+    class="flex justify-between flex-column-l 
+        vh-100-l 
+        pa1-00 
+        bg-blue0"
+>   
+    <div id="m__AESLLogo"
+        class="flex flex-column-l items-center justify-center"
+        tabindex="0" 
+        title="AESL Logo" 
+        aria-label="AESL Logo"
+    >
+        <a href="{% url 'website:index' %}"
+            class="white-90 mb1-00-l"
+        >
+            {% include 'components/molecules/m__mainHeaderAESLLogo.html' %} 
+        </a>
+    </div>
+    
+    <div id="m__AESLsearchForm" 
+        class=" flex items-center justify-center
+            "
+    >
+        {% include 'components/molecules/m__mainHeaderSearchForm.html' %}
+    </div>
+
+    <div id="m__menuToggle" 
+        class=" flex items-center justify-center dn-l
+            pointer"
+    >
+        {% include 'components/molecules/m__mainHeaderMenuToggle.html' %}
+    </div>
+    
+    <nav id="m__mainNav"
+        class="dn flex-l flex-column-l items-center-l justify-center-l 
+        w-100"
+    >
+        {% include 'components/molecules/m__mainHeaderMenuList.html' %} 
+    </nav>
+    <nav id="m__socialMediaNav"
+        class="dn flex-l w-100-l mv1-00-l" 
+        tabindex="0"
+    >
+        {% include 'components/molecules/m__mainHeaderSocialMediaList.html' %}
+    </nav>
+    
+    <footer id="m__" 
+        class="dn flex-l flex-column-l"
+    >
+        {% include 'components/molecules/m__mainHeaderMiscList.html' %}
+
+        {% include 'components/molecules/m__mainHeaderPoweredby.html' %}
+    </footer>
+</article>

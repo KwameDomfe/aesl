@@ -1,0 +1,88 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block pagetitle %} Create Project Catetory {% endblock pagetitle %}
+
+{% block others %}   
+    
+{% endblock others %}
+
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- 00.00   MAIN -->
+        <div id=""
+            class="min-vh-100 w-100">
+            
+            <!-- Page Header -->
+            <header id="project_Header"
+                class="grid gtc12
+                
+                bg-white"
+            >
+                <figure class="gc1s12">
+                    <img src="{% static './_media/images/Landscape_Images/fpo_hero.png' %}"          
+                        alt=""
+                        class="w-100 vh-20 cover mb3-00">
+                </figure>
+                <hgroup class="w-100 gc1s12
+                        ph1-00 mb3-00">
+                    <h2 class="
+                            f3-00
+                        "
+                    >
+                    Create Project Category
+                    </h2>     
+                </hgroup>
+            
+            </header>
+            <!-- Page Header -->
+
+            <main class="bg-white ph1-00">
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    <label for="name" 
+                        class="dib mb1-00 w-100">Project Category name:
+                        <input id="name" 
+                            type="text"
+                            name="name"
+                            class="w-100 pa0-50 mt0-25"
+                            placeholder="Please Enter Project Category name"
+                            tabindex="1" />
+                    </label>
+
+                    <label for="description" 
+                        class="dib mb1-00 w-100">Project Category description:
+                        <input id="description" 
+                            type="text"
+                            name="description"
+                            class="w-100 pa0-50 mt0-25"
+                            placeholder="Please Enter Project Category description"
+                            tabindex="1" />
+                    </label>
+    
+                    <label for="image" 
+                        class="dib mb1-00 w-100">Project Category Image:
+                        <input id="image" 
+                            type="file"
+                            class="w-100 pa0-50 mt0-25"
+                            placeholder="Please Enter Project Category image"
+                            tabindex="1" />
+                    </label>
+    
+                   
+                    <button>Create Project Category</button>
+                </form> 
+            </main>
+        
+                
+            <footer id="pageFooter"
+                class="ml16-00-m"
+            >
+            
+            </footer>
+        </div>
+    
+    {% endblock pagecontent %}
+{% endblock content %}   

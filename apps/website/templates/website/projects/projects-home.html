@@ -1,0 +1,167 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   Projects Home 
+{% endblock pagetitle %}
+
+
+{% block custom_css %} 
+<!-- Custom Stylesheets -->
+<!-- Custom Stylesheets --> 
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+<!-- Custom Scripts -->
+
+<!-- Custom Scripts -->
+{% endblock scripts %}
+
+{% block content %}
+    <!-- 00.00   main Body -->
+        {% block pagecontent %}
+            <div id="projects-home-page"
+                class=""
+            > 
+                    <!-- Page Header -->
+                    <header 
+                        class="grid gtc12
+                        bg-white">
+                        <figure class="gc1s12">
+                            <img src="{% static '_images\projects\residential\5_0.jpeg' %}"          
+                                alt=""
+                                class="w-100 vh-50 vh-60-l cover">
+                        </figure>
+                        <hgroup class="w-100 blue0 gc1s12">
+                            <h2 class="
+                                w-100 h-100
+                                pa1-00 pt0-00 mb0-00
+                                f5-00
+                                ">
+                                PROJECTS
+                            </h2>     
+                        </hgroup> 
+                        <!-- Page Navigation -->
+                        {% include 'website/projects/_partials/projects_page_nav.html' %}
+                        <!-- Page Navigation -->
+                    </header>
+                    <!-- Page Header -->
+                
+                    <!-- Page Main -->
+                    <main class="bg-white">
+                        <!-- Overview -->
+                        <div id="overview"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            <!-- Overview Description --> 
+                            <header 
+                                class="gr1s1 gc2s10 
+                                    w-100
+                                    blue0 bb"
+                            >
+                                <hgroup id="Project_Overview_1"
+                                    class="f1-50"
+                                >
+                                    <p class="mb0-00 pv4-00 lh-copy tracked tj">
+                                        {% lorem 50 w random %}.
+                                    </p>   
+                                </hgroup> 
+                            </header>
+                            <!-- Overview Description -->
+                        </div>
+                        <!-- Overview -->
+                        <!-- Projects -->
+                        <div id="projects"
+                            class = "w-100 
+                                mv4-00
+                                white-90">
+                            <ul class="flex justify-center flex-wrap w-100 ggap1-00">
+                                {% for project in projects_list %}
+                                    <li class="grid
+                                        w-100 w-45-s w-29-m
+                                        mh0-50"
+                                    >
+                                        
+                                        <article id="" 
+                                            class="flex flex-column justify-start items-start
+                                                h-100 w-100
+                                                bg-blue0 pa0-50
+                                                br0-50"
+                                        >
+                                            <hgroup 
+                                                class="w-100"
+                                            >
+                                                <div class="flex flex-column
+                                                    mv1-00
+                                                    bb"
+                                                >
+                                                    <span class="mb0-50 b">{{ project.name }}</span> 
+                                                    <span class="f0-75 tr">{{ project.location }}</span>  
+                                                </div>
+                                            </hgroup>
+
+                                            <div class="flex flex-column justify-start
+                                                    mb2-00 w-100"
+                                            >
+                                                <figure class="h12-00 w-100">
+                                                    <img src="{{ project.thumbnail.url }}" 
+                                                    alt="" 
+                                                    class="h-100 cover"
+                                                    />
+                                                </figure>
+
+                                                <figcaption class="h12-00
+                                                    w-100
+                                                    mt2-00 
+                                                    f1-00 lh-copy tj"
+                                                >
+                                                    <p class=""
+                                                    >
+                                                        {{ project.description }} . . .
+                                                        {% comment %} <a href="{% url 'website:project-details' project.slug %}"> {% endcomment %}
+                                                        
+                                                    </p> 
+                                                    <div>
+                                                        <a href="{{ project.get_absolute_url }}"
+                                                            class="dib pv0-25 ph0-50 br0-25 bg-gold"
+                                                        >
+                                                            read more
+                                                        </a>
+                                                    </div>
+                                                        
+                                                </figcaption>
+                                            </div>
+
+                                            <footer 
+                                                class="w-100"
+                                            > 
+                                                <div class="flex justify-between w-100">
+                                                    <h5 class="pa0-50 ba br0-25">{{ project.sub_category }}</h5>
+                                                    <small class="pa0-50 ba br0-25">{{ project.sub_category.category }}</small>
+                                                </div>
+                                            </footer>
+
+                                        </article>
+                                        
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- Projects -->
+                    </main>
+                    <!-- Page Main -->
+
+                    <!--Projects page Footer -->
+                    <footer id = "projectsPage__Footer"
+                        class="mb1-00"
+                    >
+                        {% include 'website/_partials/page_footer.html' %} 
+                    </footer>
+                    <!--Projects page Footer -->
+               
+            </div>
+            {% endblock pagecontent %}   
+        <!-- 00.00   main Body -->
+    </main> 
+{% endblock content %}

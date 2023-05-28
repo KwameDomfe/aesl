@@ -1,0 +1,21 @@
+Git Notes
+
+## Git Configuration
+
+git config --global user.name ""
+git config --global user.email ""
+git config --global push.default matching
+git config --global alias.co checkout
+git init
+
+(master) is the master branch
+
+## git add
+
+git add . , git add file.ext, git add *html, etc...
+
+
+## git commit 
+
+git commit -am 'commit message'
+

@@ -1,0 +1,1208 @@
+<section id="address" 
+    class="dn mb0-00-m white-90 w-100" 
+    data-use-new="true" 
+    role="tabpanel" 
+    aria-label="GET IN TOUCH" 
+    section-index="1"
+>
+    <div id=""
+        class=" w-100
+            mb1-00
+            f0-75 tc" 
+        itemtype=""
+    >
+        <div itemprop="name" 
+            class ="mb0-50
+            f1-00 ttu b">
+            AESL Head Office
+        </div>
+
+        <div id="Locational_address"
+            itemprop="address" 
+            itemscope="" 
+            itemtype="http://schema.org/PostalAddress">
+            <span class="dib mb0-50" itemprop="streetAddress">
+                The Hall of Technology<br>
+                Opp. The Ministry of Roads and Highways<br>
+                Ministries, Accra.<br>
+                Ghana
+            </span>
+        </div>
+
+        <div class="flex flex-column items-center justify-center w-100 h-100 f0-75 tracked-tight">
+            <div class="flex justify-between w-100 h-100">
+                <a  href="" 
+                    title="Get In Touch on WhatsApp" 
+                    target="_blank" 
+                    class="tc"
+                    rel="noopener noreferrer">
+                    
+                    <address class="flex items-center justify-center 
+                    
+                        pa0-25
+                        mb0-25 
+                        ba br5-00 b--white-90"> 
+                        <img src="{% static '_media/svgs/WhatsApp.svg' %}" 
+                            alt="WhatsApp" 
+                            class="w1-00 mr0-25" 
+                        />(+233) 302 683 871
+                    </address>
+                    
+                </a>
+                <a  href="" 
+                    title="Get In Touch on WhatsApp" 
+                    target="_blank" 
+                    class="tc "
+                    rel="noopener noreferrer">
+                    
+                    <address class="flex items-center justify-center ba br5-00 pa0-25
+                    mb0-25 b--white-90"> 
+                        <img src="{% static '_media/svgs/WhatsApp.svg' %}" 
+                            alt="WhatsApp" 
+                            class="w1-00 mr0-25" 
+                        />(+233) 302 683 871
+                    </address>
+                    
+                </a>
+            </div>
+            <a  href="" 
+                title="Get In Touch on WhatsApp" 
+                target="_blank" 
+                class="tc w-50"
+                rel="noopener noreferrer">
+                
+                <p class="flex items-center justify-center  ba br5-00 pa0-25
+                mb0-25 b b--white-90"> 
+                    <img src="" change to email
+                        alt="WhatsApp" 
+                        class="w1-00 pa0-25" 
+                    />info@aesl.com 
+                </p>
+            </a>
+        </div>   
+    </div>
+    
+</section>
+
+
+<ul id="people_principal_consultants_gallery"
+    class="gr3s1 gc1s12 flex justify-between flex-wrap
+        ggap1-00
+        w-100
+        mb2-00
+        white-90"
+>
+    {% for x in staff %}
+    <li id="people_principal_consultant_1" 
+        class="flex flex-column items-center justify-center
+            w-30
+        "
+    >
+        <figure class="shadow-5 mb0-50">
+            <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                alt=""
+                class="pa0-50 "
+            /> 
+        </figure>
+        <hgroup 
+            class="flex flex-column items-center justify-start
+                pa0-25
+                blue0
+                    ">
+            
+            <h5 class="mb0-50">
+                {{x.person.title}} {{ x.person.surName}} {{ x.person.lastName}} {{ x.person.otherName}}
+            </h5>
+            <h6>
+                {{ x.rank}}
+            </h6>   
+            <h6>
+                
+            </h6>                                 
+            <h6>
+                {{ x.department}}
+            </h6>                                 
+            <h6>
+                {{ x.title}}
+            </h6>                                 
+        </hgroup> 
+    </li>
+    {% endfor %}
+</ul>     
+
+
+
+ <!-- Practice Start -->
+                {% comment %} 
+                <section id="HomePageMain--Practice">
+                    <header id="HomePageMain__practice--header"
+                        class="grid
+                            h12-00 w-100
+                            
+                            blue0"
+                    >
+                        <img src="{% static '_images\_partials\01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h12-00 cover"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00 bg-gradientLR">
+                            <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
+                                aesl Practice
+                            </h3>     
+                            <h4 class="gold mb0-00 f1-50 w-60 tj">
+                                {% lorem 15 w random %}
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    
+                    <div id="practice__content">
+                        <div id="6x6_Grid_People" 
+                            class="grid gac gafc ggap0-25 ttu pa2-00 f0-75"
+                        >
+                            
+                            <article id="practice_overview" 
+                                class="gr1s2 gc1s2 
+                                    grid justify-between
+                                    shadow-5"       
+                            > 
+                                <header class="grid items-center justify-between">
+                                    <figure 
+                                        class="gc1s1 gr1s1 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\landscape_Images\landscape_01.png' %}"            
+                                            alt=""
+                                            class="cover">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        bg-blue0T white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex
+                                            
+                                        mb0-50">
+                                            Overview
+                                        </h5>
+                                       
+                                    </hgroup> 
+                                </header>
+                                <div>
+                                    <p>
+                                        {% lorem 8 w random %}
+                                    </p>    
+                                    <p>
+                                        {% lorem 8 w random %}
+                                    </p>    
+                                    <p>
+                                        {% lorem 8 w random %}
+                                    </p>  
+                                    <p>
+                                        {% lorem 8 w random %}
+                                    </p>  
+                                </div> 
+                                <div>
+                                    <a  href="{% url 'website:practice-home' %}"
+                                        class="blue0 ba br0-25 dib pa0-50 mb0-50"
+                                    >
+                                        EXPLORE 
+                                    </a> 
+                                </div>   
+                                <footer class="grid items-end">
+                                    <figure 
+                                        class="gc1s1 gr1s1"
+                                    >
+                                        <img src="{% static '_images\placeholders\landscape_Images\landscape_01.png' %}"            
+                                            alt=""
+                                            class="">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        
+                                        white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class=""  
+                                        >
+                                            Overview
+                                        </h5>
+                                    </hgroup> 
+                                </footer>       
+                            </article>
+
+                            <article id="practice_history" 
+                                class="gr1s1 gc3s2"
+                            >
+                                <div id=""
+                                    class="grid items-end justify-between 
+                                        h-100
+                                        bg-blue0 "
+                                >
+                                    <figure 
+                                        class="gc1s1 gr1s1 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="
+                                                f1-00 mb0-00"
+                                        >History</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        
+                            <article id="practice_mandate" 
+                                class="gr1s1 gc5s2"      
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Mandate</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_functions" 
+                                class="gr1s1 gc7s2"
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Functions</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_mission_vision_values" 
+                                class="gr1s1 gc9s2"      
+                            >
+                                <div class="grid items-end justify-end h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                           grid items-center justify-center
+                                            bg-gradient1TB
+                                            white-90 
+                                            pa0-50
+                                            h4-00"
+                                    >
+                                        <h5 
+                                            class="w-100
+                                                f1-00 mb0-00 tc"
+                                        >Mission, Vision, and Values</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_sector_ministry" 
+                                class="gr1s1 gc11s2"       
+                            > 
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        flex flex-column justify-between
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h-100
+                                        ">
+                                        <h5 
+                                            class="
+                                                f1-00 mb1-00"
+                                        >Sector Ministry</h5>
+                                        <p class="">
+                                            {% lorem 18 w random %}
+                                        </p>
+                                        
+                                        <div class="grid justify-start items-end">
+                                            <a  href="{% url 'website:sector-ministry' %}"
+                                                class="blue0 ba br0-25 dib pa0-50 mt2-00"
+                                            >Read More</a> 
+                                        </div> 
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_corporate_governance" 
+                                class="gr2s1 gc3s2"
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Corporate Governance</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        
+                            <article id="practice_management" 
+                                class="gr2s1 gc5s2"      
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Management</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_alliances" 
+                                class="gr2s1 gc7s2"
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Alliances</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_client_speak" 
+                                class="gr2s1 gc9s2"      
+                            >
+                                <div class="grid items-end justify-center h-100">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100 h-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Client Speak</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="practice_corporate_responsilities" 
+                                class="gr2s1 gc11s2"       
+                            > 
+                                <div class="grid items-end justify-center ">
+                                    <figure 
+                                        class="gc1s1 gr1s1 w-100"
+                                    >
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="">
+                                    </figure> 
+                                    <hgroup 
+                                        class="gc1s1 gr1s1
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
+                                        <h5 
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Corporate Responsibilities</h5>
+                                        <p class="dn">
+                                            {% lorem 8 w random %}
+                                        </p>
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                        </div> 
+                    </div>
+
+                    <footer id="practice__footer">
+                        <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
+                            <div class="gold">
+                                AESL || Practice
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section> 
+                {% endcomment %}
+                <!-- Practice End-->
+        
+                <!-- Principles Start -->
+                {% comment %} 
+                <section id="HomePageMain--Principles"
+                    class=""
+                >
+                    <header id="principles__header"
+                        class="grid
+                            w-100
+                            blue0"
+                    >
+                        <img src="{% static '_images\_partials\01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h12-00"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00 white-90 bg-gradientLR">
+                            <h3 class="pv1-00 mb0-00 f3-00 ttu">
+                                aesl principles
+                            </h3>     
+                            <h4 class="gold mb0-00 f1-50 w-60 tj">
+                                The AESL is guided by principes in all our deliverables 
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    <section id="principles_content"
+                        class="grid gtc12 ggap1-00
+                            container white-90
+                            pa4-00 ma4-00 bg-gol"
+                    >    
+                        <article id="principles__overview"
+                            class="gr1s4 gc5s4"       
+                        >
+                              
+                            <figure class="flex flex-column 
+                                h-100 pa1-00  
+                                bg-white blue0 shadow-5">
+                                <hgroup id = ""
+                                    class="mb4-00
+                                        f1-25
+                                        tj"
+                                >   
+                                    <p>
+                                        {% lorem 15 w random %}
+                                    </p>  
+                                    <p>
+                                        {% lorem 15 w random %}
+                                    </p> 
+                                    <p>
+                                        {% lorem 10 w random %}
+                                    </p>
+                                </hgroup> 
+                                <div>
+                                <a href="{% url 'website:principles-home' %}"
+                                    class = "ba blue0 mt2-00 pa0-25 br0-25"  
+                                > EXPLORE </a>                                           
+                                </div>
+                            </figure>
+                           
+                        </article>
+
+                        <article id="indexPrinciples__civic"
+                            class="gr5s2 gc5s4"       
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        Civic
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                           
+                        </article>
+
+                        <article id="indexPrinciples__excellence" 
+                            class="gr1s2 gc1s4"            
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        excellence
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                        </article>
+        
+                        <article id="indexPrinciples__integrity_and_honesty" 
+                            class="gr3s2 gc1s4" 
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        integrity and honesty
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                        </article>
+                        
+                        <article id="indexPrinciples__professionalism" 
+                            class="gr5s2 gc1s4" 
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        professionalism
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                            
+                        </article>
+                        
+                        <article id="indexPrinciples__Sustainability" 
+                            class="gr3s2 gc9s4
+                                "
+                        >   
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        Sustainability
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                        </article>
+                            
+                        <article id="indexPrinciples__timeliness_and_cost_effectiveness" 
+                            class="gr1s2 gc9s4 "
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        timeliness and cost effectiveness
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                        </article>
+                        
+                        <article id= "indexPrinciples__empowerment" 
+                            class="gr5s2 gc9s4"
+                        >
+                            <figure class="shadow-5 aspect-ratio--1x1 relative"
+                            >
+                                <hgroup id = ""
+                                    class="flex items-center justify-center
+                                        h-100 w-100
+                                        pa1-00
+                                        bg-blue0 
+                                        absolute
+                                        white-90 tc ba"
+                                >                                           
+                                    <h3 class="flex items-start justify-center 
+                                        pa1-00 ma2-00 
+                                        white-90 f1-00 ba br0-25 ttu">
+                                        empowerment
+                                    </h3>    
+                                </hgroup>
+                            </figure>
+                        </article>
+                    </section>
+                    <footer id="principles__footer">
+                        <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
+                            <div class="gold">
+                                AESL || Principles
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section> 
+                {% endcomment %}
+                <!-- Principles End -->
+        
+                <!-- People Start -->
+                {% comment %} 
+                <section id="HomePageMain--People"
+                    class=""
+                >   
+                    <header id="services__header"
+                        class="grid
+                             w-100
+                            blue0"
+                    >
+                        <img src="{% static '_images\_partials\01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h12-00"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 pl4-00 bg-gradientLR">
+                            <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
+                                aesl People
+                            </h3>     
+                            <h4 class="dn flex-m gold mb0-00 f1-50 w-50 tj">
+                                The AESL is a practicing professional group of Consulting Architects, Civil, Installations Engineers ,Land and Quantity Surveyors.
+                            </h4>     
+                        </hgroup>
+                    </header>
+
+                    <div id="people__content">
+                        <div id="6x6_Grid_People" 
+                            class="grid gc1s12 ggap0-50 ttu pa4-00 f0-75"
+                        >
+                            <article id="people_architects" 
+                                class="gr1s1 gc9s4"       
+                            > 
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50 "
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\architect_01.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Architects
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                            
+                            <article id="people_civilEngineers" 
+                                class="gr1s1 gc1s4"
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-blue0">
+                                    <figure 
+                                        class="w-50 pa0-50 "
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\civil_engineers.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Civil Engineers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        
+                            <article id="people_quantitySurveyors" 
+                                class="gr1s1 gc5s4"      
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 ">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\qs_01.jpg' %}"            
+                                            alt=""
+                                            class="w-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column justify-start
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            quantity Surveyors
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="people_valuers" 
+                                class="gr2s1 gc7s4"       
+                            > 
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\valuers.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            valuers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                            
+                            <article id="people_waterEngineers" 
+                                class="gr2s1 gc3s4"
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\water_engineers_01.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Water Engineers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="people_landSurveyors" 
+                                class="gr3s1 gc9s4"       
+                            > 
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\geomatic_01.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Land Surveyors
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                            
+                            <article id="people_mechanicalEngineers" 
+                                class="gr3s1 gc5s4"
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\mech_engineer.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                        Mechanical Engineers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        
+                            <article id="people_finance" 
+                                class="gr3s1 gc1s4"      
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\finance.jpg' %}"            
+                                            alt=""
+                                            class="w-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column justify-start
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            finance
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="people_humanResources" 
+                                class="gr4s1 gc3s4"       
+                            > 
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\HR-Management.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Human Resources
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                            
+                            <article id="people_electricalEngineers" 
+                                class="gr4s1 gc7s4"
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\06.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Electrical Engineers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+
+                            <article id="people_legalAdvisors" 
+                                class="gr5s1 gc1s4"       
+                            > 
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\corporate-legal-advisor-500x500.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            legal advisors
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                            
+                            <article id="people_projectManagers" 
+                                class="gr5s1 gc5s4"
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\pm_01.jpg' %}"            
+                                            alt=""
+                                            class="w-100 h-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Project Managers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        
+                            <article id="people_geotechEngineers" 
+                                class="gr5s1 gc9s4"      
+                            >
+                                <div class="flex items-center justify-center h-100 w-100 bg-black-50">
+                                    <figure 
+                                        class="w-50 pa0-50"
+                                    >
+                                        <img src="{% static '_images\index\AESL_People\geomatic_02.jpg' %}"            
+                                            alt=""
+                                            class="w-100">
+                                    </figure> 
+                                    <hgroup 
+                                        class="flex flex-column justify-start
+                                        w-50 h-100
+                                        bg-blue1t3 white-90 
+                                        pa0-50
+                                        ">
+                                        <h5 
+                                            class="flex items-center
+                                            
+                                        f1-00 mb0-50">
+                                            Geo-Tech Engineers
+                                        </h5>
+                                        <p>
+                                            {% lorem 8 w random %}
+                                        </p>    
+                                    </hgroup> 
+                                </div>
+                            </article>
+                        </div> 
+                    </div>
+
+                    <footer id="people__footer">
+                        <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
+                            <div class="gold">
+                                AESL || People
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>   
+                </section>  {% endcomment %}
+                <!-- People End -->
+                

@@ -1,0 +1,63 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %} 
+   Search Home
+{% endblock title %}
+
+{% block content %}
+    <main id="l_mainContents"
+        class="flex flex-column flex-row-l 
+            vh-100 w-100"
+    >
+        <!-- 00.00   mainHeader -->
+        <div id="mainHeader" 
+            class="flex items-center justify-between flex-column-l
+                white-90"  
+        >
+            {% include '_partials/_mainHeader.html' %}
+        </div>
+        <!-- 00.00   mainHeader -->
+
+        <!-- 00.00   main Body -->
+        <div id="mainBody"
+            class="w-100 of-y-scroll"
+        >
+            {% block mainbody %}
+            <div id=""
+                class="">
+                <header class="grid gtc12
+                    bg-blue0 ">
+                    <figure class="gc1s12 mb-00">
+                        <img src="{% static './_media/images/search/search.jpg' %}"          
+                            alt=""
+                            class="w-100 vh-60 cover">
+                    </figure>
+                </header>
+                <main class="">
+                    
+                    <div id =""
+                        class="grid gtc12 ggap1-00
+                        pa1-00">
+                        <article class="gr1s3 gc1s12">
+                            
+                            <div role="main">
+                                <h2>Page not found</h2>
+                                
+                                <p>Looks like you followed a bad link. If you think it's our fault, please <a href="https://code.djangoproject.com/" class= "blue0">let us know</a>.</p>
+                                
+                                <p>Here's a link to the <a href="{% url 'pages:index' %}" class= "blue0">homepage</a>, please use the menus to navigate to a specific section.</p>
+                            </div>
+                        </article>
+                    </div>
+        
+                </main>
+                <footer class="">
+                    {% include '_partials/page-footer.html' %}
+                </footer>
+            </div>
+            {% endblock mainbody %}
+        </div>
+        <!-- 00.00   main Body -->
+    </main>  
+{% endblock content %}

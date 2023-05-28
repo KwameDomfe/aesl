@@ -1,0 +1,132 @@
+
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+<!-- TITLE BLOCK -->
+{% block title %} 
+    Admin SignIn Page
+{% endblock title %}
+<!-- TITLE BLOCK END-->
+
+<!-- OTHERS BLOCK -->
+{% block others %}   
+    
+{% endblock others %}
+<!-- OTHERS BLOCK END-->
+
+<!-- CUSTOM CSS BLOCK -->
+{% block custom_css %}   
+    
+{% endblock custom_css %}
+<!-- CUSTOM CSS BLOCK END-->
+
+<!-- CUSTOM CSS JS -->
+{% block Custom_js %}   
+    
+{% endblock Custom_js %}
+<!-- CUSTOM CSS JS END-->
+
+<!-- PAGE TITLE BLOCK -->
+{% block page_title %} 
+    Home 
+{% endblock page_title %}
+<!-- PAGE TITLE BLOCK END-->
+
+
+{% block pagecontent %}
+    <div id="AdminSignInPage"
+        class="vh-75 w-60-s 
+            ma2-00">
+        <div id="AdminSignIn_Content"
+            class="flex flex-column items-center justify-between
+            h-100 ">
+            <header id = "AdminSignIn_Header"
+                class="w-100 
+                pa1-00  
+                bg-blue0
+                white-90">
+                <figure id = ""
+                    class="flex justify-between items-center 
+                        w12-00">
+                    <img src="{% static '_media/images/Regular_Images/fpo_avatar.png' %}" 
+                        alt=""
+                        class="w2-00 br-100">
+                    <figcaption class="f1-25 ttc">
+                        Admin Login
+                    </figcaption>
+                </figure>
+            </header>
+            <main id = "AdminSignIn_Main"
+                class="bg-white">
+                <!-- login details -->
+                <form id=""
+                    class="flex flex-column justify-between items-center 
+                        w-100 h-100 ph1-00" 
+                    method="POST"
+                    action="{}">
+                    {% csrf_token %}
+                    {% if error %}
+                        <p class = "red"></p>
+                    {% endif %}
+                    <fieldset id = "admin-primary-credentials"
+                        class="ph1-00  mb1-00 w-100">
+                        <legend class="ph0-50">
+                           Login Credentials
+                        </legend>
+                        <label for="username"
+                            class="dib mb1-00 w-100">Username:
+                            <input id="username"
+                                class="w-100 pa0-50 mt0-25" 
+                                type="text"
+                                placeholder="Please Enter Your Username"
+                                name="username"
+                                tabindex="1" />
+                        </label>
+                        <label for="password"
+                            class="dib mb1-00 w-100">Password:
+                            <input id="password"
+                                class="w-100 pa0-50 mt0-25" 
+                                name = "password"
+                                type="password"
+                                placeholder="Please Enter Your Password"
+                            />
+                            <!-- <a class="blue0 f0-75" href="">Forgot Password?</a> -->
+                        </label>
+                        
+                        <label for="loginSubmit"
+                            class="dib 
+                                w-100">
+                            <button type = "submit"
+                                class = "bg-blue0
+                                    white-90
+                                    pa0-50
+                                    b--none"    
+                            >
+                                Submit
+                            </button>
+                        </label> 
+                    </fieldset>
+                   
+                </form>
+                <!-- Log In with Social Media -->
+                
+            </main>
+            <footer id="AdminSignIn_Footer"
+                class="flex justify-between items-center
+                w-100
+                pa1-00 
+                white-90  
+                bg-blue0 ">
+                <div>
+                    AESL
+                </div>
+                <div>
+                    <h5 class="f0-75 tc">
+                        Consulting Architects, Enginners and Surveyors
+                    </h5>
+                </div>
+            </footer>
+        </div>
+    </div>
+{% endblock pagecontent %}

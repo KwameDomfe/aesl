@@ -1,0 +1,219 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Principles - Professionalism
+{% endblock pagetitle %}
+
+{% block content %}>
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white">
+            <figure class="gc1s12">
+                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"          
+                    alt=""
+                    class="w-100 vh-50 vh-60-l cover">
+            </figure>
+            <hgroup class="w-100 blue0 gc1s12">
+                <h2 class="ph1-00 pb1-00 mb0-00
+                    f5-00 ttu"
+                >
+                    Professionalism
+                </h2>     
+            </hgroup> 
+            <!-- Page Navigation -->
+            {% include 'website/principles/_partials/principles-page-nav.html' %}
+            <!-- Page Navigation -->
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="bg-white">
+
+            <div id="l_3:1" 
+            class="grid gtc4"
+        >
+            <!-- AESL History Start -->
+            <div id="lc_gc1s3__pageMain--history"
+                class="gc1s3
+                    min-vh-100"
+            >   
+                <!-- Page Contents-->
+                <div id="Professionalism"
+                    class="grid gtc12 ggap1-00
+                        ph1-00
+                        mb3-00"
+                >
+            
+                    <!-- Practice Description -->
+                    <article id="Project_Practice_1" 
+                        class="gr1s1 gc2s10 tj lh-copy"
+                    > 
+                        <p>
+                            AESL offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and private sector clients.
+                        </p>
+                        <P>
+                            100% state-owned limited liability company
+
+                        </P>
+                    </article>
+                    <!-- Practice Description -->
+
+                    <!-- Practice Gallery -->
+                    <div id="Practice_gallery"
+                        class="gr2s1 gc1s12
+                            grid gtc12 ggap1-00
+                            ph0-25 white-90">
+                        
+                        <article id="professionalism-01" 
+                            class="gr1s1 gc1s12
+                            flex items-center justify-center
+                            relative"
+                        >
+                            {% comment %} <hgroup 
+                                class="flex flex-column items-center justify-center
+                                    pa0-50 bg-red 
+                                    absolute
+                                        ">
+                                <h3>
+                                    Professionalism 01
+                                </h3>    
+                                <span>
+                                - Techiman, Ghana.
+                                </span>    
+                            </hgroup>  {% endcomment %}
+                            <figure >
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        w-100 h-100
+                                        cover"
+                                    /> 
+                            </figure>
+                        </article>
+                        
+                        <article id="professionalism-02" 
+                            class="gr2s2 gc1s12
+                                grid items-center
+                                w-100
+                                "
+                        >
+                            <figure class="gc1s1 gr1s1 shadow-5">
+                                <img src="{% static '_images\practice\_partials\practice_3.jpg' %}"            
+                                    alt=""
+                                    class=""
+                                /> 
+                            </figure>
+                            {% comment %} <hgroup 
+                                class="gc1s1 gr1s1
+                                    pa0-50
+                                    w12-00
+                                    ma6-00
+                                    bg-red"
+                            >           
+                                <h3>
+                                    Professionalism 02
+                                </h3>    
+                                <span>
+                                - Accra , Ghana.
+                                </span>    
+                            </hgroup>  {% endcomment %}
+                        </article>
+
+                        <article id="professionalism-03" 
+                            class="gr4s1 gc1s6
+                            flex items-center w-100
+                            relative"
+                        >
+                            {% comment %} <hgroup 
+                                class="flex flex-column items-center
+                                    pa0-50
+                                    bg-red
+                                    absolute
+                                        ">
+                                <h3>
+                                    Professionalism 03
+                                </h3>    
+                                <span>
+                                - Accra , Ghana.
+                                </span>    
+                            </hgroup>  {% endcomment %}
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\_partials\practice_3.jpg' %}"            
+                                    alt=""
+                                    class=""
+                                /> 
+                            </figure>
+                        </article>
+
+                        <article id="professionalism-04" 
+                            class="gr5s1 gc7s6
+                                flex items-center justify-center
+                                relative"
+                        >
+                            {% comment %} <hgroup 
+                                class="flex items-center justify-center
+                                    bg-red
+                                    absolute
+                                        ">
+                                <h3 class="
+                                        flex items-center justify-around
+                                        pa0-50
+                                        white-90">
+                                        Professionalism 04
+                                </h3>    
+                                <span class="white-90 flex items-center justify-center">
+                                    - Techiman, Ghana.
+                                </span>    
+                            </hgroup>  {% endcomment %}
+                            <figure >
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        ba b--gold 
+                                        "
+                                    /> 
+                            </figure>
+                        </article>
+
+                        <article id="professionalism-misc_gold" 
+                            class="gr4s1 gc8s1 w-100 h-100
+                                flex items-center justify-center
+                                bg-red
+                            ">
+                        </article>
+
+                        <article id="professionalism-misc_black" 
+                            class="gr5s1 gc2s1 w6-00 h-100
+                                flex items-center justify-center
+                                bg-black-90
+                                ">
+                        </article>
+                        <!-- Practice -->
+
+                    </div>
+                    <!-- Practice Gallery -->   
+                </div>
+                <!-- Page Contents -->
+            
+                <!-- Page Footer -->
+                <footer class="gr3s1 gc1s12 pa1-00 ma1-00 bg-red white-90">
+                    Principles || Professionalism
+                </footer>
+                <!-- Page Footer -->
+            </div>
+            <!-- AESL History End -->
+
+            <!-- AESL History Aside  Start -->
+            <div id="lc_gc4s1__pageAside--history" 
+                class="gc4s1 "
+            >
+            </div>
+            <!-- AESL History Aside  End -->
+        </div>
+        </main>
+        <!-- Page Main --> 
+    {% endblock pagecontent %}   
+{% endblock content %}

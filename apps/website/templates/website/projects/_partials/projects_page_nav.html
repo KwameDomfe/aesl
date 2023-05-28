@@ -1,0 +1,98 @@
+<div id="projects_page_Nav"
+    class="grid gtc12 gc1s12 ggap1-00
+        pa1-00
+        white-90
+        f1-00  tracked-tight
+        bg-blue0
+        "
+    >
+    <nav id="projects_categories_nav1" 
+        class="gr1s1 gc1s1
+            w10-00 h10-00
+            bg-blue0
+            br0-50 ba shadow-yellow"
+    >
+        <ul id = "projectcategories_list_1"
+            class="
+            pa0-50">
+           {% for project_category in project_categories_list_1 %}
+                <li class="mb0-50">
+                    <a href="{% url 'website:project-category-details' project_category.slug %}"
+                    class="white-90">
+                        {{ project_category.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>   
+    </nav>
+    
+    <nav id="projects_categories_nav2" 
+        class="gr1s1 gc2s1
+            w10-00 h10-00 
+            bg-blue0
+            br0-50 ba shadow-yellow"
+    >
+        <ul id = "projectcategories_list_2"
+            class="flex flex-column justify-start
+                w-100, h-100
+                pa0-50">
+            {% for project_category in project_categories_list_2 %}
+                <li class="mb0-50">
+                    <a href="{% url 'website:project-category-details' project_category.slug %}"
+                    class="white-90 ">
+                        {{ project_category }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>  
+    </nav>
+
+    <nav id="projects_info" 
+        class="gr1s1 gc11s2
+            flex items-center justify-center
+            w10-00 h10-00 shadow-yellow"
+    >
+        <ul id = ""
+            class="gr1s1 gc11s2
+                w-100 h-100
+                pa0-50
+                blue0
+                ba
+                bg-white
+                br0-50"
+        >
+            <li class="">
+                <a  href="{% url 'website:projects-list' %}"
+                    class="blue0" 
+                >Projects List</a>
+            </li>     
+            <li class="">
+                <a  href="{% url 'website:projects-maps-home' %}"
+                    class="blue0" 
+                >Projects Map</a> 
+            </li>     
+            <li class="">
+                <a  href="{% url 'website:project-films-home' %}"
+                    class="blue0"    
+                >Films</a>
+            </li>     
+        </ul> 
+    </nav>
+
+    <article id="misc_1" 
+        class="gr1s1 gc7s2
+            bg-blue3  h10-00 w-100
+            br0-50
+            "
+    >
+    </article>
+
+    <article id="misc_2" 
+        class="gr1s1 gc9s2
+             h10-00 w-100
+            bg-gold
+            br0-50
+            "
+    >
+    </article>
+</div>

@@ -1,0 +1,210 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %} 
+    Practice - client Speak
+{% endblock title %}
+
+{% block pagetitle %} 
+    Practice - Client Speak
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            ">
+            <figure class="gc1s12">
+                <img src="{% static '_images\practice\client_speak\01.jpeg' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover">
+            </figure>
+            <hgroup class="w-100 blue0 gc1s12">
+                <h2 class=" ph1-00 pb0-50 mb0-00
+                f5-00 ttu
+                    ">
+                    client Speak
+                </h2>     
+            </hgroup>
+            <!-- Page Navigation -->
+            {% include 'website\practice\_partials\practice-page-nav.html' %}
+            <!-- Page Navigation -->
+
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+            <main class="ph1-00">
+                <div class="grid gtc4">
+
+                    <div id="pageDetails"
+                        class="gc1s3
+                            mb1-00 min-vh-100"
+                    >   
+                        <!-- Practice client_Speak -->
+                        <div id="client_Speak"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            
+                            <article id="client_Speak--Overview" 
+                                class="gr1s1 gc2s10"
+                            >   
+                                <div class="ggap1-00 mv6-00">
+                                   
+                                        <p>
+                                            The Public Works Department (PWD) established by the British was used for all state works over decades post-colonial.
+                                        </p>
+                                        <p>
+                                            The institutions like State Construction Corporation (SCC), State Housing Corporation (SHC), Highways.
+                                        </p>
+                                        <p>
+                                            No privates businesses were allowed to handle state/ public works except the PWD.
+                                        </p>
+                                        <p>
+                                            The Public Works Department (PWD) established by the British was used for all state works over decades post-colonial.
+                                        </p>
+                                        <p>
+                                            The institutions like State Construction Corporation (SCC), State Housing Corporation (SHC), Highways.
+                                        </p>
+                                    
+                                </div>
+                            </article>
+                            <article id="client_Speak--gallery" 
+                                class="gr2s1 gc1s12"
+                            >    
+                                <!-- Practice -->
+                                <div id="practice"
+                                    class="gr3s1 gc1s12
+                                            grid gtc12 ggap1-00
+                                            white-90"
+                                >
+                                    <figure id="" 
+                                        class="gr1s1 gc1s5
+                                        flex items-center justify-center
+                                        "
+                                    >
+                                        <img src="{% static '_images\practice\client_speak\01.jpeg' %}"            
+                                            alt=""
+                                            class="
+                                                w-100 h-100
+                                                cover"
+                                        /> 
+                                    </figure>
+                                  
+                                    <figure  id="passport_office" 
+                                        class="gr1s1 gc6s4
+                                            flex items-center justify-center
+                                             shadow-5"
+                                    >
+                                        <img src="{% static '_images\practice\client_speak\01.jpeg' %}"            
+                                            alt=""
+                                            class="pa0-50"
+                                        /> 
+                                    </figure>
+
+                                    <figure id="Office_Techiman" 
+                                        class="gr1s1 gc10s3
+                                            flex items-center justify-center
+                                            "
+                                    >
+                                        <img src="{% static '_images\practice\client_speak\01.jpeg' %}"            
+                                            alt=""
+                                            class="
+                                                ba b--gold 
+                                                "
+                                            /> 
+                                    </figure>
+                                </div >
+                                <footer id="practice"
+                                class="gr3s1 gc1s12
+                                        grid gtc12 ggap1-00
+                                        white-90">
+                                    <article id="misc_gold" 
+                                        class="gr3s1 gc6s1
+                                            flex items-center justify-center
+                                            bg-gray w-100 h0-00 pb-75
+                                            ">
+                                    </article>
+                                
+                                    <article id="misc_blue" 
+                                        class="gr2s1 gc6s3
+                                            flex items-center justify-center
+                                            bg-black-90 w-100 h0-00 pb-50
+                                            ">
+                                    </article>
+                                </footer>
+                                <!-- Practice -->
+                            </article>
+                            <footer class="gr3s1 gc1s12 pa1-00 bg-gray white-90 w-100 i">
+                                Practice || Client Speak
+                            </footer>
+                        </div>
+                        <!-- Practice client_Speak -->
+                    </div>
+
+                    <div id="pageNav" 
+                        class="gc4s1 
+                            w-100 blue0 ">
+                        <div class="flex flex-column justify-between
+                            min-vh-100 
+                            ph2-00 pb1-00
+                            pt6-00
+                            sticky top-0"
+                        >
+                            <div>
+                                <a href= {% url 'website:practice-home' %}
+                                    class="dib mb1-00 
+                                        f1-25 blue0 ttu fw6">Back to Practice
+                                </a>
+                                <ul class="mb1-00 bl bw4 pa1-00 b--gray gray f0-75">
+                                    <h3 >Client Speak</h3>
+                                    <li class="mb1-00 i">
+                                        <a href="#client_Speak--Overview"
+                                            class="gray"
+                                        >
+                                            AESL Clients
+                                        </a>
+                                    </li>
+                                    <li class="mb1-00 i">
+                                        <a href="#client_Speak--gallery"
+                                            class="gray"
+                                        >
+                                            AESL Clients Testimonials
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
+
+                            <div class="h6-00 gray">
+                                <small>Previous</small></br>
+                                <a href="{% url 'website:services' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL Services
+                                </a> <br><br>
+                                <small>Next</small></br>
+                                <a href="{% url 'website:alliances' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL alliances
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </main>
+        <!-- Page Main -->
+    {% endblock pagecontent %}
+{% endblock content %}

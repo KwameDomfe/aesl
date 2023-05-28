@@ -1,0 +1,52 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   Home Page
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+
+{% block custom_scripts %}   
+{% endblock custom_scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+    {% block pagecontent %}
+        <div id="blank-page"
+            class=""
+        >
+            <!-- Page Header -->
+            {% block pageheader %}
+            
+            {% endblock pageheader %}
+            <header id ="home-page-header"
+                class="mb2-00" 
+            >
+            </header>
+            <!-- Page Header -->
+
+            <!-- Page Main Start -->
+            <main class="ph1-00">
+                
+                
+            </main>
+
+            <!-- Page Footer Start -->
+                <footer id = "home-page-footer">
+                    <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
+                        <div>
+                            AESL
+                        </div>
+                        <div>
+                            Consulting Architects, Engineers and Surveyors
+                        </div>
+                    </div> 
+                </footer>
+            <!-- Page Footer End -->
+        </div>
+    {% endblock pagecontent %}
+    <!-- main Body End -->
+{% endblock content %}

@@ -1,0 +1,475 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   People Home 
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+{% block custom_scripts %}   
+
+{% endblock custom_scripts %}
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- People Page Start -->
+        <div id="peoplePage"
+            class=""
+        > 
+            <!-- People Page Header Start -->
+                <header id="peopePage__Header"
+                    class=""
+                >
+                    <figure id="peopePage__Header--Background" 
+                        class="gc1s12"
+                    >
+                        <img src="{% static '_images\people\What is the caption for this picture..jpeg' %}"          
+                            alt=""
+                            class="vh-50 vh-60-l cover">
+                    </figure>
+                    <hgroup id="peopePage__Header--Title" 
+                        class="gc1s12 
+                        w-100 
+                        blue0"
+                    >
+                        <h2 class="ph1-00 mb1-00
+                            f5-00"
+                        >
+                            PEOPLE
+                        </h2>     
+                    </hgroup> 
+                    <!-- Page Navigation -->
+                        {% include 'website/people/_partials/people-page-nav.html' %}
+                    <!-- Page Navigation -->
+                </header>
+            <!-- People Page Header End -->
+            
+            <!-- People Page Main Start -->
+                <main id="peoplePage__Main"
+                    class="ph1-00"
+                >
+                    <!-- AESL People Start -->
+                    <div id="AESL__People"
+                        class="grid gtc12 ggap1-00
+                            mb1-00"
+                    >            
+                        <!-- AESL People Categories Start -->
+                            <article id="AESL__People--Categories"
+                                class="blue0 gr1s1 gc1s12"   
+                            >   
+                                <header id="AESL__PeopleHeader" 
+                                    class="gr1s1 gc3s8 flex ggap2-00 
+                                        f1-50 ph8-00 pt4-00"
+                                > 
+                                    <P class="blue0 lh-copy tracked">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
+                                    </P>
+                                </header>
+                                <section id="AESL__PeopleConsultants" 
+                                    class="ma2-00 bg-blue0 pa2-00"
+                                >
+                                    <div id="4x4_Grid_PeopleConsultants"
+                                        class="grid gtc12 ggap1-00"
+                                    >
+                                        <article id="AESL__PeopleConsultants--PrincipalConsultants"
+                                            class="gr1s1 gc1s3
+                                                grid items-center justify-center
+                                                white-90"
+                                        >
+                                            <a href="{% url 'website:principal-consultants' %}"
+                                                class = ""  
+                                            >
+                                                <figure class="items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br0-50 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <figcaption id = ""
+                                                        class="gr1s1 gc1s1 
+                                                            flex flex-column items-center justify-center
+                                                            h-100 w-100
+                                                            pv1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            white-90 tc"
+                                                    >
+                                                        <h3 class="dib 
+                                                            w-100 
+                                                            pa0-50 mb0-00 
+                                                            white-90 bg-white-10 ba b--white br0-50 
+                                                            f1-00"
+                                                        >
+                                                            Principal Consultants
+                                                        </h3>
+                                                    </figcaption>
+                                                </figure> 
+                                            </a>
+                                        </article>
+                                        
+                                        <article id="AESL__PeopleConsultants--SeniorConsultants"
+                                            class="gr1s1 gc4s3
+                                                grid items-center justify-center
+                                                white-90"      
+                                        >
+                                            <a href="{% url 'website:senior-consultants' %}"
+                                                class = ""  
+                                            >    
+                                                <figure class="items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br0-50 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            pv1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            white-90 tc"
+                                                    >
+                                                        <h3 class="dib 
+                                                            w-100 
+                                                            pa0-50 mb0-00 
+                                                            white-90 bg-white-10 ba b--white br0-50 
+                                                            f1-00"
+                                                        >
+                                                            Senior Consultants
+                                                        </h3>
+                                                    </hgroup>
+                                                </figure>
+                                            </a> 
+                                        </article>
+
+                                        <article id="AESL__PeopleConsultants--Consultants" 
+                                            class="gr2s1 gc1s3
+                                            grid items-center justify-center"
+                                        >
+                                            <a href="{% url 'website:consultants' %}"
+                                                    class = ""  
+                                            >
+                                                <figure class="items-center justify-center"
+                                                >
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="gc1s1 gr1s1 br0-50"
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            pv1-00
+                                                            bg-blue0-50
+                                                            f0-75 tc"
+                                                    >
+                                                        <h3 class="dib 
+                                                            w-100 
+                                                            pa0-50 mb0-00 
+                                                            white-90 bg-white-10 ba b--white br0-50 
+                                                            f1-00"
+                                                        >
+                                                            Consultants
+                                                        </h3>
+                                                    </hgroup>
+                                                </figure>
+                                            </a>
+                                        </article> 
+                                            
+                                        <article id="AESL__PeopleConsultants--ConsultantsSummary" 
+                                            class="gr1s2 gc7s6
+                                                grid"
+                                        >
+                                            <figure class="shadow-5 items-center justify-center">
+                                                <hgroup id = ""
+                                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                        h-100
+                                                        pa1-00
+                                                        bg-white-90
+                                                        br0-50
+                                                        f1-25 tc"
+                                                    >
+                                                    <h1 class = "mv1-00 f2-00">
+                                                        AESL Consultants
+                                                    </h1>
+                                                    <p class="lh-copy mb2-00">
+                                                        {% lorem 40 w random %}
+                                                    </p>
+                                                </hgroup> 
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </section>
+                                
+                                <section id="AESL__PeopleProfessionals" 
+                                    class="ma2-00 bg-white pa2-00"
+                                >
+                                    <div id="4x4_Grid_PeopleProfessionals"
+                                        class="grid gtc12 ggap1-00"
+                                    >
+                                        <article id="AESL__PeopleProfessionals--ProfessionalsSummary" 
+                                            class="gr1s2 gc1s6
+                                                grid"
+                                        >
+                                            <figure class="grid items-center justify-center
+                                               "
+                                            >
+                                                <hgroup id = ""
+                                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                        h-100
+                                                        pa1-00
+                                                        bg-blue0 br1-00 
+                                                        white-90
+                                                        f1-25
+                                                        tc"
+                                                >
+                                                    <h1 class = "f2-00 mv1-00">
+                                                        AESL Professionals
+                                                    </h1>
+                                                    <p class="lh-copy mb2-00">
+                                                        AESL has a highly qualified and experienced team of engineers that can provide a wide range of capabilities including general infrastructure, heavy civil engineering and building structure design. 
+                                                    </p>
+                                                </hgroup> 
+                                            </figure>
+                                        </article>
+                                        <article id="AESL__PeopleProfessionals--SeniorProfessionals"
+                                            class="gr1s1 gc7s3
+                                                grid items-center justify-center
+                                                white-90"
+                                        >
+                                            <a href="{% url 'website:senior-professionals' %}"
+                                                class = ""  
+                                            >
+                                                <figure class="grid items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br1-00 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <figcaption id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            h-100 w-100
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            white-90 tc"
+                                                    >
+                                                        <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                            Senior Professionals
+                                                        </h3>    
+                                                        
+                                                    </figcaption>
+                                                </figure> 
+                                            </a>
+                                        </article>
+                                        
+                                        <article id="AESL__PeopleProfessionals--Professionals"
+                                            class="gr1s1 gc10s3
+                                            grid items-center justify-center
+                                            white-90"      
+                                        >
+                                            <a href="{% url 'website:professionals' %}"
+                                                class = ""  
+                                            >    
+                                                <figure class=" grid items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br1-00 gc1s1 gr1s1"
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            white-90 tc"
+                                                        >
+                                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                                Professionals
+                                                            </h3>    
+                                                        
+                                                    </hgroup>
+                                                </figure>
+                                            </a> 
+                                        </article>
+
+                                        <article id="AESL__PeopleProfessionals--AssistantProfessionals" 
+                                            class="gr2s1 gc7s3
+                                                grid items-center justify-center"
+                                        >
+                                            <a href="{% url 'website:assistant-professionals' %}"
+                                                class = ""  
+                                            >
+                                                <figure class="grid items-center justify-center
+                                                    "
+                                                >
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"
+                                                        alt=""
+                                                        class="gc1s1 gr1s1 br1-00"
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            white-90 tc"
+                                                    >
+                                                        <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                            Assistant Professionals
+                                                        </h3>    
+                                                    </hgroup>
+                                                </figure>
+                                            </a>        
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <section id="AESL__PeopleSupportTeam" 
+                                    class="ma2-00 bg-blue0 pa2-00"
+                                >
+                                    <div id="4x4_Grid_PeopleSupportTeam"
+                                        class="grid gtc12 ggap1-00"
+                                    >
+                                        <article id="AESL__PeopleSupportTeam--SupportTeam"
+                                            class="gr1s1 gc1s3
+                                                grid items-center justify-center
+                                                white-90"
+                                        >
+                                            <a href="{% url 'website:supporting-team' %}"
+                                                class = ""  
+                                            >
+                                                <figure class="grid  items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br1-00 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <figcaption id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            h-100 w-100
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75 white-90 tc"
+                                                    >
+                                                        <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                            Support Team
+                                                        </h3>    
+                                                        
+                                                    </figcaption>
+                                                </figure> 
+                                            </a>
+                                        </article>
+                                        
+                                        <article id="AESL__PeopleSupportTeam--NationalServicePersonnel"
+                                            class="gr2s1 gc1s3
+                                                grid items-center justify-center
+                                                white-90"
+                                        >
+                                            <a href="{% url 'website:national-service-personnels' %}"
+                                                class = ""  
+                                            >    
+                                                <figure class="grid items-center justify-center
+                                                    "
+                                                >
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br1-00 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 
+                                                            flex flex-column items-center justify-center
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75 white-90 tc"
+                                                    >
+                                                        <h3 class="pa0-50 mb0-00 
+                                                            blue0 bg-white ba 
+                                                            f1-00"
+                                                        >
+                                                            National Service Personnel
+                                                        </h3>
+                                                    </hgroup>
+                                                </figure>
+                                            </a> 
+                                        </article>
+
+                                        <article id="AESL__PeopleSupportTeam--Probationers" 
+                                            class="gr1s1 gc4s3
+                                                grid items-center justify-center"
+                                        >
+                                            <a href="{% url 'website:probationers' %}"
+                                                    class = ""  
+                                                >
+                                                <figure class="grid  items-center justify-center">
+                                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                        alt=""
+                                                        class="br1-00 gc1s1 gr1s1 "
+                                                    /> 
+                                                    <hgroup id = ""
+                                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                            
+                                                            pa1-00
+                                                            bg-blue0-50
+                                                            f0-75
+                                                            tc
+                                                            
+                                                                ">
+                                                        <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                            Probationers
+                                                        </h3>    
+                                                        
+                                                    </hgroup>
+                                                </figure>
+                                            </a>
+                                        </article> 
+                                    
+                                        <article id="AESL__PeopleSupportTeam--SupportTeamSummary" 
+                                            class="gr1s2 gc7s6
+                                                grid
+                                                "
+                                        >
+                                            <figure class="grid  items-center justify-center">
+                                                <hgroup id = ""
+                                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                        h-100
+                                                        mv2-00 ph4-00
+                                                        bg-white-90
+                                                        f1-25 tc blue0 
+                                                        br1-00"
+                                                >
+                                                    <h1 class = "f2-00 mv1-00">
+                                                    AESL Support Team
+                                                    </h1>
+                                                    <p class="lh-copy">
+                                                        We provide a range of Professional Quantity Surveying, Land Surveying and Valuation services tailored to meet our clients requirements. We always take challenges and bring them to a conclusion.
+                                                    </p>
+                                                </hgroup> 
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <footer id="AESL__PeopleFooter">
+                                    <div class="flex justify-between 
+                                        mh2-00 pa2-00 mb0-00 i
+                                        bg-blue0 white-90"
+                                    >
+                                        <div class="gold">
+                                            AESL || People
+                                        </div>
+                                        
+                                    </div> 
+                                </footer>
+                            </article>
+                        <!-- AESL People Categories End -->
+                    </div>
+                    <!-- AESL People End -->
+                </main>
+            <!-- People Page Main End --> 
+            
+        </div>
+        <!-- People Page End -->
+        <!-- People Page Footer Start -->
+            <footer id = "peoplePage__Footer"
+                class="mb1-00"
+            >
+                {% include 'website/_partials/page_footer.html' %} 
+            </footer>
+        <!-- People Page Footer End -->
+    {% endblock pagecontent %}
+{% endblock content %}

@@ -1,0 +1,50 @@
+Create Project Directory in Client Folder
+
+Identify project Packages and include them in a requirements file.
+NB: requirements.txt would be needed during deployment.
+Set up Virtual Environment VENV and activate.
+Pip install Packages required for project.
+Start Project and setup project folder stucture.
+    Project
+        core
+            __init__.py
+            asgi.py
+            settings.py
+            urls.py
+            wsgi.py
+        apps
+            website
+                migrations
+                templates
+                static
+            accounts
+            blogApp
+            Publications
+            Polls etc.
+        venv
+            activate.bat
+            deactiate.bat
+        requirements
+            requirements.txt
+        static
+            css
+            js
+            images
+            videos
+            fonts
+            svgs
+        media
+            images
+            videos
+            pdf
+            svgs
+        templates
+            _partials
+            base_layout.html
+            main_header.html
+            main_footer.html
+        .gitignore
+        db.sqlite3
+        manage.py
+        README.md
+        

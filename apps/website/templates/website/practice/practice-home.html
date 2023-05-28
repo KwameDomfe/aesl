@@ -1,0 +1,869 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Practice Home
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+<!-- Custom Stylesheets -->
+<!-- Custom Stylesheets --> 
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+<!-- Custom Scripts -->
+
+<!-- Custom Scripts -->
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body -->
+    {% block pagecontent %}
+    <div id="projects-home-page"
+        class=""
+    > 
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white mb1-00">
+            <figure class="gc1s12 ">
+                <img src="{% static '_images\practice\_partials\practice_1.jpg' %}"
+                    alt=""
+                    class="w-100 vh-40 vh-60-l cover"
+                />
+            </figure>
+            <hgroup class="w-100 blue0 gc1s12 ">
+                <h2 class="ph1-00 mb0-50
+                    f5-00"
+                >
+                    PRACTICE
+                </h2>
+            </hgroup> 
+            <!-- Page Navigation --> 
+                {% include 'website/practice/_partials/practice-page-nav.html' %}  
+            <!-- Page Navigation -->   
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="ph1-00">
+            <!-- Overview -->
+            <div id="overview"
+                class="grid gtc12 ggap1-00
+                    ph1-00 mb2-00
+                    blue0"
+            >
+                <!-- Overview Description --> 
+                <header 
+                    class="gr1s1 gc2s10 
+                        w-100
+                        blue0 bb"
+                >
+                    <hgroup id=""
+                        class=""
+                    >
+                        <div id="Project_Overview_1" 
+                            class="gr2s1 gc1s10 f1-50"
+                        > 
+                            <p class="mb0-00 pv4-00 lh-copy tj tracked">
+                                {% lorem 50 w random %}
+                            </p>
+                        </div>     
+                    </hgroup> 
+                </header>
+                <!-- Overview Description -->
+            </div>
+            <!-- Overview -->
+            <div id="practice__content" 
+                class="bg-blue0">
+
+                <article id="l__sector_ministry"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00 
+                        "
+                >   
+                    <!-- Media -->
+                    <div id=""
+                        class="gr1s1 gc6s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <!-- Figure Start -->   
+                        <figure id=""
+                            class="grid items-center justify-center
+                                    shadow-5"
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\sector_ministry\sm-02.jpg' %}"                
+                                alt=""
+                                class="gc1s1 gr1s1 h-100 w-100 cover br0-50 br--right"
+                            /> 
+                            {% comment %} <figcaption id = ""
+                                class="gr1s1 gc1s1 items-center justify-end
+                                    mt10-00 mb2-00 ml4-00 mr4-00 pa1-00
+                                    white-90 bg-blue0 
+                                    br0-50"                                  
+                            >   
+                                <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>    
+                            </figcaption> {% endcomment %}
+                        </figure>
+                        <!-- Figure Start -->   
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption -->   
+                    <div id="" 
+                        class="gr1s1 gc1s5 items-center justify-center
+                            w-100 h-100 bg-white br0-50 br--left">
+                        <article 
+                            class="grid
+                                h-100"  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        blue0 f0-75 tc
+                                       
+                                        
+                                        shadow-5
+                                            ">
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The sector Ministry is the overall {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:sector-ministry' %}"
+                                        class="dib 
+                                            pa0-50 mb1-00 
+                                            blue0 
+                                            ba b br0-25
+                                            f1-00
+                                            ttu"
+                                    >
+                                        sector ministry
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption -->   
+                    
+                </article>
+                
+                <article id="l__corporate corporate_governance"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00
+                        bg-white"
+                >   
+                    <!-- Media -->
+                    <div id="" 
+                        class="gr1s1 gc1s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <figure id =""
+                            class="grid items-center justify-center
+                                shadow-5  "
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\corporate-governance\board-meeting.jpeg' %}"           
+                                alt="AESL Board Meeting"
+                                class="gc1s1 gr1s1 h-100 cover br0-50 br--left"
+                            /> 
+                            {% comment %} <hgroup id = ""
+                                class="gr1s1 gc1s1 items-center justify-start
+                                mt10-00 mb2-00 pa1-00 ml4-00 mr4-00
+                                white-90 bg-blue0 br0-50"
+                            >   <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>
+                            </hgroup> {% endcomment %}
+                        </figure> 
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption-->
+                    <div id="" 
+                        class="gr1s1 gc8s5 w-100 h-100 items-center justify-center"
+                    >
+                        <article 
+                            class="grid
+                                h-100 "  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        bg-blue0 white
+                                        f0-75 tc
+                                        shadow-5 br0-50 br--right"
+                                >
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The governing board of the AESL is {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:corporate-governance' %}"
+                                        class="dib 
+                                        pa0-50 mb1-00 
+                                        white
+                                        ba b br0-25
+                                        f1-00
+                                        ttu"
+                                    >
+                                        corporate governance
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption-->
+
+                </article>
+                
+                <article id="l__management"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00 
+                        "
+                >   
+                    <!-- Media -->
+                    <div id=""
+                        class="gr1s1 gc6s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <!-- Figure Start -->   
+                        <figure id=""
+                            class="grid items-center justify-center
+                                    shadow-5"
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\management\2.jpeg' %}"                
+                                alt=""
+                                class="gc1s1 gr1s1 h-100 w-100 cover br0-50 br--right"
+                            /> 
+                            {% comment %} <figcaption id = ""
+                                class="gr1s1 gc1s1 items-center justify-end
+                                    mt10-00 mb2-00 ml4-00 mr4-00 pa1-00
+                                    white-90 bg-blue0 
+                                    br0-50"                                  
+                            >   
+                                <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>    
+                            </figcaption> {% endcomment %}
+                        </figure>
+                        <!-- Figure Start -->   
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption -->   
+                    <div id="" 
+                        class="gr1s1 gc1s5 items-center justify-center
+                            w-100 h-100 bg-white br0-50 br--left">
+                        <article 
+                            class="grid
+                                h-100"  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        blue0 f0-75 tc
+                                    
+                                        
+                                        shadow-5
+                                            ">
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The management of AESL is the {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:management' %}"
+                                        class="dib 
+                                            pa0-50 mb1-00 
+                                            blue0 
+                                            ba b br0-25
+                                            f1-00
+                                            ttu"
+                                    >
+                                        Management
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption -->   
+                    
+                </article>
+                   
+                <article id="l__history"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00
+                        bg-white"
+                >   
+                    <!-- Media -->
+                    <div id="" 
+                        class="gr1s1 gc1s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <figure id =""
+                            class="grid items-center justify-center
+                                shadow-5  "
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\history\History-01.JPG' %}"           
+                                alt="AESL Board Meeting"
+                                class="gc1s1 gr1s1 h-100 cover br0-50 br--left"
+                            /> 
+                            {% comment %} <hgroup id = ""
+                                class="gr1s1 gc1s1 items-center justify-start
+                                mt10-00 mb2-00 pa1-00 ml4-00 mr4-00
+                                white-90 bg-blue0 br0-50"
+                            >   <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>
+                            </hgroup> {% endcomment %}
+                        </figure> 
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption-->
+                    <div id="" 
+                        class="gr1s1 gc8s5 w-100 h-100 items-center justify-center"
+                    >
+                        <article 
+                            class="grid
+                                h-100 "  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        bg-blue0 white
+                                        f0-75 tc
+                                        shadow-5 br0-50 br--right"
+                                >
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The history of the AESL is {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:history' %}"
+                                        class="dib 
+                                        pa0-50 mb1-00 
+                                        white
+                                        ba b br0-25
+                                        f1-00
+                                        ttu"
+                                    >
+                                        History
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption-->
+
+                </article>
+                
+                <article id="l__mandate"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00 
+                        "
+                >   
+                    <!-- Media -->
+                    <div id=""
+                        class="gr1s1 gc6s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <!-- Figure Start -->   
+                        <figure id=""
+                            class="grid items-center justify-center
+                                    shadow-5"
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\mandate\mandate-01.jpg' %}"                
+                                alt=""
+                                class="gc1s1 gr1s1 h-100 w-100 cover br0-50 br--right"
+                            /> 
+                            {% comment %} <figcaption id = ""
+                                class="gr1s1 gc1s1 items-center justify-end
+                                    mt10-00 mb2-00 ml4-00 mr4-00 pa1-00
+                                    white-90 bg-blue0 
+                                    br0-50"                                  
+                            >   
+                                <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>    
+                            </figcaption> {% endcomment %}
+                        </figure>
+                        <!-- Figure Start -->   
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption -->   
+                    <div id="" 
+                        class="gr1s1 gc1s5 items-center justify-center
+                            w-100 h-100 bg-white br0-50 br--left">
+                        <article 
+                            class="grid
+                                h-100"  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        blue0 f0-75 tc
+                                    
+                                        
+                                        shadow-5
+                                            ">
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The mandate of AESL is the {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:mandate' %}"
+                                        class="dib 
+                                            pa0-50 mb1-00 
+                                            blue0 
+                                            ba b br0-25
+                                            f1-00
+                                            ttu"
+                                    >
+                                        Mandate
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption -->   
+                    
+                </article>
+                   
+                <article id="l__functions"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00
+                        bg-white"
+                >   
+                    <!-- Media -->
+                    <div id="" 
+                        class="gr1s1 gc1s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <figure id =""
+                            class="grid items-center justify-center
+                                shadow-5  "
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\functions\sod_cutting.jpg' %}"           
+                                alt="AESL Board Meeting"
+                                class="gc1s1 gr1s1 h-100 cover br0-50 br--left"
+                            /> 
+                            {% comment %} <hgroup id = ""
+                                class="gr1s1 gc1s1 items-center justify-start
+                                mt10-00 mb2-00 pa1-00 ml4-00 mr4-00
+                                white-90 bg-blue0 br0-50"
+                            >   <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>
+                            </hgroup> {% endcomment %}
+                        </figure> 
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption-->
+                    <div id="" 
+                        class="gr1s1 gc8s5 w-100 h-100 items-center justify-center"
+                    >
+                        <article 
+                            class="grid
+                                h-100 "  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        bg-blue0 white
+                                        f0-75 tc
+                                        shadow-5 br0-50 br--right"
+                                >
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The functions of the AESL is {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:functions' %}"
+                                        class="dib 
+                                        pa0-50 mb1-00 
+                                        white
+                                        ba b br0-25
+                                        f1-00
+                                        ttu"
+                                    >
+                                        Functions
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption-->
+
+                </article>
+                
+                <article id="l__mission_vision_values"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00 
+                        "
+                >   
+                    <!-- Media -->
+                    <div id=""
+                        class="gr1s1 gc6s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <!-- Figure Start -->   
+                        <figure id=""
+                            class="grid items-center justify-center
+                                    shadow-5"
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\mission_vision_values\01.jpg' %}"                
+                                alt=""
+                                class="gc1s1 gr1s1 h-100 w-100 cover br0-50 br--right"
+                            /> 
+                            {% comment %} <figcaption id = ""
+                                class="gr1s1 gc1s1 items-center justify-end
+                                    mt10-00 mb2-00 ml4-00 mr4-00 pa1-00
+                                    white-90 bg-blue0 
+                                    br0-50"                                  
+                            >   
+                                <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>    
+                            </figcaption> {% endcomment %}
+                        </figure>
+                        <!-- Figure Start -->   
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption -->   
+                    <div id="" 
+                        class="gr1s1 gc1s5 items-center justify-center
+                            w-100 h-100 bg-white br0-50 br--left">
+                        <article 
+                            class="grid
+                                h-100"  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        blue0 f0-75 tc
+                                    
+                                        
+                                        shadow-5
+                                            ">
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The mission, vision, and values of AESL is the {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:mission-vision-values' %}"
+                                        class="dib 
+                                            pa0-50 mb1-00 
+                                            blue0 
+                                            ba b br0-25
+                                            f1-00
+                                            ttu"
+                                    >
+                                        Mission Vision and Values
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption -->   
+                    
+                </article>
+                   
+                <article id="l__alliances"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00
+                        bg-white"
+                >   
+                    <!-- Media -->
+                    <div id="" 
+                        class="gr1s1 gc1s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <figure id =""
+                            class="grid items-center justify-center
+                                shadow-5  "
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\alliances\practice_2.jpg' %}"           
+                                alt="AESL Board Meeting"
+                                class="gc1s1 gr1s1 h-100 cover br0-50 br--left"
+                            /> 
+                            {% comment %} <hgroup id = ""
+                                class="gr1s1 gc1s1 items-center justify-start
+                                mt10-00 mb2-00 pa1-00 ml4-00 mr4-00
+                                white-90 bg-blue0 br0-50"
+                            >   <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>
+                            </hgroup> {% endcomment %}
+                        </figure> 
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption-->
+                    <div id="" 
+                        class="gr1s1 gc8s5 w-100 h-100 items-center justify-center"
+                    >
+                        <article 
+                            class="grid
+                                h-100 "  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        bg-blue0 white
+                                        f0-75 tc
+                                        shadow-5 br0-50 br--right"
+                                >
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The alliances of the AESL is {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:alliances' %}"
+                                        class="dib 
+                                        pa0-50 mb1-00 
+                                        white
+                                        ba b br0-25
+                                        f1-00
+                                        ttu"
+                                    >
+                                        Alliances
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption-->
+
+                </article>
+                
+                <article id="l__client_Speaks"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00 
+                        "
+                >   
+                    <!-- Media -->
+                    <div id=""
+                        class="gr1s1 gc6s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <!-- Figure Start -->   
+                        <figure id=""
+                            class="grid items-center justify-center
+                                    shadow-5"
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\client_speak\01.jpeg' %}"                
+                                alt=""
+                                class="gc1s1 gr1s1 h-100 w-100 cover br0-50 br--right"
+                            /> 
+                            {% comment %} <figcaption id = ""
+                                class="gr1s1 gc1s1 items-center justify-end
+                                    mt10-00 mb2-00 ml4-00 mr4-00 pa1-00
+                                    white-90 bg-blue0 
+                                    br0-50"                                  
+                            >   
+                                <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>    
+                            </figcaption> {% endcomment %}
+                        </figure>
+                        <!-- Figure Start -->   
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption -->   
+                    <div id="" 
+                        class="gr1s1 gc1s5 items-center justify-center
+                            w-100 h-100 bg-white br0-50 br--left">
+                        <article 
+                            class="grid
+                                h-100"  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        blue0 f0-75 tc
+                                    
+                                        
+                                        shadow-5
+                                            ">
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The clients of AESL is the {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:client-speak' %}"
+                                        class="dib 
+                                            pa0-50 mb1-00 
+                                            blue0 
+                                            ba b br0-25
+                                            f1-00
+                                            ttu"
+                                    >
+                                        Clients Speak
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption -->   
+                    
+                </article>
+                   
+                <article id="l__corporate_responsibilities"
+                    class="grid gtc12 
+                        container white-90
+                        pa4-00
+                        bg-white"
+                >   
+                    <!-- Media -->
+                    <div id="" 
+                        class="gr1s1 gc1s7 items-center justify-center
+                            w-100 h-100 "
+                    >
+                        <figure id =""
+                            class="grid items-center justify-center
+                                shadow-5  "
+                        >
+                            <img id=""
+                                src="{% static '_images\practice\corporate_responsilities\01.jpg' %}"           
+                                alt="AESL Board Meeting"
+                                class="gc1s1 gr1s1 h-100 cover br0-50 br--left"
+                            /> 
+                            {% comment %} <hgroup id = ""
+                                class="gr1s1 gc1s1 items-center justify-start
+                                mt10-00 mb2-00 pa1-00 ml4-00 mr4-00
+                                white-90 bg-blue0 br0-50"
+                            >   <h3 id=""
+                                    class="bb pb0-50 mb1-00 f1-00">
+                                    Image Title 
+                                </h3>
+                                <p id="">
+                                    Image description {% lorem 10 w random %}
+                                </p>
+                                <small>Royal Senchi, Akosombo.</small>
+                            </hgroup> {% endcomment %}
+                        </figure> 
+                    </div>
+                    <!-- Media -->
+
+                    <!-- Media Caption-->
+                    <div id="" 
+                        class="gr1s1 gc8s5 w-100 h-100 items-center justify-center"
+                    >
+                        <article 
+                            class="grid
+                                h-100 "  
+                        >   <!-- Media Caption -->                        
+                                <hgroup id = ""
+                                    class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        w-100 h-100
+                                        ph1-00
+                                        bg-blue0 white
+                                        f0-75 tc
+                                        shadow-5 br0-50 br--right"
+                                >
+                                    <h2 class = " mv2-00 lh-copy">
+                                        The corporate responsibilities of the AESL is {% lorem 15 w random %}.
+                                    </h2>    
+                                    <a  href="{% url 'website:corporate-responsibilities' %}"
+                                        class="dib 
+                                        pa0-50 mb1-00 
+                                        white
+                                        ba b br0-25
+                                        f1-00
+                                        ttu"
+                                    >
+                                        Corporate Responsibilities
+                                    </a>   
+                                    
+                                </hgroup> 
+                            <!-- Media Caption -->
+                        </article>
+                    </div>
+                    <!-- Media Caption-->
+
+                </article>
+            </div> 
+        </main>
+        <!-- Page Main --> 
+
+        <!-- Page Footer -->
+        <footer id = "practicePage__Footer"
+            class="mb1-00"
+        >
+            {% include 'website/_partials/page_footer.html' %} 
+        </footer>
+        <!-- Page Footer -->
+    </div>
+    <!-- main Body -->
+    {% endblock pagecontent %}
+{% endblock content %}

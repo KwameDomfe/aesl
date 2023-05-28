@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta 
+            charset="utf-8" 
+        />
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        />
+        <meta 
+            name = "description" 
+            content="The official website of AESL." 
+        />
+        <meta 
+            name="author" 
+            content="kda technologies kda_technologies"
+        />
+        <meta
+            name="Keywords" 
+            content="Architecture, Engineering, Valuation, Quantity Surveying, Planning"
+        />
+
+        <!-- Favicon & title start -->
+        <link 
+            href="{% static '_images\_partials\aesl_logo.png' %}" 
+            rel="shortcut icon" 
+            type="image/gif" 
+        />
+        <title>
+            AESL || {% block pagetitle %} 
+                        Page Titles Goes Here 
+                    {% endblock pagetitle %}
+        </title>
+        <!-- Favicon & title end -->
+
+        <!-- CSS Start-->
+        <link 
+            href="{% static '_css/gdb_normalize.css' %}" 
+            rel="stylesheet" 
+            type="text/css" 
+        />
+        <link 
+            href="{% static '_css/Utilities.css' %}" 
+            rel="stylesheet"  
+            type="text/css" 
+        />
+        <link 
+            href="{% static '_css/style.css' %}" 
+            rel="stylesheet" 
+            type="text/css" 
+        />
+        <!-- CSS End-->
+
+        <!-- Custom Page CSS Start-->
+        {% block custom_css %} 
+        
+        {% endblock custom_css %}
+        <!-- Custom Page CSS End-->
+
+        <!-- Custom Page JavaScripts Start-->
+        {% block custom_scripts %}   
+        
+        {% endblock custom_scripts %}
+        <!-- Custom Page JavaScripts End-->
+    </head>
+
+    <body class="pa0-00 ma0-00 ">
+        <!-- page Layout Start -->
+        <main id="l__Contents" 
+            class="flex flex-column flex-row-l vh-100 w-100"
+        >   
+            <!-- Main Sidebar -->
+                <div id="l__MainSidebar" 
+                    class=""  
+                >  
+                    {% include 'accounts\admin-templates\_partials\sidebar.html' %} 
+                </div>
+            <!-- Main Sidebar --> 
+            
+            <!-- Main Content Start -->
+                <div id="l__MainContent"
+                    class="w-100 vh-100 of-y-scroll"
+                >   
+                    <!-- Page Content Start -->
+                    {% block pagecontent %}
+                        
+                    {% endblock pagecontent %}
+                    <!-- Page Content End -->
+
+                    <!-- Main Footer Start -->
+                    <footer id="main__footer"
+                        class=""
+                    >
+                        {% comment %} {% include '_partials/main-footer.html' %} {% endcomment %}
+                    </footer>
+                    <!-- Main Footer End -->
+                </div>
+            <!-- Main Content End -->
+        </main>
+        <!-- page Layout End -->
+    </body>
+</html>

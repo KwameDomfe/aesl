@@ -1,0 +1,77 @@
+
+{% extends 'accounts/admin-templates/base_layout.html' %}
+
+{% load static %}
+
+<!-- TITLE BLOCK -->
+{% block pagetitle %} 
+    Admin Dashboard
+{% endblock pagetitle %}
+<!-- TITLE BLOCK -->
+
+<!-- OTHERS BLOCK -->
+{% block others %}   
+    
+{% endblock others %}
+<!-- OTHERS BLOCK -->
+
+<!-- CUSTOM CSS BLOCK -->
+{% block custom_css %}   
+    
+{% endblock custom_css %}
+<!-- CUSTOM CSS BLOCK -->
+
+<!-- CUSTOM CSS JS -->
+{% block Custom_js %}   
+    
+{% endblock Custom_js %}
+<!-- CUSTOM CSS JS -->
+
+<!-- PAGE TITLE BLOCK -->
+{% block page_title %} 
+    Admin Home 
+{% endblock page_title %}
+<!-- PAGE TITLE BLOCK -->
+
+
+
+
+{% block pagecontent %}
+    <div id="Admin_Home_Page"
+        class="min-vh-100 w-100
+             
+            "
+    >
+    <section 
+        class=" flex justify-between
+        w-100 bg-black-20 pa1-00">
+        <div>
+            <img src="{% static 'svgs/menu-icon.svg' %}" 
+                alt=""
+                class="w2-00 h2-00 pa0-25"  
+                srcset=""
+            >
+        </div>
+        <article id="m__search" 
+            class=" flex items-center justify-center
+                pointer
+        ">
+            <form action="">
+                <input type="text" name="q" id="" class="pa0-25">
+                <button type="submit" 
+                    class="pa0-25">search</button>
+            </form>
+        </article>
+        <div>
+            <img src="{% static 'images/avatar-01.png' %}" 
+                alt=""
+                class="w2-00 br-100"  
+                srcset=""
+            >
+        </div>
+    </section>
+    <h1 class="tc">Admin Dashboard</h1>
+
+    </div>
+
+{% endblock pagecontent %}

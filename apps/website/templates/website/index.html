@@ -1,0 +1,703 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block pagetitle %} 
+   Home Page
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+
+{% block custom_scripts %}   
+{% endblock custom_scripts %}
+
+{% block content %}
+   
+    {% block pagecontent %}
+
+        <div id="HomePage"
+            class=""
+        >
+            <!-- Page Header Start -->
+            <header id ="HomePageHeader"
+                class="" 
+            >   
+                <figure id="HomePageHeader--mainBanner"
+                    class="ma0-00"
+                >
+                    <img src="{% static '_images/index/index-01.jpg' %}"            
+                        alt=""
+                        class="w-100 vh-60 vh-50-s vh-60-m
+                            cover"
+                    >
+                    <figcaption class = "ttu blue0">
+                        <h1 class = "ph1-00 ph4-00-m pv2-00 pv4-00-s ma0-00
+                            f2-25 f2-75-s f3-50-m f4-00-l"
+                        >Architectural And Engineering Services Limited 
+                        </h1> 
+                    </figcaption> 
+                </figure>
+                
+                <div id="HomepageHeader--introduction"  
+                    class="grid gtc12 ggap1-00 
+                        ph1-00 ph4-00-m"
+                >  
+                    <article id="aesl-brief" 
+                        class="gr1s1 gc1s12 
+                            gr1s3-m gc1s8-m
+                            grid justify-between
+                            w-100
+                            mb4-00 mb0-00-m
+                            blue0 f1-25 tj"     
+                    >
+                        <hgroup 
+                            class="w-100
+                               pr1-00-m 
+                               lh-copy "
+                        >
+                            <p>
+                                Architectural and Engineering Services Limited (AESL) offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and sector clients. 
+                            </P>
+    
+                            <P>
+                                Its operations were restructured by an act of parliament, Act 461 Statutory Corporation (Conversion to Companies), in 1993 to transform it from a government corporation since the birth of the first republic into 100% state owned limited liability company. 
+                            </p>   
+                            
+                            <P>
+                                With unmatched experience and long history as agency for development consultancy for the state, AESL has been the primus inter paris for the construction industry in Ghana. 
+                            </p>   
+                            <P>
+                                The reputation of the company is wide spread beyond the shores of Ghana with successful project executions in West Africa including countries La Cote D’ivoire, Sierra Leone, Liberia etc. 
+                            </p>
+                            <div class="flex justify-start items-end mt4-00">
+                                <a  href="{% url 'website:practice-home' %}"
+                                    class="dib 
+                                        pa0-50 mr4-00
+                                        bg-blue0 white-90 f1-00
+                                        ba b--blue0 br0-25"
+                                >Read More</a> 
+                                <a  href="{% url 'website:practice-home' %}"
+                                    class="dib 
+                                        pa0-50 
+                                        blue0 white-90 f1-00
+                                        ba br0-25"
+                                >Contact Us</a> 
+                            </div> 
+
+
+                        </hgroup>
+                            
+                    </article>
+                            
+                    <article id="architecture-and-planning" 
+                        class= "gr2s1 gc2s10 
+                            gr1s1-m gc1s6-s gc9s4-m
+                            grid gtc1
+                            w-100 w16-00-m
+                            f1-25
+                            "
+                    >
+                        <figure id=""
+                            class="gr1s1 gc1s1"
+                        >
+                            <img src="{% static '_images/projects/residential/4.jpeg' %}"            
+                                alt=""
+                                class="w-100
+                                    br0-50
+                                    cover"
+                            >
+                        </figure>
+                        <hgroup id=""
+                            class="gr1s1 gc1s1
+                            grid justify-between
+                            w-100 h0-00 pb-100
+                            bg-black-70 white-90 br0-50
+                            ttu"
+                        >
+                            <h3 
+                                class="pa1-00"
+                            >
+                                Architecture & Planning
+                            </h3>
+                            <ul class="grid ph1-00 lh-copy justify-between">
+                                <li>
+                                    <a href="javascript:void()">Architecture</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Land Surveying</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Quantity Surveying</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Valuation</a>
+                                </li>
+                            </ul>
+                        </hgroup> 
+                    </article>
+    
+                    <article id="engineering" 
+                        class=" gr3s1 gc2s10
+                            gr2s1-s gc7s6-s 
+                            gr2s1-m gc9s4-m
+                            w-100 w16-00-m
+                            f1-25
+                            grid gtc1
+                            "
+                    >
+                        <figure class="gc1s1 gr1s1">
+                            <img src="{% static '_images/projects/infrastructure-and-survey/1_1.jpg' %}"            
+                                alt=""
+                                class="w-100 flex
+                                    br0-50 ba b--gold
+                                    cover"
+                            >
+                        </figure>
+                        <hgroup 
+                            class="gc1s1 gr1s1 flex flex-column justify-start
+                                w-100 h0-00 pb-100 br0-50
+                                white-90 
+                                bg-black-70  ttu"
+                        >
+                            <h3 class="pa1-00
+                                
+                                ">
+                                Engineering
+                            </h3> 
+                            <ul class="ph1-00 w-100 lh-copy">
+                                <li>
+                                    <a href="javascript:void()">Civil / Structural</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Geotech</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Installations </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Water</a>
+                                </li>
+                            </ul>    
+                        </hgroup> 
+                    </article>
+                </div>
+            </header>
+            <!-- Page Header End -->
+
+            <!-- Page Main Start -->
+            <main class="HomePageMain">
+                <!-- Clients Start -->
+                <section class="HomePageMain--selectedClients"
+                >
+                    <figure class="grid gtc6 ggap1-00 items-center justify-center
+                        w-100 h-100 pa4-00"
+                    >
+                        <img src="{% static '_images/index/clients/1.jpg' %}" 
+                            alt=""
+                            class="w-100 gr1s1 gc1s3 gc1s2-s gc1s1-m">
+                        <img src="{% static '_images/index/clients/2.jpg' %}" 
+                            alt=""
+                            class="w-100 gr1s1 gc4s3 gc3s2-s gc2s1-m">
+                        <img src="{% static '_images/index/clients/3.jpg' %}" 
+                            alt=""
+                            class="w-100 gr2s1 gr1s1-s gc1s3 gc5s2-s gc3s1-m">
+                        <img src="{% static '_images/index/clients/4.jpg' %}" 
+                            alt=""
+                            class="w-100 gr2s1 gc4s3 gc1s2-s gr1s1-m gc4s1-m">
+                        <img src="{% static '_images/index/clients/5.jpg' %}" 
+                            alt=""
+                            class="w-100 gr3s1 gr2s1-s gr1s1-m gc1s3 gc3s2-s gc5s1-m">
+                        <img src="{% static '_images/index/clients/6.jpg' %}" 
+                            alt=""
+                            class="w-100 gr3s1 gr2s1-s gr1s1-m gc4s3 gc5s2-s gc6s1-m">
+                    </figure>
+                </section>
+                <!-- Clients End -->
+                <!-- Project Categories Start -->
+                <section id="HomePageMain--ProjectCategories"
+                    class="bg-black-20 mb3-00"            
+                >
+                    <header id="projectCategories__header"
+                        class="grid"
+                    >
+                        <img src="{% static '_images/_partials/backgrounds/01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h6-00 h12-00-s cover"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 ph4-00 bg-gradientLR">
+                            <h3 class="pt1-00 white-90 f3-00 ttu">
+                                projects
+                            </h3>     
+                            <h4 class="dn dib-s gold pv0-00 mb0-00 f1-50 w-60-m tj tracked-tight lh-title">
+                                The diversity of our projects portfolio cuts across all the tribal cultures and the socio-economic sectors of the Ghanaian economy.
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    <article id="projectCategories__content"
+                        class="pa4-00 flex items-center justify-center"
+                    >
+                        <div id="4x4_Grid_projectCategories__content"
+                            class="grid gtc12 ggap1-00 
+                                pa1-00
+                                bg-blue0"
+                        >
+                            <div id="projectCategories__civicAndCulture"
+                                class="gr1s1 gc1s12
+                                    gc1s6-s
+                                    gr1s3-m gc1s3-m 
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure id=""
+                                        class="grid w-100 h0-00 pb-100
+                                            shadow-5"
+                                    >
+                                        <img src="{% static '_images/projects/civic_and_culture/civic/civic_2.jpg' %}"            
+                                            alt=""
+                                            class="h-100 w-100 gr1s1 gc1s1
+                                                br0-40 cover"
+                                        /> 
+                                        <figcaption id =""
+                                            class="gr1s1 gc1s1
+                                                pa1-00 flex justify-end items-end
+                                                f0-75 tc"
+                                        >
+                                            <h3 class="
+                                                pa0-25 mb0-00 
+                                                blue0 bg-white-50 
+                                                ba bw0 br0-25"    
+                                            >
+                                                Civic and Culture
+                                            </h3>
+                                        </figcaption>
+                                    </figure> 
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__education"
+                                class="gr2s1 gc1s12 
+                                    gr1s1-s gc7s6-s 
+                                    gr1s3-m gc4s3-m 
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >     
+                                    <figure class="shadow-5 grid w-100">
+                                        <img src="{% static '_images/projects/education/5_2.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        
+                                            <figcaption id =""
+                                            class="gr1s1 gc1s1
+                                                pa1-00 flex justify-end items-end
+                                                f0-75 tc"
+                                        >
+                                            <h3 class="
+                                                pa0-25 mb0-00 
+                                                blue0 bg-white-50 
+                                                ba bw0 br0-25"    
+                                            >
+                                            Education
+                                            </h3>
+                                        </figcaption>    
+                                    </figure>
+                                </a> 
+                            </div>
+
+                            <div id="projectCategories__health" 
+                                class="gr3s1 gc1s12 
+                                    gr2s1-s gc1s6-s 
+                                    gr1s3-m gc7s3-m
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"
+                                        class = ""  
+                                    > 
+                                    <figure class="shadow-5 grid w-100">
+                                        <img src="{% static '_images/projects/health/1_1a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id =""
+                                            class="gr1s1 gc1s1
+                                                pa1-00 flex justify-end items-end
+                                                f0-75 tc"
+                                        >
+                                            <h3 class="
+                                                pa0-25 mb0-00 
+                                                blue0 bg-white-50 
+                                                ba bw0 br0-25"    
+                                            >
+                                            Health
+                                            </h3>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div> 
+                                
+                            <div id="projectCategories__officeAndMixedUse" 
+                                class="gr4s1 gc1s12
+                                    gr2s1-s gc7s6-s
+                                    gr1s3-m gc10s3-m
+                                    grid items-center justify-center
+                                    r"
+                            >
+                                <a href="javascript:void()"
+                                class = ""  
+                                > 
+                                    <figure class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/office-and-mixed-use/6_1a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id =""
+                                            class="gr1s1 gc1s1
+                                                pa1-00 flex justify-end items-end
+                                                f0-75 tc"
+                                        >
+                                            <h3 class="
+                                                pa0-25 mb0-00 
+                                                blue0 bg-white-50 
+                                                ba bw0 br0-25"    
+                                            >
+                                            Offices and mixed Use
+                                            </h3>
+                                        </figcaption>
+                                    </figure>
+                                </a>        
+                            </div>
+            
+                            <div id="projectCategories__industrialAndRetail" 
+                                class="gr5s1 gc1s12
+                                    gr3s1-s gc1s6-s
+                                    gr4s3-m gc1s3-m
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                > 
+                                    <figure class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/hospitality/2_2a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id =""
+                                            class="gr1s1 gc1s1
+                                                pa1-00 flex justify-end items-end
+                                                f0-75 tc"
+                                        >
+                                            <h3 class="
+                                                pa0-25 mb0-00 
+                                                blue0 bg-white-50 
+                                                ba bw0 br0-25"    
+                                            >
+                                            Industrial and Retail
+                                            </h3>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__hospitality" 
+                                class="gr6s1 gc1s12
+                                    gr3s1-s gc7s6-s
+                                    gr4s3-m  gc10s3-m
+                                    grid items-center justify-center" 
+                            >
+                                <a href="javascript:void()"
+                                > 
+                                    <figure class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/hospitality/1_1a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-end justify-end
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="
+                                            pa0-25 mb0-00 
+                                            blue0 bg-white-50 
+                                            ba bw0 br0-25">
+                                                Hospitality
+                                            </h3>       
+                                        </figcaption> 
+                                    </figure>
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__infrastructureAndSurvey" 
+                                class="gr7s1 gc1s12
+                                    gr4s1-s gc1s6-s
+                                    gr7s3-m gc4s3-m
+                                    grid items-center justify-center "
+                            >
+                                <a href="javascript:void()"> 
+                                    <figure id=""
+                                        class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/infrastructure-and-survey/Untitled-3a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-end justify-end
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="
+                                            pa0-25 mb0-00 
+                                            blue0 bg-white-50 
+                                            ba bw0 br0-25">
+                                                Infrastructure and Survey
+                                            </h3>       
+                                        </figcaption> 
+                                    </figure>
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__residential" 
+                                class="gr8s1 gc1s12
+                                    gr4s1-s gc7s6-s
+                                    gr7s3-m gc10s3-m
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"
+                                > 
+                                    <figure class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/residential/5_4a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id = ""
+                                            class="gr1s1 gc1s1 
+                                                flex flex-column items-end justify-end
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc"
+                                        >
+                                            <h3 class="
+                                            pa0-25 mb0-00 
+                                            blue0 bg-white-50 
+                                            ba bw0 br0-25">
+                                                Residential
+                                            </h3>    
+                                        </figcaption> 
+                                    </figure>
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__landscapeAndMmasterplanning" 
+                                class="gr9s1 gc1s12
+                                    gr5s1-s gc1s6-s
+                                    gr7s3-m gc7s3-m
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"> 
+                                    <figure class="shadow-5  grid w-100">
+                                        <img src="{% static '_images/projects/residential/3_0a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <figcaption id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-end justify-end
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="
+                                            pa0-25 mb0-00 
+                                            blue0 bg-white-50 
+                                            ba bw0 br0-25">
+                                                Landscape and Master planning
+                                            </h3>     
+                                        </figcaption>
+                                    </figure> 
+                                </a>
+                            </div>
+                            
+                            <div id="projectCategories__sportsAndLeisure" 
+                                class="gr10s1 gc1s12
+                                    gr5s1-s gc7s6-s
+                                    gr7s3-m gc1s3-m
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"> 
+                                    <figure class="shadow-5 grid w-100">
+                                        <img src="{% static '_images/projects/sports-and-leisure/2_1a.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-end justify-end
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90
+                                                
+                                                    ">
+                                            <h3 class="
+                                            pa0-25 mb0-00 
+                                            blue0 bg-white-50 
+                                            ba bw0 br0-25">
+                                            Sports and Leisure
+                                            </h3>      
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </div>
+                        
+                            <div id="projectCategories__brief" 
+                                class="gr11s1 gc1s12
+                                    gr6s1-s
+                                    gr4s3-m gc4s6-m
+                                    grid"
+                            >
+                                <figure class="shadow-5  grid  items-center justify-center">
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                            h-100 w-100 bg-white
+                                            ph1-00
+                                            blue0
+                                            f0-75
+                                            tc
+                                            
+                                                ">
+                                        <h1 class = "blue0 f2-00 mv1-00">
+                                            Losts of projects and still counting
+                                        </h1>    
+                                        <a  href="{% url 'website:projects-home' %}"
+                                            class="blue0 ba br0-25 dib pa0-50 mb0-50 f1-00"
+                                        >
+                                            AESL Projects
+                                        </a>   
+                                    </hgroup> 
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+                    <footer id="projectCategories__footer">
+                        <div class="flex justify-between bg-blue0 pa2-00 ph4-00 i">
+                            <div class="gold">
+                                AESL || Projects
+                            </div>
+                        </div> 
+                    </footer>
+                </section>
+                <!-- Project Categories End -->
+
+                <!-- Regional Offices Start -->
+                <section id="RegionalOffices"
+                    class=""
+                >    
+                    <header id="RegionalOffices__header"
+                        class="grid
+                            w-100
+                            blue0"
+                    >
+                        <img src="{% static '_images/_partials/backgrounds/01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h12-00-s"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 
+                            pl4-00 pr8-00
+                            bg-gradientLR"
+                        >
+                            <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
+                                aesl Offices
+                            </h3>     
+                            <h4 class="dn dib-s 
+                                w-60-m 
+                                pv0-00 mb0-00 
+                                gold f1-50 tj tracked-tight lh-title"
+                            >
+                                We have offices in all the regional capitals of Ghana.
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    <main id="regionalOffices__content" 
+                        class="grid gtc12 ma4-00-s ma5-00-l flex"
+                    >
+                        <figure class="gc1s12 gc1s6-s">
+                            <img src="{% static 'svgs/maps/Greater_Accra_in_Ghana_2018.svg' %}" 
+                                alt=""
+                                class="w-100 cover">
+                        </figure>
+                        <article id="regional-office-details" 
+                            class="gc1s12 gc7s6-s grid
+                            bg-blue0 white-90 w-100"
+                        >
+                            
+                            <img src="{% static '_images/placeholders/landscape_Images/landscape_01.png' %}" 
+                            alt=""
+                            class="">
+                            
+                            <div class="flex flex-column justify-between
+                                
+                                ma1-00"
+                            >
+                                <div>
+                                    <small>office:</small>
+                                    <h4>AESL, Accra</h4>
+                                </div>
+                                <div>
+                                    <small>email:</small> <br>
+                                    <a class="dib white-90">
+                                        <h4> aeslaccra@aesl.com.gh</h4>
+                                    </a>
+                                </div> 
+                                <div>
+                                    <small>phone:</small> <br>
+                                    <a class="dib white-90"><h4> (+233) 20 344 5678</h4></a>
+                                </div>
+                            </div>
+                        </article>
+                    </main>
+                    <footer id="regionalOffices__footer"
+                    >
+                        <div class="flex justify-between 
+                            pa2-00 ph4-00 mb4-00
+                            bg-blue0 white-90 i"
+                        >
+                            <div class="gold"
+                            >
+                                AESL || Offices
+                            </div>
+                        </div> 
+                    </footer>    
+                </section>
+                <!-- Regional Offices End -->
+            </main>
+            <!-- Page Main End -->
+
+            <!-- Page Footer Start -->
+            <footer id = "HomePageFooter"
+                class="w-100 mb1-00"
+            >
+                {% include 'website/_partials/page_footer.html' %} 
+            </footer>
+            <!-- Page Footer End -->
+        </div>
+    {% endblock pagecontent %}
+    
+{% endblock content %}

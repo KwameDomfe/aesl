@@ -1,0 +1,85 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+Projects || {{ projectCategory }}
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+    {% block pagecontent %} 
+        <!-- Page Header -->
+        <header id="project_Header"
+            class="grid gtc12
+               
+                bg-white"
+        >
+            <figure class="gc1s12">
+                <img src="{{ projectCategory.thumbnail.url }}"          
+                    alt=""
+                    class="w-100 vh-60 cover">
+            </figure>
+            <hgroup class="gc1s12
+                    pa1-00 ">
+                <h2 class="mb0-00
+                        f3-00
+                    "
+                >
+                {{ projectCategory }}</h2>
+            </hgroup>
+            <!-- Page Navigation -->
+                {% include 'website/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
+        </header>
+        <!-- Page Header -->
+
+        <main class=" bg-white ph1-00">
+            <!-- Projects Category Overview -->
+            <div id="project_Overview"
+                class="grid gtc12 ggap1-00
+                    ph1-00
+                    mb3-00"
+            >
+                <article id="Project_Overview_1" 
+                    class="gr2s1 gc1s8
+                       
+                    "
+                > 
+                <ul>
+                    {% for category in Categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+                </article>
+
+            </div>
+            <!-- Projects Category Overview -->
+
+            <!-- Projects Category Gallery -->
+            <div id="Categories_Gallery"
+                class="grid gtc12 ggap1-00
+                    mb3-00"
+            >
+            <div class="w-100 gc1s12">
+              
+                   
+               
+            </div>
+                
+            </div>
+            <!-- Projects Category Gallery -->
+            
+        </main>
+        
+    {% endblock pagecontent %}
+    <!-- main Body End -->
+{% endblock content %}
+   

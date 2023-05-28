@@ -1,0 +1,208 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Practice - Functions
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+        {% block pagecontent %}
+            <!-- Page Header Start -->
+            <header 
+                class="grid gtc12
+                bg-white ">
+                <figure class="gc1s12">
+                    <img src="{% static '_images/practice/functions/sod_cutting.jpg' %}"          
+                        alt=""
+                        class="w-100 vh-60 cover">
+                </figure>
+                <hgroup class="w-100 blue0 gc1s12">
+                    <h2 class="
+                        ph1-00 pb0-50 mb0-00
+                        f5-00 ttu
+                        ">
+                        Functions
+                    </h2>
+                    
+                </hgroup> 
+                <!-- Page Navigation -->
+                {% include 'website/practice/_partials/practice-page-nav.html' %} 
+                <!-- Page Navigation -->
+            </header>
+            <!-- Page Header End -->
+
+            <!-- Page Main Start -->
+            <main id=""
+                class="ph1-00"
+            >
+                <div id="" 
+                    class="grid gtc4"
+                >
+                    <div id="pageDetails"
+                        class="gc1s3 grid
+                            mb1-00 min-vh-100
+                            blue0"
+                    >   
+                            <!-- Header Start -->
+                            <header id="functions--overview"
+                                class="gr1s1 gc2s10 w-100"
+                            >
+                                <hgroup id=""
+                                    class="mv6-00"
+                                >
+                                    <p class=" 
+                                        f1-25 lh-copy tj"
+                                    >
+                                        The Architectural and Engineering Services Corporation (AESC) as it was then called, was established in 1973 under the National Redemption Council Decree (NRCD) 193 to take over the consultancy functions of the then Public Works Department (PWD). 
+                                    </p>     
+                                    <p class=" 
+                                        f1-25 lh-copy tj"
+                                    >
+                                        The objects of the Corporation were:
+                                    </p>     
+                                </hgroup> 
+                            </header>
+                            <!-- Header End -->
+
+                            <!-- Functions 01 Start -->
+                            <figure id="functions--01" 
+                                class="gr2s1 gc1s12 
+                                    grid gtc12 ggap1-00 mb3-00"
+                            >
+                                <img src="{% static '_images/_partials/backgrounds/02.jpg' %}"
+                                    alt=""
+                                    class="gc1s4
+                                        w-100 h-100
+                                        cover"
+                                /> 
+                                <figcaption class="gc5s8 mb0-00 lh-copy">
+                                    To investigate, survey, design, administration and management both in Ghana and elsewhere of all kinds of architectural and engineering consultancy works, whether public or private including the design of houses, highways, airfields, bridges, harbour, water supplies and sewerage systems, soils and foundations investigation;
+                                </figcaption>
+                            </figure>
+                            <!-- Functions 01 End -->
+
+                            <!-- Functions 02 Start -->
+                            <figure id="functions--02" 
+                                class="gr3s1 gc1s12 
+                                    grid gtc12 ggap1-00 mb3-00"
+                            >
+                                <img src="{% static '_images/practice/_partials/practice_2.jpg' %}"            
+                                alt=""
+                                class="gc1s4
+                                    w-100 h-100
+                                    cover"
+                                /> 
+                                <figcaption class="gc5s8 mb0-00 lh-copy">
+                                    To undertake the testing of construction materials, surveying and mapping, valuation and appraisal of property, and design of irrigation works; 
+                                </figcaption>
+                            </figure>
+                            <!-- Functions 02 End --> 
+
+                            <!-- Functions 03 Start -->
+                            <figure id="functions--03" 
+                                class="gr4s1 gc1s12 
+                                    grid gtc12 ggap1-00 mb3-00"
+                            >
+                                <img src="{% static '_images/projects/residential/hostel_takoradi2.jpg' %}"            
+                                    alt=""
+                                    class="w-100 gc1s4
+                                        "
+                                /> 
+                                <figcaption class="gc5s8 mb0-00 lh-copy">
+                                    To carry out such other activities as appear to the Corporation to be conducive or incidental to the attainment of all or any of the foregoing objects To provide consultancy services in respect of all works required by or on behalf of the Government in the fields of engineering, building and architecture, urban and regional planning and development;
+                                </figcaption>
+                            </figure>
+                            <!-- Functions 03 End --> 
+                
+                            <!-- Functions 04 Start -->
+                            <figure id="functions--04" 
+                                class="gr5s1 gc1s12 
+                                    grid gtc12 ggap1-00 mb3-00"
+                            >
+                                <img src="{% static '_images/practice/_partials/practice_2.jpg' %}"                 
+                                    alt=""
+                                    class="w-100 gc1s4
+                                        "
+                                /> 
+                                <figcaption class="gc5s8 mb0-00 lh-copy">
+                                    To carry out technical studies in planning, designing as well as the supervision of such infrastructural works as will assist the economic and social development of the country;
+                                </figcaption>
+                            </figure>
+                            <!-- Functions 04 End --> 
+
+                            <footer id="page_footer"
+                                class="gr6s1 gc1s12 pa1-00 bg-gray white-90 w-100 i">
+                                Practice || Functions
+                            </footer>
+                    </div>
+
+                    <div id="pageNav" 
+                        class="gc4s1 
+                            w-100 blue0 relative"
+                    >
+                        <div class="flex flex-column justify-between
+                            min-vh-100 
+                            ph2-00 pb1-00
+                            pt6-00
+                            sticky top-0"
+                        >
+                            <div
+                            >
+                                <a href= {% url 'website:practice-home' %}
+                                    class="dib mb1-00 
+                                        f1-25 blue0 ttu fw6">Back to Practice
+                                </a>
+                                <ul class="mb1-00 bl bw4 pa1-00 b--gray gray f0-75">
+                                    <h3 >Functions</h3>
+                                    <li class="mb1-00 i">
+                                        <a href="#functions--overview"
+                                            class="gray"
+                                        >
+                                            AESL Object
+                                        </a>
+                                    </li>
+                                    <li class="mb1-00 i">
+                                        <a href="#functions--01"
+                                            class="gray"
+                                        >
+                                            AESL Functions
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
+
+                            <div class="h6-00 gray"
+                            >
+                                <small>Previous</small></br>
+                                <a href="{% url 'website:mandate' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL Mandate
+                                </a> <br><br>
+                                <small>Next</small></br>
+                                <a href="{% url 'website:mission-vision-values' %}" 
+                                    class="mb1-00 f0-75 gray b"
+                                >
+                                    AESL Mission vision and Values
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+            <!-- Page Main End -->
+
+        {% endblock pagecontent %}
+    <!-- 00.00   main Body -->
+    </main> 
+{% endblock content %}

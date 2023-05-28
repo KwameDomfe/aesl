@@ -1,0 +1,355 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   Senior Consultants Home 
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+{% block custom_scripts %}   
+{% endblock custom_scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+    {% block pagecontent %}
+        <div id=""
+            class="min-vh-100 w-100">
+            <!-- Page Header -->
+            <header id="peope_pageHeader"
+                class="grid gtc12
+                    "
+            >
+                <figure class="gc1s12 pa0-25">
+                    <img src="{% static '_images\practice\management\management-07.jpeg' %}"          
+                        alt=""
+                        class="vh-60 cover">
+                </figure>
+                <hgroup class="gc1s12 w-100 blue0">
+                    <h2 class="w-100 h-100
+                        pa1-00 pb1-00 mb0-00
+                        f3-00
+                        ">
+                        Senior Consultants
+                    </h2>     
+                </hgroup> 
+                <!-- Page Navigation -->
+                {% include 'website/people/_partials/people-page-nav.html' %}
+                <!-- Page Navigation -->
+            </header>
+            <!-- Page Header -->
+
+            <!-- Page Main -->
+            <main id = "senioir-consultant-pagemain"
+                class="bg-white">
+
+                <div id="l_3:1" 
+                class="grid gtc4"
+                >
+                    <!-- Principal Consultants -->
+                    <div id="people_principal_consultants"
+                        class="grid gtc12 ggap1-00 gc1s3
+                            ph1-00
+                            "
+                    >   
+                        <!-- Principal Consultants Description -->
+                        <article id="people_principal_consultants_description" 
+                            class="gr1s1 gc2s10"
+                        > 
+                            <div id=""
+                                class="flex ggap1-00 w-100 mt6-00 mb4-00 lh-copy f1-25 tj">
+                                <div id="div">
+                                    <P>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima
+                                    </P>
+                                    <P>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor incidunt dolorum, veritatis blanditiis  
+                                    </P>
+                                    <P>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor incidunt dolorum, veritatis blanditiis obcaecati nesciunt v
+                                    </P>
+                                </div>
+                               
+                            </div>
+                            
+                        </article>
+                        <!-- Principal Consultants Description -->
+
+                        <!-- Principal Consultants Gallery -->
+                        <div id="people_principal_consultants_gallery"
+                            class="gr2s1 gc1s12
+                                grid gtc12 ggap1-00
+                                white-90"
+                        >
+                            <article id="people_principal_consultant_1" 
+                                class="gr1s1 gc1s3
+                                    flex flex-column items-center justify-center
+                                "
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5> 
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_principal_consultant_2" 
+                                class="gr1s1 gc4s3
+                                    flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>
+                                </hgroup>
+                            </article>
+                            
+                            <article id="people_principal_consultant_3" 
+                                class="gr1s1 gc7s3
+                                flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_principal_consultant_4" 
+                                class="gr1s1 gc10s3
+                                    flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            <article id="people_principal_consultant_5" 
+                                class="gr2s1 gc1s3
+                                flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_principal_consultant_6" 
+                                class="gr2s1 gc4s3
+                                flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_principal_consultant_7" 
+                                class="gr2s1 gc7s3
+                                flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_principal_consultant_8" 
+                                class="gr2s1 gc10s3
+                                flex flex-column items-center justify-center"
+                            >
+                                <figure class="shadow-5 mb0-50">
+                                    <img src="{% static '_images\practice\management\director-of-finance\dof-03.jpeg' %}"            
+                                        alt=""
+                                        class="pa0-50 "
+                                    /> 
+                                </figure>
+                                <hgroup 
+                                    class="flex flex-column items-center justify-start
+                                        pa0-25
+                                        blue0
+                                            ">
+                                    <h5 class="mb0-50">
+                                        <a class="blue0" href="{% url 'website:senior-consultant-details' %}">Isaac Agyei Marfo</a> 
+                                    </h5>  
+                                    <h6>
+                                        architect
+                                    </h6>   
+
+                                </hgroup> 
+                            </article>
+
+                            <article id="misc_gold" 
+                                class="gr3s1 gc1s3
+                                    flex items-center justify-center
+                                    bg-green h6-00
+                                ">
+                            </article>
+
+                            <article id="misc_blue" 
+                                class="gr4s1 gc6s1
+                                    flex items-center justify-center
+                                    bg-blue0 h4-00 
+                                    ">
+                            </article>
+                            <article id="misc_blue" 
+                                class="gr3s1 gc9s1
+                                    flex items-center justify-center
+                                    bg-blue0 h4-00 
+                                    ">
+                            </article>
+                        </div>
+                        <!-- Principal Consultants Gallery --> 
+                        <!-- Page Footer -->
+                        <footer id="pageFooter"
+                            class="gr3s1 gc1s12 mb1-00"
+                        >
+                        {% include 'website/_partials/page_footer.html' %}
+                        </footer>
+                        <!-- Page Footer --> 
+                    </div>
+                    <!-- Principal Consultants -->
+                    <!-- AESL History End -->
+
+                    <!-- AESL History Aside  Start -->
+                    <div id="lc_gc4s1__pageAside--history" 
+                        class="gc4s1 
+                            blue0 relative"
+                    >
+                        <div class="flex flex-column justify-between
+                            min-vh-100 
+                            ph1-00 pt6-00
+                            sticky top-0"
+                        >
+                            
+                            <ul class="mb1-00 bl bw4 b--green pl1-00 f0-75">
+                                <h3 >Page Sections</h3>
+                                <li class="mb1-00 i">Senior Consultants</li>
+                                <li class="mb1-00 i">Senior Consultants List</li>
+                            </ul>
+
+                            <div class="mb1-00" >
+                                {% comment %} <small>Previous</small> </br>
+                                <a href="{% url 'website:mission-vision-values' %}" 
+                                    class="mb1-00 blue0 f0-75 b"
+                                >
+                                    Principal Consultants
+                                </a> <br><br>
+                                <small>Next</small> </br>
+                                <a href="{% url 'website:corporate-governance' %}" 
+                                    class="mb1-00 blue0 f0-75 b"
+                                    >Consultants
+                                </a> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AESL History Aside  End -->
+                </div> 
+            </main>
+            <!-- Page Main --> 
+        </div>
+    {% endblock pagecontent %}
+    <!-- main Body Start -->
+{% endblock content %}
