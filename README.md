@@ -1,8 +1,8 @@
-# KDA Design Technologies Website Template Version 1.00
+# AESL Website Version 1.00
 
 ## Overview
 
-### This is a custom website design tempalte for KDA Design Technologies using .
+### This is a custom website design tempalte for AESLgit  using .
 
 ## Tools
 ####   integrated development environment: Visual Studio Code
