@@ -54,17 +54,17 @@
                        
                     "
                 > 
-                <ul>
-                    {% for project in projectcategories_list %}
-                    <li>{{ project }}</li>
-                    
-                    {% endfor %}
-                </ul>
-                <P>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
-                </P>
+                    <ul>
+                        {% for project in projectcategories_list %}
+                        <li>{{ project }}</li>
+                        
+                        {% endfor %}
+                    </ul>
+                    <P>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                    </P>
                 </article>
-
+                {% if projectcategory %}
                 <div class="gr2s1 gc1s12 w-100">
                     {% for projectcategory in projectcategories_list %}
                         <div class="w-100 bg-blue0">
@@ -78,7 +78,8 @@
                             </a>
                         </div>
                     {% endfor %}
-                </div>  
+                </div>
+                {% endif %}  
                 {{ projectCategory.name }}
             </div>
             <!-- Projects Category Overview -->

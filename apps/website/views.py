@@ -947,8 +947,8 @@ def empowerment(request):
 def projects(request):
     projects_qs = Project.objects.all()
     projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
-    projectCategories_qs_1 = Category.objects.all().reverse()[:5]
-    projectCategories_qs_2 = Category.objects.all().reverse()[5:]
+    projectCategories_qs_1 = Category.objects.all()[:5]
+    projectCategories_qs_2 = Category.objects.all()[5:]
     
     context = {
                 'projects_list': projects_qs,
@@ -993,7 +993,7 @@ def projectDetails(request, slug = None):
             raise Http404
     projectCategories = Category.objects.all() 
     projectOverview = ProjectOverview.objects.all()
-        
+      
     context = {
             'project_categories_list':projectCategories,
             'project': project_obj,
@@ -1077,13 +1077,14 @@ def projectCategories(request):
     projects_qs = Project.objects.all()#print(projects_qs)
     projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
     projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
-    projectCategories_qs_2 = Category.objects.all()[5:]#print(projectCategories_qs)
+    projectCategories_qs_2 = Category.objects.all()[5:]
+    print(projectCategories_qs)
         
     context = {
             'projects_list': projects_qs,
             'project_categories_list':projectCategories_qs,
-            'projectcategories_list_1':projectCategories_qs_1,
-            'projectcategories_list_2':projectCategories_qs_2,
+            'project_categories_list_1':projectCategories_qs_1,
+            'project_categories_list_2':projectCategories_qs_2,
     }
 
     return render(request, 'website/projects/project_categories/project_categories_home_view.html', context)
@@ -1114,21 +1115,24 @@ def projectCategoryCreate(request):
 def projectCategoryDetails(request, slug = None):
     
     projects_qs = Project.objects.all()
+    # projects_qs = Project.objects.filter(slug=slug)
     projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
-    projectCategories_qs_1 = Category.objects.all().reverse()[:5]
-    projectCategories_qs_2 = Category.objects.all().reverse()[5:]
+    projectSubCategories_qs = SubCategory.objects.all()#print(projectCategories_qs)
+    projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
+    projectCategories_qs_2 = Category.objects.all()[5:]
+    print(projectCategories_qs)
         
     projectCategory = None
     if slug is not None:
         projectCategory = Category.objects.get(slug=slug)
 
     context = {
-        'Categories' : projectCategories_qs,
-        'projects_list': projects_qs,
+        'projectslist': projects_qs,
         'projectCategory':projectCategory ,
         'project_categories_list':projectCategories_qs,
-        'project-categories_list_1':projectCategories_qs_1,
-        'project-categories_list_2':projectCategories_qs_2
+        'project_sub_categories_list':projectSubCategories_qs,
+        'project_categories_list_1':projectCategories_qs_1,
+        'project_categories_list_2':projectCategories_qs_2
     }
 
     return render(

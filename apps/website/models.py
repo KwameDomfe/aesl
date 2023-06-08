@@ -39,7 +39,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Project Categories'
-        ordering = ['-created','updated','name',]
+        ordering = ['created','updated','name',]
         
     def __str__(self):
         return self.name
@@ -476,7 +476,6 @@ class Management(models.Model):
 # Projects Model
 class Project(models.Model): 
     id=models.AutoField(primary_key=True)
-    
     sub_category=models.ForeignKey(
         SubCategory, 
         on_delete=models.SET_NULL, 
@@ -524,12 +523,18 @@ class Project(models.Model):
     start_date=models.DateField(
         blank=True, 
         null=True,
-        auto_now_add=True)
+        )
     completed_date=models.DateField(
         blank=True, 
+        null=True,)  
+    created=models.DateField(
+        blank=True, 
         null=True,
-        auto_now_add=True)  
-    
+        auto_now_add=True)
+    updated=models.DateField(
+        blank=True, 
+        null=True,
+        auto_now=True)  
     class Meta:
         verbose_name='Project'
         verbose_name_plural = 'Projects'
@@ -561,7 +566,7 @@ class ProjectLead(models.Model):
         blank=True,
         null=True)
 
-    staff=models.ForeignKey(
+    project_lead=models.ForeignKey(
         Staff, 
         on_delete=models.CASCADE,
         null=True,

@@ -7,11 +7,12 @@ from django.contrib import admin
 from .models import (
     Category, 
         SubCategory,
+
+    Person, 
         Title,
         Gender,  
         Region,
 
-    Person, 
     Staff, 
         Profession,
         Rank,
@@ -45,7 +46,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name','description']
     extra = 0
     list_per_page = 5
-    readonly_fields = ['slug',]
+    readonly_fields = []
     search_fields = ['name','description']
     ordering = ['name',]
     # raw_id_fields = ['']
@@ -61,6 +62,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ProjectLeadInline(admin.TabularInline):     
     model = ProjectLead
+    extra = 0
 
 # class ProjectTagInline(admin.TabularInline):
 #     model = ProjectTag

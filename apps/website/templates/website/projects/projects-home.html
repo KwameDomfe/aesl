@@ -79,7 +79,7 @@
                             <ul class="flex justify-center flex-wrap w-100 ggap1-00">
                                 {% for project in projects_list %}
                                     <li class="grid
-                                        w-100 w-45-s w-29-m
+                                        w-100 w-45-s w-30-m
                                         mh0-50"
                                     >
                                         
@@ -119,8 +119,8 @@
                                                     <p class=""
                                                     >
                                                         {{ project.description }} . . .
-                                                        {% comment %} <a href="{% url 'website:project-details' project.slug %}"> {% endcomment %}
-                                                        
+                                                        <a href="{% url 'website:project-details' project.slug %}">{{project.slug}}
+                                                        </a>
                                                     </p> 
                                                     <div>
                                                         <a href="{{ project.get_absolute_url }}"
@@ -137,8 +137,8 @@
                                                 class="w-100"
                                             > 
                                                 <div class="flex justify-between w-100">
-                                                    <h5 class="pa0-50 ba br0-25">{{ project.sub_category }}</h5>
-                                                    <small class="pa0-50 ba br0-25">{{ project.sub_category.category }}</small>
+                                                    <h5 class="pa0-50 ba br0-25">{{ project.sub_category.category }}</h5>
+                                                    <small class="pa0-50 ba br0-25">{{ project.sub_category }}</small>
                                                 </div>
                                             </footer>
 

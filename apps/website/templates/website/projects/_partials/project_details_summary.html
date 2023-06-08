@@ -1,122 +1,190 @@
 <div id="project_summary"
     class="gc1s12 grid gtc12 ggap1-00
     items-center justify-center
-    ph1-00 mb1-00 max-h-100
-    tracked-tight f0-75 f1-00-s"
+    ph1-00 mb1-00
+    "
     >
-    <article id="project_team" 
-        class="gr1s1 gc1s6 gc1s4-m gc1s3-l"
+    <article id="consultants_info" 
+        class="gc1s6 gr1s1 
+            gc1s4-s 
+            gc1s3-m
+            gc1s3-l
+            gc1s1-xl"
     >
-        <ul
-            class="w-100 h0-00 pb-100
-            pa0-50
-            white-90
-            bg-blue0
-            br0-50"
-            >
+        <div
+            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50
+                bg-blue0 flex flex-column
+                br0-50 white-90"
+        >
             <hgroup 
                 class="mb1-00"
             >
-                <h3 class="mb0-50">
+                <h2 class="mb0-50 f0-75">
                     Project Coordinator
-                </h3>
-                <p>
-                    {{project.coordinator}}
+                </h2>
+                <p class=" mb0-25">
+                    {{ project.coordinator }}
+                  
                 </p>     
             </hgroup>
-            <h3 class="mb0-50">
-                Project Leads
-            </h3>
-            {% for x in projectLead %}
-                <li>
-                {{ x }} 
-                </li>     
-            {% endfor %}
-            <li>
-                Arc. Walter Sermodzi{% comment %} {{project.coordinator}} {% endcomment %}
-            </li>  
-            <li>
-                Ing. Adivdom Clement{% comment %} {{project.coordinator}} {% endcomment %}
-            </li>  
-            <li>
-                Surv. Kwadwo Appiah{% comment %} {{project.coordinator}} {% endcomment %}
-            </li>    
-        </ul>
-    </article>
-
-    <article id="project_details" 
-        class="gr2s1 gc7s6 gc9s4-m gc10s3-l gr1s1-l"
-    >
-        <ul class="w-100 h0-00 pb-100
-            pa0-50
-            white-90
-            bg-blue0
-            br0-50"
+            <hgroup 
+                class="mb0-00"
             >
-                <h3 class="mb0-50">
-                    Job Sheets
-                </h3>
-                <li>English</li>
-                <div 
-                    class="w-100 
-                        white-90 mt1-00"
-                >
-                    <h3 class="mb0-50">
-                        Certifications
-                    </h3>
-                    <p>
-                        Certification I
-                    </p>
-                </div> 
-        </ul> 
+                <h2 class="mb0-50 f0-75">
+                    Project Leads
+                </h2>
+                <p class="mb0-25">
+                    {{ project.coordinator }}
+                </p>     
+                <p class="mb0-25">
+                    {{ project.coordinator }}
+                </p>     
+                <p class="mb0-25">
+                    {{ project.coordinator }}
+                </p>     
+            </hgroup>
+          
+        </div>
     </article>
 
-    <article id="project_details" 
-        class="gr1s1 gc7s6 gc5s4-m gc4s3-l"
+    <article id="project_jobsheet" 
+        class="gc7s6 gr2s1 
+        gc9s4-s
+        gc7s3-m gr1s1-m
+        gc4s3-l
+        gc2s1-xl"
     >
-        <div 
-            class="w-100 h0-00 
-            pb-100 pa0-50
-            white-90
-            bg-blue1
+        <div class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50 
+            bg-blue0 white-90
             br0-50"
         >
-            <h3 class="mb0-25">
-                Client
-            </h3>
-            <p class="mb0-50">{{project.client}}</p>
-
-            <h3 class="mb0-25">
-                Total Floor Area
-            </h3>
-            <p>{{project.total_floor_area}} m<sup>2</sup></p>
-       
-            <h3 class="mb0-50">
-                Cost
-            </h3>
-            <p>{{project.cost}}</p>
+            <hgroup 
+                class="mb1-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Client
+                </h2>
+                <p class="mb0-25">
+                    {{project.client}}
+                </p>     
+            </hgroup>
+            <hgroup 
+                class="mb0-50"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Total Floor Area
+                </h2>
+                <p class="mb0-25">
+                    {{project.total_floor_area}} m<sup>2</sup>
+                </p>     
+            </hgroup>
+            <hgroup 
+                class="mb0-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Cost
+                </h2>
+                <p class="mb0-25">
+                    {{project.cost}}
+                </p>     
+            </hgroup>
+        </div> 
+    </article>
+    
+    <article id="project_dates" 
+        class=" gc7s6 gr1s1 
+            gc5s4-s
+            gc4s3-m
+            gc7s3-l
+            gc11s1-xl"
+    >
+        <div 
+            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50 
+            bg-blue2 white-90
+            br0-50"
+        >
+            <hgroup 
+                class="mb1-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Start Date
+                </h2>
+                <p class="mb0-25">
+                    {{ project.start_date|date:'F, Y' }}
+                </p>     
+            </hgroup>
+            <hgroup 
+                class="mb1-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Completed Date
+                </h2>
+                <p class="mb0-25">
+                    {{ project.completed_date|date:'F, Y' }}
+                </p>     
+            </hgroup>
         </div> 
     </article>
 
-    <article id="project_dates" 
-        class="gr1s1-l gc5s4-m gc7s3-l gr2s1 gc1s6"
+
+    <article id="project_info" 
+        class="gc1s6 gr2s1 
+        gc5s4-s
+        gc10s3-m gr1s1-m 
+        gc10s3-l 
+        gc12s1-xl"
+    >
+       <div 
+            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50
+            bg-blue1 white-90
+            br0-50"
+        >
+            <hgroup 
+                class="mb1-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                Job Sheets 
+                </h2>
+                <p class="mb0-25">
+                    English
+                </p>     
+            </hgroup>
+            <hgroup 
+                class="mb0-00"
+            >
+                <h2 class="mb0-50 f0-75">
+                    Certifications
+                </h2>
+                <p class="mb0-25">
+                    Certification I
+                </p>     
+                <p class="mb0-25">
+                    Certification Ii
+                </p>     
+                
+            </hgroup>
+            
+        </div> 
+    </article>
+    <article id="blank_1" 
+        class="gc9s4 gc9s1-xl gr1s1-xl"
     >
         <div 
-            class="w-100 h0-00 
-            pb-100 pa0-50
-            white-90
-            bg-blue2
-            br0-50
-                "
+            class="dn dib-s dn-m dib-xl h0-00 w-100 w11-00-l pb-100
+            bg-blue4 white-90 pa0-50
+            br0-50 ba"
         >
-            <h3 class="mb0-50">
-                Sart Date
-            </h3>
-            <p class="mb0-25">{{ project.start_date|date:'F, Y' }}</p>
-            <h3 class="mb0-50">
-                Competed Date
-            </h3>
-            <p class="mb0-25">{{ project.completed_date|date:'F, Y' }}</p>
+        </div> 
+    </article>
+    <article id="blank_2" 
+        class=" gc1s4 gr2s1
+            "
+    >
+        <div 
+            class="dn dib-s dn-m h0-00 w-100 pb-100
+            bg-blue0 white-90 pa0-50
+            br0-50 ba bw1 b--white-90"
+        >
         </div> 
     </article>
 </div>

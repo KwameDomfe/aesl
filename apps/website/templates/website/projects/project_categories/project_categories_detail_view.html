@@ -30,10 +30,10 @@ Projects || {{ projectCategory }}
             <hgroup class="gc1s12
                     pa1-00 ">
                 <h2 class="mb0-00
-                        f3-00
-                    "
+                        f3-00"
                 >
-                {{ projectCategory }}</h2>
+                    {{ projectCategory.name }}
+                </h2>
             </hgroup>
             <!-- Page Navigation -->
                 {% include 'website/projects/_partials/projects_page_nav.html' %}
@@ -42,40 +42,125 @@ Projects || {{ projectCategory }}
         <!-- Page Header -->
 
         <main class=" bg-white ph1-00">
-            <!-- Projects Category Overview -->
-            <div id="project_Overview"
-                class="grid gtc12 ggap1-00
-                    ph1-00
-                    mb3-00"
+             <!-- Overview -->
+             <div id="overview"
+             class="grid gtc12 ggap1-00"
+         >
+             <!-- Overview Description --> 
+             <header 
+                 class="gr1s1 gc2s10 
+                     w-100
+                     blue0 bb"
+             >
+                 <hgroup id="Project_Overview_1"
+                     class="f1-50"
+                 >
+                     <p class="mb0-00 pv4-00 lh-copy tracked tj">
+                        {{ projectCategory.description }}
+                     </p>   
+                 </hgroup> 
+             </header>
+             <!-- Overview Description -->
+        </div>
+        <!-- Overview -->
+        <!-- Projects -->
+        <div id="projects"
+             class = "w-100 
+                 mv4-00"     
+        >
+           
+            <ul class="grid ggap1-00 blue0"
             >
-                <article id="Project_Overview_1" 
-                    class="gr2s1 gc1s8
-                       
-                    "
-                > 
-                <ul>
-                    {% for category in Categories %}
-                    <li>{{ category }}</li>
-                    {% endfor %}
-                </ul>
-                </article>
+                {% for project_sub_category in project_sub_categories_list %}
+                    <li class="w-100
+                        mh0-50 "
+                    >   
+                        <header class="flex justify-between w-100">
+                            <hgroup><h2 class = "f1-50 tl">
+                                {{ project_sub_category.name }}
+                            </h2>
+                            <p class = "f1-50 tl w-75">
+                                {{ project_sub_category.description }}
+                            </p></hgroup>
+                        </header>
 
-            </div>
-            <!-- Projects Category Overview -->
+                        <ul class = "w-100 flex flex-wrap justify-between ggap1-00">
+                            {% for project in project_sub_category.project_set.all %}
+                                
+                                <li id="" 
+                                    class="flex flex-column justify-start items-start
+                                        white-90 w-100 w-45-s w-30-m
+                                        bg-blue0 pa0-50
+                                        br0-50"
+                                >
+                                    <hgroup 
+                                        class="w-100"
+                                    >
+                                        <div class="flex flex-column
+                                            mv1-00
+                                            bb"
+                                        >
+                                            <span class="mb0-50 b">{{ project.name }}</span> 
+                                            <span class="f0-75 tr">{{ project.location }}</span>  
+                                        </div>
+                                    </hgroup>
 
-            <!-- Projects Category Gallery -->
-            <div id="Categories_Gallery"
-                class="grid gtc12 ggap1-00
-                    mb3-00"
-            >
-            <div class="w-100 gc1s12">
-              
-                   
-               
-            </div>
-                
-            </div>
-            <!-- Projects Category Gallery -->
+                                    <div class="flex flex-column justify-start
+                                            mb2-00 w-100"
+                                    >
+                                        <figure class="h12-00 w-100">
+                                            <img src="{{ project.thumbnail.url }}" 
+                                            alt="" 
+                                            class="h-100 cover"
+                                            />
+                                        </figure>
+
+                                        <figcaption class="
+                                            w-100
+                                            mt2-00 
+                                            f1-00 lh-copy tj"
+                                        >
+                                            <p class=""
+                                            >
+                                                {{ project.description }} . . .
+                                            <a href="{% url 'website:project-details' project.slug %}">
+                                                
+                                            </p> 
+                                            <div>
+                                                <a href="{{ project.get_absolute_url }}"
+                                                    class="dib pv0-25 ph0-50 br0-25 bg-gold"
+                                                >
+                                                    read more
+                                                </a>
+                                            </div>
+                                                
+                                        </figcaption>
+                                    </div>
+
+                                    <footer 
+                                        class="w-100"
+                                    > 
+                                        <div class="flex justify-between w-100">
+                                            <h5 class="pa0-50 ba br0-25">{{ project.sub_category.category }}</h5>
+                                            <small class="pa0-50 ba br0-25">{{ project.sub_category }}</small>
+                                        </div>
+                                    </footer>
+                                
+                                </li>
+                                
+                            {% endfor %}
+                        </ul>
+                        
+                    </li>
+                    <footer class="flex w-100 bg-red">
+                        <h2 class = "f1-50 tl">
+                            {{ project_sub_category.category }}
+                        </h2>
+                    </footer>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- Projects -->
             
         </main>
         

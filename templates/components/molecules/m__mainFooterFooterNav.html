@@ -3,162 +3,152 @@
     items-start justify-between ggap0-50 
     w-100"
 >
-    <section id="footer__projects"  
+    <div id="footer__projects"
         class = "gr1s1 gc1s12 gc1s6-s gc1s3-m
             w-100"
         data-use-new="true" 
         role="tabpanel" 
         aria-label="projects" 
-        section-index="1"
+        section-index="1" aria-label=""
     >
-        <header>
-            <h2 class=""
-            >
-                <a class="white-90" 
-                    href="#projects"
-                    role="button" 
-                    aria-expanded="false"
-                >
-                    PROJECTS
-                </a>
-            </h2>
-        </header>
-        <nav aria-label=""
+        <h2 class=""
         >
-            <ul class="flex flex-column items-center justify-center"
+            <a class="white-90" 
+                href="#projects"
+                role="button" 
+                aria-expanded="false"
             >
-                {% for project_category in project_categories_list %}
-                    <li class="w-100 
-                        mb1-00"
+                PROJECTS
+            </a>
+        </h2>
+        <ul class="flex flex-column items-center justify-center"
+        >
+            {% for project_category in project_categories_list %}
+                <li class="w-100 
+                    mb1-00"
+                >
+                    <a href="{% url 'website:project-category-details' project_category.slug %}"
+                        class="white-90 dib "
                     >
-                        <a href="{% url 'website:project-category-details' project_category.slug %}"
-                            class="white-90 dib "
-                        >
-                            {{ project_category.name}} 
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>  
-        </nav>
-    </section>
+                        {{ project_category.name}} 
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>  
+    </div>
 
-    <section id="footer__practice" 
+    <div id="footer__practice"  
+        aria-label="practice"
         class="gr2s1 gr1s1-s gc1s12 gc7s6-s gc4s3-m
-            w-100" 
+        w-100" 
         data-use-new="true" 
         role="tabpanel" 
         aria-label="PRACTICE" 
         section-index="2"
     >
-        <header>
-            <h2 class=""
-            >
-                <a  role="button" 
-                    aria-expanded="false" 
-                    href="#practice"
-                    class="white-90"
-                >
-                    PRACTICE
-                </a>
-            </h2>
-        </header>
-        
-        <nav aria-label="practice"
+        <h2 class=""
         >
-            <ul class=""
+            <a  role="button" 
+                aria-expanded="false" 
+                href="#practice"
+                class="white-90"
             >
-                <li class="mb1-00 "
+                PRACTICE
+            </a>
+        </h2>
+        <ul class=""
+        >
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:history' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:history' %}"
-                    >
-                        History
-                    </a>
-                </li>
-                <li class="mb1-00 ">
-                    <a  class="white-90" 
-                        href="{% url 'website:mandate' %}"
-                    >
-                        Mandate
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    History
+                </a>
+            </li>
+            <li class="mb1-00 ">
+                <a  class="white-90" 
+                    href="{% url 'website:mandate' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:functions' %}"
-                    >
-                        Functions
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Mandate
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:functions' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:mission-vision-values' %}"
-                    >
-                        Mission, Vision & Values
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Functions
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:mission-vision-values' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:sector-ministry' %}"
-                    >
-                        Sector Ministry
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Mission, Vision & Values
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:sector-ministry' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:corporate-governance' %}"
-                    >
-                        Corporate Governance
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Sector Ministry
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:corporate-governance' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:management' %}"
-                    >
-                        Management
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Corporate Governance
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:management' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:services' %}"
-                    >
-                        Services
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Management
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:services' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:client-speak' %}"
-                    >
-                        Client Speak
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Services
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:client-speak' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:alliances' %}"
-                    >
-                        Alliances
-                    </a>
-                </li>
-                <li class="mb1-00 "
+                    Client Speak
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:alliances' %}"
                 >
-                    <a  class="white-90" 
-                        href="{% url 'website:corporate-responsibilities' %}"
-                    >
-                        Corporate Responsibility
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+                    Alliances
+                </a>
+            </li>
+            <li class="mb1-00 "
+            >
+                <a  class="white-90" 
+                    href="{% url 'website:corporate-responsibilities' %}"
+                >
+                    Corporate Responsibility
+                </a>
+            </li>
+        </ul>
+    </div>
     
-    <section id="footer__principles" 
+    <div id="footer__principles" 
         class="gr3s1 gr2s1-s gr1s1-m gc1s12 gc1s6-s gc7s3-m
             w-100" 
         data-use-new="true" 
@@ -235,9 +225,9 @@
                 </li>
             </ul>
         </nav>
-    </section>
+    </div>
     
-    <section id="footer__people" 
+    <div id="footer__people" 
         class="w-100 gr4s1 gr2s1-s gr1s1-m gc1s12 gc7s6-s gc10s3-m" 
         data-use-new="true" 
         role="tabpanel" 
@@ -294,5 +284,5 @@
                 </li>
             </ul>
         </nav>
-    </section>
+    </div>
 </div>

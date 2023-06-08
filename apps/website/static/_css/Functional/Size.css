@@ -69,8 +69,10 @@
 .h6-00{height:6.00rem}
 .h8-00{height:8.00rem}
 .h10-00{height:10.0rem}
+.h10-50{height:10.5rem}
 .h11-00{height:11.0rem}
 .h12-00{height:12.0rem}
+.h14-00{height:14.0rem}
 .h16-00{height:16.0rem}
 .h20-00{height:20.0rem}
 .h24-00{height:24.0rem}
@@ -160,6 +162,7 @@
 .w6-00{width:6.00rem}
 .w8-00{width:8.00rem}
 .w10-00{width:10.0rem}
+.w10-50{width:10.50rem}
 .w11-00{width:11.0rem}
 .w12-00{width:12.0rem}
 .w14-00{width:14.0rem}
@@ -437,6 +440,7 @@
 .h8-00-m{height:8.00rem}
 .h10-00-m{height:10.0rem}
 .h12-00-m{height:12.0rem}
+.h14-00-m{height:14.0rem}
 .h16-00-m{height:16.0rem}
 .h20-00-m{height:20.0rem}
 .h24-00-m{height:24.0rem}
@@ -615,7 +619,9 @@
 .h6-00-l{height:6.00rem}
 .h8-00-l{height:8.00rem}
 .h10-00-l{height:10.0rem}
+.h11-00-l{height:11.0rem}
 .h12-00-l{height:12.0rem}
+.h14-00-l{height:14.0rem}
 .h16-00-l{height:16.0rem}
 .h20-00-l{height:20.0rem}
 .h24-00-l{height:24.0rem}
@@ -702,7 +708,9 @@
 .w6-00-l{width:6.00rem}
 .w8-00-l{width:8.00rem}
 .w10-00-l{width:10.0rem;}
+.w11-00-l{width:11.0rem;}
 .w12-00-l{width:12.0rem;}
+.w14-00-l{width:14.0rem;}
 .w16-00-l{width:16.0rem;}
 .w20-00-l{width:20.0rem;}
 .w24-00-l{width:24.0rem;}
