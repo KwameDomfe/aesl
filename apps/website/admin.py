@@ -7,11 +7,11 @@ from django.contrib import admin
 from .models import (
     Category, 
         SubCategory,
-
     Person, 
         Title,
         Gender,  
         Region,
+        Client,
 
     Staff, 
         Profession,
@@ -22,12 +22,17 @@ from .models import (
         Position,
         Department,
         Service,
+        Section,
         Office,
     Project,
-        ProjectDetail,
+        ProjectCertification,
         ProjectLead,
-        ProjectMedia,
         ProjectOverview,
+        ProjectConcept,
+        ProjectDesign,
+        ProjectConstruction,
+        ProjectDetail,
+        ProjectMedia,
         ProjectTag  
 )
 """ Imports End"""
@@ -54,31 +59,53 @@ class CategoryAdmin(admin.ModelAdmin):
 """ Categories Admin End """
 
 """ Project Administration Start """
-# class ProjectOverviewInline(admin.TabularInline):
-#     model = ProjectOverview
-
-# class ProjectDetailInline(admin.TabularInline):
-#     model = ProjectDetail
 
 class ProjectLeadInline(admin.TabularInline):     
     model = ProjectLead
     extra = 0
 
-# class ProjectTagInline(admin.TabularInline):
-#     model = ProjectTag
+class ProjectCertificationInline(admin.TabularInline):     
+    model = ProjectCertification
+    extra = 0
 
-# class ProjectMediaInline(admin.TabularInline):
-#     model = ProjectMedia
+class ProjectOverviewInline(admin.TabularInline):
+    model = ProjectOverview
+    extra = 0
 
+class ProjectConceptInline(admin.TabularInline):
+    model = ProjectConcept
+    extra = 0
+
+class ProjectDesignInline(admin.TabularInline):
+    model = ProjectDesign
+    extra = 0
+
+class ProjectConstructionInline(admin.TabularInline):
+    model = ProjectConstruction
+    extra = 0
+
+class ProjectDetailInline(admin.TabularInline):
+    model = ProjectDetail
+    extra = 0
+
+class ProjectTagInline(admin.TabularInline):
+    model = ProjectTag
+    extra = 0
+
+class ProjectMediaInline(admin.TabularInline):
+    model = ProjectMedia
+    extra = 0
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [
-        # ProjectOverviewInline,
-        # ProjectDetailInline,
-        ProjectLeadInline,
-        # ProjectTagInline,
-        # ProjectMediaInline
+        ProjectOverviewInline,
+        ProjectConceptInline,
+        ProjectDesignInline,
+        ProjectConstructionInline,
+        ProjectDetailInline,
+        ProjectTagInline,
+        ProjectMediaInline
 
         ]
     list_display = ['name','description']
@@ -93,11 +120,18 @@ class DepartmentInline(admin.StackedInline):
     extra = 0
 """  Models Register """
 
+@admin.register(Section)
+class SectionAdmin(admin.ModelAdmin):
+    inlines = [
+        DepartmentInline,
+        ]
+
 admin.site.register(Title)
 admin.site.register(Gender)
 admin.site.register(Region)
 admin.site.register(Profession)
 admin.site.register(Person)
+admin.site.register(Client)
 
 admin.site.register(BoardOfDirector)
 admin.site.register(Management)
@@ -108,3 +142,8 @@ admin.site.register(Rank)
 admin.site.register(Department)
 admin.site.register(Office)
 admin.site.register(Service)
+admin.site.register(ProjectLead)
+admin.site.register(ProjectCertification)
+admin.site.register(ProjectDesign)
+admin.site.register(ProjectConstruction)
+# admin.site.register(Section)

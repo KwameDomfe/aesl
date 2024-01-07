@@ -1,7 +1,7 @@
 <div id="project_summary"
     class="gc1s12 grid gtc12 ggap1-00
     items-center justify-center
-    ph1-00 mb1-00
+    ph1-00 mb1-00 min-h14-00
     "
     >
     <article id="consultants_info" 
@@ -9,41 +9,37 @@
             gc1s4-s 
             gc1s3-m
             gc1s3-l
-            gc1s1-xl"
+            w14-00-xl"
     >
         <div
-            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50
+            class="w-100 h0-00 pb-100 pa0-50
                 bg-blue0 flex flex-column
                 br0-50 white-90"
         >
             <hgroup 
                 class="mb1-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Project Coordinator
                 </h2>
-                <p class=" mb0-25">
+                <p class="mb0-25">
                     {{ project.coordinator }}
-                  
-                </p>     
+                </p>
             </hgroup>
             <hgroup 
                 class="mb0-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60"
+                >
                     Project Leads
                 </h2>
-                <p class="mb0-25">
-                    {{ project.coordinator }}
-                </p>     
-                <p class="mb0-25">
-                    {{ project.coordinator }}
-                </p>     
-                <p class="mb0-25">
-                    {{ project.coordinator }}
-                </p>     
+                <ul class="mb0-25">
+                    {% for project_lead in project_leads %}
+                    <li>{{project_lead}}</li>
+                    {% endfor %}
+                </ul>
             </hgroup>
-          
+
         </div>
     </article>
 
@@ -52,16 +48,17 @@
         gc9s4-s
         gc7s3-m gr1s1-m
         gc4s3-l
-        gc2s1-xl"
+        gc4s3-xl
+        w14-00-xl"
     >
-        <div class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50 
+        <div class="w-100 h0-00 pb-100 pa0-50 
             bg-blue0 white-90
             br0-50"
         >
             <hgroup 
                 class="mb1-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Client
                 </h2>
                 <p class="mb0-25">
@@ -71,7 +68,7 @@
             <hgroup 
                 class="mb0-50"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Total Floor Area
                 </h2>
                 <p class="mb0-25">
@@ -81,11 +78,11 @@
             <hgroup 
                 class="mb0-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Cost
                 </h2>
                 <p class="mb0-25">
-                    {{project.cost}}
+                    GHC {{project.cost}} million
                 </p>     
             </hgroup>
         </div> 
@@ -96,17 +93,17 @@
             gc5s4-s
             gc4s3-m
             gc7s3-l
-            gc11s1-xl"
+            w14-00-xl"
     >
         <div 
-            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50 
+            class="w-100 h0-00 pb-100 pa0-50 
             bg-blue2 white-90
             br0-50"
         >
             <hgroup 
                 class="mb1-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Start Date
                 </h2>
                 <p class="mb0-25">
@@ -116,7 +113,7 @@
             <hgroup 
                 class="mb1-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Completed Date
                 </h2>
                 <p class="mb0-25">
@@ -132,36 +129,38 @@
         gc5s4-s
         gc10s3-m gr1s1-m 
         gc10s3-l 
-        gc12s1-xl"
+        w14-00-xl"
     >
        <div 
-            class="w-100 h0-00 pb-100 h11-00-l w11-00-l pb0-00-l pa0-50
+            class="w-100 h0-00 pb-100 pa0-50
             bg-blue1 white-90
             br0-50"
         >
             <hgroup 
                 class="mb1-00"
             >
-                <h2 class="mb0-50 f0-75">
-                Job Sheets 
+                <h2 class="mb0-50 f0-75 white-60">
+                    Job Sheets 
                 </h2>
-                <p class="mb0-25">
-                    English
-                </p>     
+                <a href=""
+                    class=""
+                >
+                    <p class="mb0-25">
+                        English
+                    </p>
+                </a>     
             </hgroup>
             <hgroup 
                 class="mb0-00"
             >
-                <h2 class="mb0-50 f0-75">
+                <h2 class="mb0-50 f0-75 white-60">
                     Certifications
                 </h2>
-                <p class="mb0-25">
-                    Certification I
-                </p>     
-                <p class="mb0-25">
-                    Certification Ii
-                </p>     
-                
+                <ul class="mb0-25">
+                    {% for project_certification in project_certifications %}
+                    <li>{{project_certification}}</li>
+                    {% endfor %}
+                </ul>  
             </hgroup>
             
         </div> 
@@ -170,7 +169,7 @@
         class="gc9s4 gc9s1-xl gr1s1-xl"
     >
         <div 
-            class="dn dib-s dn-m dib-xl h0-00 w-100 w11-00-l pb-100
+            class="dn dib-s dn-m  h0-00 w-100 w11-00-l pb-100
             bg-blue4 white-90 pa0-50
             br0-50 ba"
         >

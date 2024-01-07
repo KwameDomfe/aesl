@@ -9,17 +9,21 @@
             {% lorem 25 w random %} <br> <br>
             {% lorem 25 w random %}
         </p>
-        <label for=""
+        <label for="email"
             class="dib mb1-00 w-100">Email:
-            <input class="w-100 pa0-50 mt1-00" 
+            <input id="email" 
+                class="w-100 pa0-50 mt1-00" 
+                name="email"
                 type="text"
                 placeholder="Enter Your Email"
+                autocomplete="true"
             />
         </label>
-        <label for=""
+        <label for="submit"
             class=""
         >
-            <input 
+            <input id="submit"
+                name="submit"
                 class="pa0-50 br0-25 b--none"
                 type="submit"
                 value="SUBSCRIBE"

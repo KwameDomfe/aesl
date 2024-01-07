@@ -19,7 +19,7 @@
         />
         <meta
             name="Keywords" 
-            content="Architecture, Engineering, Valuation, Quantity Surveying, Planning"
+            content="Architecture and Planning, Engineering, Valuation, Quantity Surveying, Planning, water"
         />
         <!-- Favicon & title start -->
         <link 
@@ -62,23 +62,23 @@
         <!-- Custom Page JavaScripts End-->
     </head>
 
-    <body class="pa0-00 ma0-00 "
+    <body class="pa0-00 ma0-00"
     >
         <!-- page Layout Start -->
-        <div id="l__Contents" 
+        <div id="l__twoColumn" 
             class="flex flex-column flex-row-l vh-100 w-100"
         >   
-            <!-- Main Aside Start -->
-                <aside id="l__contents--MainAside" 
+            <!-- Main Header Start -->
+                <header id="lc--MainHeader" 
                     class=""  
                 >  
                     {% include '_partials/mainHeader.html' %} 
-                </aside>
-            <!-- Main Aside End --> 
+                </header>
+            <!-- Main Header End --> 
             
             <!-- Main Content Start -->
-                <main id="l__contents--MainContent"
-                    class="w-100 vh-100 of-y-scroll"
+                <main id="lc__MainContent"
+                    class="vh-100 of-y-scroll"
                 >   
                     <!-- Page Content Start -->
                     {% block pagecontent %}
@@ -87,7 +87,7 @@
                     <!-- Page Content End -->
 
                     <!-- Main Footer Start -->
-                    <footer id="main__footer"
+                    <footer id="lc__mainFooter"
                         class=""
                     >
                         {% include '_partials/mainFooter.html' %}

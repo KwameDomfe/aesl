@@ -26,20 +26,20 @@ from . views import (
         mandate, 
         functions,
         missionVisionAndValues,
+
         sectorMinistry, 
         corporateGovernance, 
-        boardChairman,
-        boardMember,
-        services,
+            boardChairman,
+            boardMember,
         management, 
-        managingDirectorDetails,
-        deputyManagingDirectorDetails, 
-        headsOfDepartmentsDetails,
-        regionalConsultantDetails, 
+            managingDirectorDetails,
+            deputyManagingDirectorDetails, 
+            headsOfDepartmentsDetails,
+            regionalConsultantDetails, 
         alliances,
         clientSpeak, 
         corporateResponsibilities,
-
+        services,
     principles, 
         professionalism,
         civic, 
@@ -50,15 +50,14 @@ from . views import (
         empowerment, 
 
     projects,
+
+        projectCategories,
+        projectCategoryDetails,
+         
         projectsList,
         projectsMap, 
         projectFilms, 
         projectDetails,
-        projectCategories,
-        projectCategoryDetails, 
-        projectCategoryCreate, 
-        projectSubCategories, 
-        projectSubCategories, 
     search,
 
     news,
@@ -242,18 +241,22 @@ urlpatterns = [
                     path('', 
                         projects, 
                         name = 'projects-home'),
+
                     # Projects List
                     path('projects-list/', 
                         projectsList, 
                         name='projects-list'),
+
                     # Project Details
                     path('<slug:slug>', 
                         projectDetails, 
                         name='project-details'),
+
                     # Projects Map
                     path('projects-map-home/', 
                         projectsMap, 
                         name='projects-maps-home'),
+
                     # Project Films
                     path('projects-films-home/', 
                         projectFilms, 
@@ -263,42 +266,11 @@ urlpatterns = [
                     path('project-categories-home/', 
                         projectCategories, 
                         name='project-categories-home'),
-                    # Project Categories List
-                    path('project-categories-list/', 
-                        projectCategories, 
-                        name='project-categories-list'),
+
                     # Project Categories Details
                     path('<slug:slug>/', 
                         projectCategoryDetails, 
                         name='project-category-details'),
-                    
-                    # Project Category Create   
-                    path('project-categories-create/', 
-                        projectCategoryCreate, 
-                        name='project-categories-create'),
-
-
-                    path('project-sub-categories-home/', 
-                        projectSubCategories, 
-                        name='project-sub-categories-home'),
-
-                    path('project-sub-categories-list/', 
-                        projectSubCategories, 
-                        name='project-sub-categories-list'),
-
-                    path('<slug:slug>/', 
-                        projectSubCategories, 
-                        name='project-sub-categories-details'),
-
-                    # path('project-types-home/', 
-                    #   project_Types_Home, 
-                    # name='project-types-home'),
-                    # path('project-types-list/', 
-                    #   project_Types_List, 
-                    # name='project-types-list'),
-                    # path('<slug:slug>/', 
-                    #   project_Type_Details, 
-                    # name='project-type-details'),
                 ]
             )
         ),
@@ -308,7 +280,7 @@ urlpatterns = [
         search, 
         name = 'search'
         ),
-    
+
     # News
     path('news/', 
         news, 

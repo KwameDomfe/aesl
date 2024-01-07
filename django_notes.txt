@@ -2,8 +2,10 @@ Create Project Directory in Client Folder
 
 Identify project Packages and include them in a requirements file.
 NB: requirements.txt would be needed during deployment.
+
 Set up Virtual Environment VENV and activate.
 Pip install Packages required for project.
+
 Start Project and setup project folder stucture.
     Project
         core

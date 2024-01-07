@@ -5,50 +5,72 @@
         f1-00  tracked-tight
         bg-blue0
         "
-    >
-    <nav id="projects_categories_nav1" 
-        class="gr1s1 gc1s1
+>
+    <div id="projectCategories--nav1" 
+        class="gr1s1 gc2s1
             w10-00 h10-00
             bg-blue0
             br0-50 ba shadow-yellow"
     >
-        <ul id = "projectcategories_list_1"
+        <ul id = "projectCategories_list_1"
             class="
             pa0-50">
-           {% for project_category in project_categories_list_1 %}
+           {% for projectCategory in projectCategories_list_1 %}
                 <li class="mb0-50">
-                    <a href="{% url 'website:project-category-details' project_category.slug %}"
+                    <a href="{% url 'website:project-category-details' projectCategory.slug %}"
                     class="white-90">
-                        {{ project_category.name }}
+                        {{ projectCategory.name }}
                     </a>
                 </li>
             {% endfor %}
         </ul>   
-    </nav>
+    </div>
     
-    <nav id="projects_categories_nav2" 
-        class="gr1s1 gc2s1
+    <div id="projectCategories--nav2" 
+        class="gr1s1 gc3s1
             w10-00 h10-00 
             bg-blue0
             br0-50 ba shadow-yellow"
     >
-        <ul id = "projectcategories_list_2"
+        <ul id = "projectCategories_list_2"
             class="flex flex-column justify-start
                 w-100, h-100
-                pa0-50">
-            {% for project_category in project_categories_list_2 %}
+                pa0-50"
+        >
+            {% for projectCategory in projectCategories_list_2 %}
                 <li class="mb0-50">
-                    <a href="{% url 'website:project-category-details' project_category.slug %}"
+                    <a href="{% url 'website:project-category-details' projectCategory.slug %}"
                     class="white-90 ">
-                        {{ project_category }}
+                        {{ projectCategory }}
                     </a>
                 </li>
             {% endfor %}
         </ul>  
-    </nav>
+    </div>
+    <div id="projects" 
+        class="gr1s1 gc1s1
+            w10-00 h10-00 
+            bg-blue0
+            br0-50 ba shadow-yellow"
+    >
+        <ul id = "projects"
+            class="flex flex-column justify-start
+                w-100, h-100
+                pa0-50"
+        >
+            
+                <li class="mb0-50">
+                    <a href="{% url 'website:projects-home' %}"
+                    class="white-90 ">
+                        All Projects
+                    </a>
+                </li>
+           
+        </ul>  
+    </div>
 
-    <nav id="projects_info" 
-        class="gr1s1 gc11s2
+    <div id="project_info" 
+        class="gr1s1 gc12s1
             flex items-center justify-center
             w10-00 h10-00 shadow-yellow"
     >
@@ -57,9 +79,8 @@
                 w-100 h-100
                 pa0-50
                 blue0
-                ba
                 bg-white
-                br0-50"
+                ba br0-50"
         >
             <li class="">
                 <a  href="{% url 'website:projects-list' %}"
@@ -77,22 +98,22 @@
                 >Films</a>
             </li>     
         </ul> 
-    </nav>
+    </div>
 
-    <article id="misc_1" 
-        class="gr1s1 gc7s2
-            bg-blue3  h10-00 w-100
+    <div id="project_misc_1" 
+        class="gr1s1 gc6s2
+            bg-blue3  h-100 w-100
             br0-50
             "
     >
-    </article>
+    </div>
 
-    <article id="misc_2" 
-        class="gr1s1 gc9s2
-             h10-00 w-100
+    <div id="project_misc_2" 
+        class="gr1s1 gc4s2
+            h-100 w-100
             bg-gold
             br0-50
             "
     >
-    </article>
+    </div>
 </div>

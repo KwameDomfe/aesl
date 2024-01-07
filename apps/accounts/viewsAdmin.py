@@ -22,7 +22,7 @@ def admin_Login(request):
         username=username, 
         password=password,
     )
-    print(user)
+    # print(user)
     
     if user is not None:
         login(request=request, user=user)

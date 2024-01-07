@@ -3,10 +3,12 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from .models import (
     # Projects 
-    Category, SubCategory,
+    Category,
     Project, 
-        ProjectOverview, 
-        # ProjectLead, 
+        ProjectOverview,
+        ProjectConcept,
+        ProjectDesign,
+        ProjectConstruction, 
         ProjectDetail, 
         ProjectTag, 
         ProjectMedia,
@@ -18,8 +20,6 @@ from .models import (
 
     Staff, 
         Rank,  
-       
-   
 
     # Practice
         # Board of Directors
@@ -52,7 +52,8 @@ def test(request):
     numberVar = random.randint(10, 123456) #pseudo random
     # From Database
 
-    return HttpResponse('Hellow World')
+    return HttpResponse('Hello World')
+
 @login_required
 def test2(request):
     nameVar = 'Kuku' #String
@@ -65,9 +66,10 @@ def test2(request):
     categories_4 = Category.objects.all()[0:4]
 
     civic_and_culture = Category.objects.get(name='Civic and Culture')
-    education = Category.objects.get(description='Hospitality Projects')
+    education = Category.objects.get(description__contains='education')
     
     categories_c = Category.objects.filter(name__contains='c')
+    
     context = {
         'nameVar':nameVar,
         'numberVar':numberVar,
@@ -79,10 +81,11 @@ def test2(request):
         'categories_c': categories_c,
         'civic_and_culture':civic_and_culture,
         'education':education
-
     }
+    
     return render(request,'website/misc/blank_page.html', context)
 """ Tests End """
+
 
 """ Home Page start """
 def index(request):
@@ -104,7 +107,9 @@ def index(request):
 
     # Projects
     projectCategories = Category.objects.all()
-
+    education = Category.objects.get(slug='education')
+    print(education)
+    
     #pageNav querysets
     context = {
         'ranks' :ranks,
@@ -114,11 +119,13 @@ def index(request):
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
         'project_categories_list' :projectCategories,
+        'education' :education,
     } 
 
     return render(request,'website/index.html', context)
 
 """ Home Page end """
+
 
 """ News start """
 def news(request):
@@ -132,6 +139,7 @@ def news(request):
     } 
     return render(request,'website/news/news-home.html', context)
 """ News End """
+
 
 """ People start """
 def people(request):
@@ -184,22 +192,33 @@ def ranks(request):
     
 def principalConsultants(request):
     #pageNav querysets
-    rank = Rank.objects.all()
     senior_ranks = Rank.objects.all()[0:3]
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
     projectCategories_qs = Category.objects.all()
-
-
+    
+    rank = Rank.objects.all()
+    pc = Rank.objects.get(id=1)
+    staffs = Staff.objects.all()
+    print(staffs)
+    principal_consultants = staffs.filter(rank__name = "Principal Consultant")
+    senior_consultants = staffs.filter(rank__name = "Senior Consultant")
+    consultants = staffs.filter(rank__name= "Consultant")
+    professionals = staffs.filter(rank__name__contains = "Professionals")
+    assistant_professionals = staffs.filter(rank__name__contains = "Assistant Professionals")
+    probationers = staffs.filter(rank__name__contains = "probationers")
     #pageNav querysets
     context = {
-        'ranks' :rank,
-        'senior_ranks' :senior_ranks,
-        'junior_ranks_1' :junior_ranks_1,
-        'junior_ranks_2' :junior_ranks_2,
-        'alumni_ranks' :alumni_ranks,
-        'project_categories_list' :projectCategories_qs,
+        'ranks'                     :rank,
+        'pc'                        :pc,
+        'senior_ranks'              :senior_ranks,
+        'junior_ranks_1'            :junior_ranks_1,
+        'junior_ranks_2'            :junior_ranks_2,
+        'alumni_ranks'              :alumni_ranks,
+        'project_categories_list'   :projectCategories_qs,
+        'staff'                     :staffs,
+        'principal_consultants'     :principal_consultants
     }
     return render(request,'website/people/principal-consultants/principal-consultants.html', context)
 
@@ -211,6 +230,7 @@ def principalConsultantsDetails(request, slug=None):
     senior_ranks = Rank.objects.all()[0:6]
     junior_ranks = Rank.objects.all()[5:10]
     projectCategories_qs = Category.objects.all()
+    
     context = {
         'staff' : staff,
         'positions' : positions,
@@ -219,27 +239,36 @@ def principalConsultantsDetails(request, slug=None):
         'junior_ranks' : junior_ranks,
         'persons' : persons,
         'project_categories_list' :projectCategories_qs,
-         }
+        }
+    
     return render(request,'website/people/principal-consultants/principal-consultant-details.html', context)
 
 def seniorConsultants(request):
     
     #pageNav querysets
     # rank = Rank.objects.all()
+
     senior_ranks = Rank.objects.all()[0:3]
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
     projectCategories_qs = Category.objects.all()
 
+    rank = Rank.objects.all()
+    sc = Rank.objects.get(id=2)
+    staffs = Staff.objects.all()
+    senior_consultants = staffs.filter(rank__name = "Senior Consultant")
+
     #pageNav querysets
     context = {
-        # 'ranks' :rank,
+        'ranks' :rank,
         'senior_ranks' :senior_ranks,
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
         'project_categories_list' :projectCategories_qs,
+        'sc' : sc,
+        'senior_consultants' : senior_consultants
     }
 
     return render(request,'website/people/senior-consultants/senior-consultants.html', context)
@@ -463,6 +492,7 @@ def supportingTeam(request):
     }
     return render(request,'website/people/supporting-team.html', context)
 """ People End """
+
 
 """ Practice start """
 # Practice Home
@@ -709,6 +739,7 @@ def services(request):
 
 """ Practice End """
 
+
 """ Principles start """
 def principles(request):
 
@@ -943,18 +974,20 @@ def empowerment(request):
 
 """ Principles End """
 
+
 """ projects start """
 def projects(request):
-    projects_qs = Project.objects.all()
+    
+    projects = Project.objects.all()
     projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
     projectCategories_qs_1 = Category.objects.all()[:5]
     projectCategories_qs_2 = Category.objects.all()[5:]
     
     context = {
-                'projects_list': projects_qs,
+                'projects_list': projects,
                 'project_categories_list':projectCategories_qs,
-                'project_categories_list_1':projectCategories_qs_1,
-                'project_categories_list_2':projectCategories_qs_2,
+                'projectCategories_list_1':projectCategories_qs_1,
+                'projectCategories_list_2':projectCategories_qs_2,
             }
     
     return render(request,'website/projects/projects-home.html', context)
@@ -966,16 +999,13 @@ def projectsList(request):
     projectCategories = Category.objects.all()
     projectCategories_1 = Category.objects.all()[:5]
     projectCategories_2 = Category.objects.all()[5:]
-
-    projectSubCategories = SubCategory.objects.all()
-    
     
     context = {
-                'projects_list': projects,
+                
+                'projects': projects,
                 'project_categories_list':projectCategories,
-                'project_subcategory':projectSubCategories,
-                'project_categories_list_1':projectCategories_1,
-                'project_categories_list_2':projectCategories_2
+                'projectCategories_list_1':projectCategories_1,
+                'projectCategories_list_2':projectCategories_2
             }
 
     return render(request, 'website/projects/projects_list_view.html', context)
@@ -988,16 +1018,30 @@ def projectDetails(request, slug = None):
         except Project.DoesNotExist:
             raise Http404
         except Project.MultipleObjectsReturned:
-                project_obj = Project.objects.get(slug=slug).first()
+            project_obj = Project.objects.get(slug=slug).first()
         except:
             raise Http404
+        
     projectCategories = Category.objects.all() 
-    projectOverview = ProjectOverview.objects.all()
-      
+    project_leads = project_obj.leads.all()
+    project_certifications = project_obj.certifications.all()
+    projectOverview = ProjectOverview.objects.filter(project=project_obj)
+    projectConcept = ProjectConcept.objects.filter(project=project_obj)
+    projectDesign = ProjectDesign.objects.filter(project=project_obj)
+    projectConstruction = ProjectConstruction.objects.filter(project=project_obj)
+
+    print(projectOverview)
+    
+    
     context = {
-            'project_categories_list':projectCategories,
-            'project': project_obj,
-            'projectOverview' :projectOverview
+        'project_categories_list':projectCategories,
+        'project':project_obj,
+        'project_leads':project_leads,
+        'project_certifications':project_certifications,
+        'project_overview':projectOverview,
+        'project_concept':projectConcept,
+        'project_design':projectDesign,
+        'project_construction':projectConstruction,
     }
         
     return render(request, 'website/projects/projects_detail_view.html', context)
@@ -1005,13 +1049,13 @@ def projectDetails(request, slug = None):
 def projectsMap(request):
         
 #         projects_qs = Project.objects.all() #print(projects_qs)
-#         projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
+        projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
 #         projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
 #         projectCategories_qs_2 = Category.objects.all()[5:]#print(projectCategories_qs)
         
         context = {
 #                 'projects_list': projects_qs,
-#                 'projectcategories_list':projectCategories_qs,
+               'project_categories_list':projectCategories_qs,
 #                 'projectcategories_list_1':projectCategories_qs_1,
 #                 'projectcategories_list_2':projectCategories_qs_2
                 
@@ -1038,14 +1082,14 @@ def projectMap(request):
 
 def projectFilms(request):
         
-#         projects_qs = Project.objects.all() #print(projects_qs)
-#         projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
-#         projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
-#         projectCategories_qs_2 = Category.objects.all()[5:]#print(projectCategories_qs)
+# projects_qs = Project.objects.all() #print(projects_qs)
+    projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
+#   projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
+#   projectCategories_qs_2 = Category.objects.all()[5:]#print(projectCategories_qs)
         
     context = {
-#                 'projects_list': projects_qs,
-#                 'projectcategories_list':projectCategories_qs,
+#            'projects_list': projects_qs,
+            'project_categories_list':projectCategories_qs,
 #                 'projectcategories_list_1':projectCategories_qs_1,
 #                 'projectcategories_list_2':projectCategories_qs_2
                 
@@ -1114,25 +1158,30 @@ def projectCategoryCreate(request):
 
 def projectCategoryDetails(request, slug = None):
     
-    projects_qs = Project.objects.all()
-    # projects_qs = Project.objects.filter(slug=slug)
-    projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
-    projectSubCategories_qs = SubCategory.objects.all()#print(projectCategories_qs)
+    project = Project.objects.filter(slug=slug)
+    projects = Project.objects.all()
+
+    projectCategory = Category.objects.get(slug=slug)
+    projectCategories_qs = Category.objects.all()
     projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
     projectCategories_qs_2 = Category.objects.all()[5:]
-    print(projectCategories_qs)
-        
+
+    projectSubCategories = projectCategory.subcategory_set.all()
+    print(projectSubCategories)
+    
     projectCategory = None
     if slug is not None:
         projectCategory = Category.objects.get(slug=slug)
-
     context = {
-        'projectslist': projects_qs,
-        'projectCategory':projectCategory ,
+        'project': project,
+        'projects': projects,
+
+        'projectCategory':projectCategory,
         'project_categories_list':projectCategories_qs,
-        'project_sub_categories_list':projectSubCategories_qs,
-        'project_categories_list_1':projectCategories_qs_1,
-        'project_categories_list_2':projectCategories_qs_2
+        'projectCategories_list_1':projectCategories_qs_1,
+        'projectCategories_list_2':projectCategories_qs_2,
+
+        'projectSubCategories' :projectSubCategories
     }
 
     return render(
@@ -1140,32 +1189,6 @@ def projectCategoryDetails(request, slug = None):
         'website/projects/project_categories/project_categories_detail_view.html', 
         context = context)
 """ project Categories end """
-""" project Subcategories start """
-def projectSubCategories(request):
-        
-#     project_families_queryset = None
-#     if id is not None:
-#         sub_categories_queryset = Sub_Category.objects.all()
-    
-
-    context = {
-#         'project_families_list': sub_categories_queryset     
-}
-
-    return render(request, 'website/projects/project_families_list_view.html', context)
-
-def projectSubCategoriesDetails(request, id=None):
-        
-#     project_families_queryset = None
-#     if id is not None:
-#         project_families_queryset = Sub_Category.objects.all()
-    
-    context = {
-#         'project_families_list': project_families_queryset
-    }
-
-    return render(request, 'website/projects/project_families_list_view.html', context)
-""" project Subcategories end """
 
 """ Publications Start """
 def publications(request):
@@ -1198,6 +1221,7 @@ def publications(request):
     return render(request,'website/publications/publications-home.html', context)
 """ Publications End """
 
+
 """ Search Start """
 def search(request):
 
@@ -1228,6 +1252,7 @@ def search(request):
 
      return render(request,'website/search/search-home.html', context)
 """ Search End """
+
 
 """ Misc. Start """
 def _404Page(request):

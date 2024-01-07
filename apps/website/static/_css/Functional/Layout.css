@@ -95,10 +95,6 @@
 .fr{float:right}
 .fn{float:none}
 
-.of-y-scroll{
-    overflow-y: scroll;
-}
-
 /*----- DISPLAY GRID-----*/
 
 .grid{display: grid;}

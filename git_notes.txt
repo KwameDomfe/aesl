@@ -1,21 +1,49 @@
 Git Notes
+git --version
+
+## Create Project Directory and Files
+    mkdir Project
+    cd Project
+    Create a couple of application files.
+        touch index.html
+        touch app.js
+
+    Edit a couple of application files.
+        index.html
+        app.js
+
+## Initialize Folder for version control.
+    git init
 
 ## Git Configuration
+    git config --global user.name "Username"
+    git config --global user.email "Email"
 
-git config --global user.name ""
-git config --global user.email ""
-git config --global push.default matching
-git config --global alias.co checkout
-git init
+## Add File
+    git add index.html
+    git status
 
-(master) is the master branch
+## Remove File
+    git rm --chached index.html
+    git status
 
-## git add
-
-git add . , git add file.ext, git add *html, etc...
-
+git add file.ext, git add *.html, git add ., etc...
 
 ## git commit 
 
 git commit -am 'commit message'
+git commit -m 'commit message'
 
+gitignore
+    touch .gitignore
+
+You can work with Directories Too
+
+
+
+
+
+git config --global push.default matching
+git config --global alias.co checkout
+
+(master) is the master branch

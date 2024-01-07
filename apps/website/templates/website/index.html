@@ -56,7 +56,7 @@
                                lh-copy "
                         >
                             <p>
-                                Architectural and Engineering Services Limited (AESL) offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and sector clients. 
+                                Architectural and Engineering Services Limited (AESL) offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and private sector clients. 
                             </P>
     
                             <P>
@@ -90,7 +90,7 @@
                     </article>
                             
                     <article id="architecture-and-planning" 
-                        class= "gr2s1 gc2s10 
+                        class= "gr2s1 gc1s12 
                             gr1s1-m gc1s6-s gc9s4-m
                             grid gtc1
                             w-100 w16-00-m
@@ -137,7 +137,7 @@
                     </article>
     
                     <article id="engineering" 
-                        class=" gr3s1 gc2s10
+                        class=" gr3s1 gc1s12
                             gr2s1-s gc7s6-s 
                             gr2s1-m gc9s4-m
                             w-100 w16-00-m
@@ -180,6 +180,33 @@
                             </ul>    
                         </hgroup> 
                     </article>
+                    <!-- Clients Start -->
+                    <section class="HomePageMain--selectedClients gr4s1 gc1s12"
+                    >
+                        <figure class="grid gtc6 ggap1-00 items-center justify-center
+                            w-100 h-100 pa1-00 pa4-00-s"
+                        >
+                            <img src="{% static '_images/index/clients/1.jpg' %}" 
+                                alt=""
+                                class="w-100 gr1s1 gc1s3 gc1s2-s gc1s1-m">
+                            <img src="{% static '_images/index/clients/2.jpg' %}" 
+                                alt=""
+                                class="w-100 gr1s1 gc4s3 gc3s2-s gc2s1-m">
+                            <img src="{% static '_images/index/clients/3.jpg' %}" 
+                                alt=""
+                                class="w-100 gr2s1 gr1s1-s gc1s3 gc5s2-s gc3s1-m">
+                            <img src="{% static '_images/index/clients/4.jpg' %}" 
+                                alt=""
+                                class="w-100 gr2s1 gc4s3 gc1s2-s gr1s1-m gc4s1-m">
+                            <img src="{% static '_images/index/clients/5.jpg' %}" 
+                                alt=""
+                                class="w-100 gr3s1 gr2s1-s gr1s1-m gc1s3 gc3s2-s gc5s1-m">
+                            <img src="{% static '_images/index/clients/6.jpg' %}" 
+                                alt=""
+                                class="w-100 gr3s1 gr2s1-s gr1s1-m gc4s3 gc5s2-s gc6s1-m">
+                        </figure>
+                    </section>
+                    <!-- Clients End -->
                 </div>
             </header>
             <!-- Page Header End -->
@@ -187,37 +214,10 @@
             <!-- Page Main Start -->
             <main class="HomePageMain">
                 
-                <!-- Clients Start -->
-                <section class="HomePageMain--selectedClients"
-                >
-                    <figure class="grid gtc6 ggap1-00 items-center justify-center
-                        w-100 h-100 pa4-00"
-                    >
-                        <img src="{% static '_images/index/clients/1.jpg' %}" 
-                            alt=""
-                            class="w-100 gr1s1 gc1s3 gc1s2-s gc1s1-m">
-                        <img src="{% static '_images/index/clients/2.jpg' %}" 
-                            alt=""
-                            class="w-100 gr1s1 gc4s3 gc3s2-s gc2s1-m">
-                        <img src="{% static '_images/index/clients/3.jpg' %}" 
-                            alt=""
-                            class="w-100 gr2s1 gr1s1-s gc1s3 gc5s2-s gc3s1-m">
-                        <img src="{% static '_images/index/clients/4.jpg' %}" 
-                            alt=""
-                            class="w-100 gr2s1 gc4s3 gc1s2-s gr1s1-m gc4s1-m">
-                        <img src="{% static '_images/index/clients/5.jpg' %}" 
-                            alt=""
-                            class="w-100 gr3s1 gr2s1-s gr1s1-m gc1s3 gc3s2-s gc5s1-m">
-                        <img src="{% static '_images/index/clients/6.jpg' %}" 
-                            alt=""
-                            class="w-100 gr3s1 gr2s1-s gr1s1-m gc4s3 gc5s2-s gc6s1-m">
-                    </figure>
-                </section>
-                <!-- Clients End -->
 
                 <!-- Project Categories Start -->
                 <section id="HomePageMain--ProjectCategories"
-                    class="bg-black-20 mb3-00"            
+                    class="bg-black-20 mb1-00"            
                 >
                     <header id="projectCategories__header"
                         class="grid"
@@ -226,7 +226,7 @@
                             alt=""
                             class="gc1s1 gr1s1 h6-00 h12-00-s cover"
                         /> 
-                        <hgroup class="gc1s1 gr1s1 ph4-00 bg-gradientLR">
+                        <hgroup class="gc1s1 gr1s1 ph1-00 ph4-00-s bg-gradientLR">
                             <h3 class="pt1-00 white-90 f3-00 ttu">
                                 projects
                             </h3>     
@@ -236,7 +236,7 @@
                         </hgroup>
                     </header>
                     <article id="projectCategories__content"
-                        class="pa4-00 flex items-center justify-center"
+                        class="pa2-00 pa4-00-m flex items-center justify-center"
                     >
                         <div id="4x4_Grid_projectCategories__content"
                             class="grid gtc12 ggap1-00 
@@ -250,17 +250,17 @@
                                     grid items-center justify-center
                                     white-90"
                             >
-                                <a href="javascript:void()"
+                                <a href="{% url 'website:project-category-details' slug='civic-and-culture' %}"
                                     class = ""  
                                 >
                                     <figure id=""
-                                        class="grid w-100 h0-00 pb-100
+                                        class="grid w-100
                                             shadow-5"
                                     >
                                         <img src="{% static '_images/projects/civic_and_culture/civic/civic_2.jpg' %}"            
                                             alt=""
                                             class="h-100 w-100 gr1s1 gc1s1
-                                                br0-40 cover"
+                                                br0-50 cover"
                                         /> 
                                         <figcaption id =""
                                             class="gr1s1 gc1s1
@@ -286,13 +286,13 @@
                                     grid items-center justify-center
                                     white-90"
                             >
-                                <a href="javascript:void()"
+                                <a href="{% url 'website:project-category-details' slug='education' %}"
                                     class = ""  
                                 >     
                                     <figure class="shadow-5 grid w-100">
                                         <img src="{% static '_images/projects/education/5_2.jpg' %}"            
                                             alt=""
-                                            class="br0-50 gc1s1 gr1s1 w-100"
+                                            class="br0-50 gc1s1 gr1s1 w-100 h-100 cover"
                                         /> 
                                         
                                             <figcaption id =""
@@ -318,9 +318,9 @@
                                     gr1s3-m gc7s3-m
                                     grid items-center justify-center"
                             >
-                                <a href="javascript:void()"
+                                <a href="{% url 'website:project-category-details' slug='health' %}"
                                         class = ""  
-                                    > 
+                                > 
                                     <figure class="shadow-5 grid w-100">
                                         <img src="{% static '_images/projects/health/1_1a.jpg' %}"            
                                             alt=""
@@ -599,7 +599,7 @@
                         </div>
                     </article>
                     <footer id="projectCategories__footer">
-                        <div class="flex justify-between bg-blue0 pa2-00 ph4-00 i">
+                        <div class="flex justify-between bg-blue0 pa2-00 ph1-00 ph4-00-s i">
                             <div class="gold">
                                 AESL || Projects
                             </div>
@@ -619,10 +619,9 @@
                     >
                         <img src="{% static '_images/_partials/backgrounds/01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 h12-00-s"
+                            class="gc1s1 gr1s1 h-100 h12-00-s"
                         /> 
-                        <hgroup class="gc1s1 gr1s1 
-                            pl4-00 pr8-00
+                        <hgroup class="gc1s1 gr1s1 ph1-00 ph4-00-s
                             bg-gradientLR"
                         >
                             <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
@@ -643,16 +642,18 @@
                         <figure class="gc1s12 gc1s6-s">
                             <img src="{% static 'svgs/maps/Greater_Accra_in_Ghana_2018.svg' %}" 
                                 alt=""
-                                class="w-100 cover">
+                                class="w-100 cover"
+                            />
                         </figure>
                         <article id="regional-office-details" 
                             class="gc1s12 gc7s6-s grid
-                            bg-blue0 white-90 w-100"
+                            bg-black-60 white-90 w-100"
                         >
                             
                             <img src="{% static '_images/placeholders/landscape_Images/landscape_01.png' %}" 
-                            alt=""
-                            class="">
+                                alt=""
+                                class=""
+                            />
                             
                             <div class="flex flex-column justify-between
                                 
@@ -675,10 +676,11 @@
                             </div>
                         </article>
                     </main>
-                    <footer id="regionalOffices__footer"
+                    <footer id="regionalOffices__footer" 
+                        class=""
                     >
                         <div class="flex justify-between 
-                            pa2-00 ph4-00 mb4-00
+                            pa2-00 ph1-00 ph4-00-s mb1-00
                             bg-blue0 white-90 i"
                         >
                             <div class="gold"
@@ -694,7 +696,7 @@
 
             <!-- Page Footer Start -->
             <footer id = "HomePageFooter"
-                class="w-100 mb1-00"
+                class="w-100 mb1-00 ph1-00 bg-black-30"
             >
                 {% include 'website/_partials/page_footer.html' %} 
             </footer>

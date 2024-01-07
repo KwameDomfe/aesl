@@ -63,7 +63,7 @@
                                 <hgroup id="Project_Overview_1"
                                     class="f1-50"
                                 >
-                                    <p class="mb0-00 pv4-00 lh-copy tracked tj">
+                                    <p class="mb0-00 pv4-00 lh-copy tracked tj ttu">
                                         {% lorem 50 w random %}.
                                     </p>   
                                 </hgroup> 
@@ -76,13 +76,14 @@
                             class = "w-100 
                                 mv4-00
                                 white-90">
-                            <ul class="flex justify-center flex-wrap w-100 ggap1-00">
+                            <ul class="flex justify-center items-start flex-wrap ggap1-00
+                                w-100 ph1-00"
+                            >
                                 {% for project in projects_list %}
                                     <li class="grid
-                                        w-100 w-45-s w-30-m
-                                        mh0-50"
+                                        w-100 w-50-s w-30-m
+                                        "
                                     >
-                                        
                                         <article id="" 
                                             class="flex flex-column justify-start items-start
                                                 h-100 w-100
@@ -119,8 +120,6 @@
                                                     <p class=""
                                                     >
                                                         {{ project.description }} . . .
-                                                        <a href="{% url 'website:project-details' project.slug %}">{{project.slug}}
-                                                        </a>
                                                     </p> 
                                                     <div>
                                                         <a href="{{ project.get_absolute_url }}"
@@ -143,7 +142,6 @@
                                             </footer>
 
                                         </article>
-                                        
                                     </li>
                                 {% endfor %}
                             </ul>
